@@ -53,7 +53,7 @@ const RiskOfRain2Header = (props: Props) => {
   )
   const searchBarContainerClasses = clsx(
     styles.flexRow,
-    styles.flexCenterY,
+    styles.flexLeft,
   )
 
   const rarities = ['Common', 'Uncommon', 'Legendary', 'Boss', 'Void', 'Lunar', 'Equipment']
@@ -78,13 +78,6 @@ const RiskOfRain2Header = (props: Props) => {
           List
         </Button>
         <Button
-          onClick={() => changeDisplayType('tierList')}
-          toggle={true}
-          toggleActive={showTierList}
-        >
-          Tier list
-        </Button>
-        <Button
           onClick={() => changeDisplayType('flashCards')}
           toggle={true}
           toggleActive={showFlashCards}
@@ -93,7 +86,7 @@ const RiskOfRain2Header = (props: Props) => {
         </Button>
       </div>
 
-      <div className={filterOptionsClasses}>
+      <div className={filterOptionsClasses} style={{overflow: 'auto'}}>
 
         {
           rarities.map((rarity, i) => {

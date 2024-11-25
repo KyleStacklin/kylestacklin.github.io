@@ -103,7 +103,7 @@ const RiskOfRain2FlashCards = observer((props: Props) => {
             <div className={styles.flexRow}>
               <div className={styles.flexColumn}>
                 { uiState.currentItemToGuess.nickname &&
-                  <img style={{height: '200px', width: '200px'}} src={require(`./ror2_items_img/${uiState.currentItemToGuess.nickname}.webp`)} />
+                  <img style={{height: '150px', width: '150px'}} src={require(`./ror2_items_img/${uiState.currentItemToGuess.nickname}.webp`)} />
                 }
                 <div className={styles.flashCardItemToGuessInfo}>
                   {uiState.itemHasBeenGuessed ? uiState.currentItemToGuess.displayName : ''}

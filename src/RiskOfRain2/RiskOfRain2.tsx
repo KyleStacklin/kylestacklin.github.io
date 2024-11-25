@@ -46,10 +46,6 @@ const RiskOfRain2 = observer(() => {
         </div>
       }
 
-      {/* { showTierList &&
-        <RiskOfRain2TierList />
-      } */}
-
       { showFlashCards &&
         <RiskOfRain2FlashCards />
       }

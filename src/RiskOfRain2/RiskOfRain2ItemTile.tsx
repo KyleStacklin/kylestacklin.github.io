@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import clsx from "clsx";
 import { createUseStyles } from "react-jss";
 import { rarityConverter } from "./RiskOfRainBusinessLogic";
@@ -43,6 +43,8 @@ const useStyles = createUseStyles({
     listStyleType: 'circle',
     margin: 0,
     padding: '8px 0px 8px 24px',
+    textAlign: 'left',
+    color: '#ffffff',
   },
   howToUnlock: {
     cursor: 'pointer',
@@ -70,9 +72,9 @@ const RiskOfRain2ItemTile = ({ item }: Props) => {
   const { displayName, nickname, rarity, description, itemNumber, unlockTask } = item
   const styles = useStyles()
 
-  const howToUnlockClicked = () => {
-    console.log(unlockTask)
-  }
+  const [showUnlockTask, setShowUnlockTask] = useState(false)
+
+  const handleHowToUnlock = () => setShowUnlockTask(!showUnlockTask)
 
   const { background, rarityString, rarityColor } = rarityConverter(rarity)
   const hasItemNumber = itemNumber !== -1
@@ -102,10 +104,13 @@ const RiskOfRain2ItemTile = ({ item }: Props) => {
           <ul className={styles.attributes}>
             <li>Alias: {nickname}</li>
             <li>Rarity: {rarityString}</li>
-          
-          { unlockTask &&
-            <li className={styles.howToUnlock} onClick={howToUnlockClicked}>How to unlock</li>
-          }
+
+            { unlockTask &&
+              <li className={styles.howToUnlock} onClick={handleHowToUnlock}>
+                {showUnlockTask ? 'Hide' : 'Show'} unlock task
+              </li>
+            }
+            { showUnlockTask && <div>{unlockTask}</div> }
           </ul>
         </div>
       </div>

@@ -10,6 +10,7 @@ export const useStyles = createUseStyles({
     backgroundColor: '#a1a1a1',
     overflowY: 'auto',
     overflowX: 'hidden',
+    fontFamily: 'Helvetica Neue, Arial, sans-serif',
   },
   flexRow: {
     display: 'flex',
@@ -19,6 +20,10 @@ export const useStyles = createUseStyles({
   flexColumn: {
     display: 'flex',
     flexDirection: 'column',
+  },
+  flexLeft: {
+    display: 'flex',
+    justifyContent: 'start',
   },
   flexCenterY: {
     display: 'flex',
@@ -42,6 +47,17 @@ export const useStyles = createUseStyles({
     gap: '16px',
     backgroundColor: '#0d5175',
     padding: '16px',
+
+    height: '175px',
+    transition: 'height 0.5s ease',
+  },
+  searchBar: {
+    width: '100%',
+    height: '32px',
+    padding: '4px 8px',
+    border: '1px solid #adadad',
+    borderRadius: '4px',
+    outline: 'none',
   },
 
 
@@ -93,9 +109,6 @@ export const useStyles = createUseStyles({
 
   filterOptions: {
     gap: '16px',
-  },
-  searchBar: {
-    height: '32px',
   },
   list: {
     display: 'flex',

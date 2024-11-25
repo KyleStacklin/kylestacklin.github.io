@@ -12,15 +12,15 @@ export const rarityConverter = (rarityNumber: number): RarityConverter => {
       }
     case 1:
       return {
-        background: 'linear-gradient(90deg, rgba(17,63,10,1) 0%, rgba(7,50,0,1) 70%, rgba(3,36,1,1) 100%)',
+        background: 'linear-gradient(90deg, rgba(88, 140, 90, 1) 0%, rgba(88, 140, 90, 1) 70%, rgba(88, 140, 90, 1) 100%)',
         rarityString: 'Uncommon',
-        rarityColor: '#0F4105'
+        rarityColor: '#598D5B'
       }
     case 2:
       return {
-        background: 'linear-gradient(90deg, rgba(103,6,5,1) 0%, rgba(103,6,5,1) 70%, rgba(103,6,5,1) 100%)',
+        background: 'linear-gradient(90deg, rgba(123,6,5,1) 0%, rgba(123,6,5,1) 70%, rgba(123,6,5,1) 100%)',
         rarityString: 'Legendary',
-        rarityColor: '#670605'
+        rarityColor: '#7B0605'
       }
     case 3:
       return {

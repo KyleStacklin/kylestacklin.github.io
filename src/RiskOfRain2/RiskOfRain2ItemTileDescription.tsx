@@ -4,7 +4,8 @@ import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
   description: {
-    color: '#fff',
+    color: '#ffffff',
+    textAlign: 'left',
   },
 })
 
