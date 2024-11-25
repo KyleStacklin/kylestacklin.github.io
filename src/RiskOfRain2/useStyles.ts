@@ -58,6 +58,7 @@ export const useStyles = createUseStyles({
     border: '1px solid #adadad',
     borderRadius: '4px',
     outline: 'none',
+    fontSize: '16px',
   },
 
 
