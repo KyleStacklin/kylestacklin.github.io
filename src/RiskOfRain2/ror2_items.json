@@ -962,7 +962,7 @@
     "itemNumber": -1,
     "rarity": 2,
     "guid": "missinguid_rainCoat",
-    "displayName": "Ben's Raincot",
+    "displayName": "Ben's Raincoat",
     "itemStatus": "defense,debuff,cleanse,tank",
     "nickname": "rainCoat",
     "description": "Prevents {misc:1} {+1} {offense:debuff} and instead grants a {defense:temporary barrier} for {defense:10%} of {defense:maximum health}. Recharges every {misc:5} seconds.",

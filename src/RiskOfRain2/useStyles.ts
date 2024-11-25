@@ -70,6 +70,11 @@ export const useStyles = createUseStyles({
     overflowX: 'auto',
     overflowY: 'hidden',
   },
+  rarityFilter: {
+    display: 'flex',
+    alignItems: 'start',
+    height: '38px',
+  },
 
 
   // Tier List

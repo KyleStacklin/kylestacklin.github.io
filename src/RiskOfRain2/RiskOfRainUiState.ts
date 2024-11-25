@@ -3,7 +3,7 @@ import ror2_items from "./ror2_items.json"
 
 class RiskOfRainUiState {
 
-  private _displayType: string = 'grid';
+  private _displayType: string = 'list';
   private _filters: Set<string> = new Set<string>();
   private _filteredList: any[] = [];
   private _list: any[] = [];
@@ -58,7 +58,10 @@ class RiskOfRainUiState {
   set currentUsedItems(value: any[]) { this._currentUsedItems = value; }
   set itemHasBeenGuessed(value: boolean) { this._itemHasBeenGuessed = value; }
 
-  public setDisplayType = (displayType: string) => this.displayType = displayType
+  public setDisplayType = (displayType: string) => {
+    this.filteredList = this.list
+    this.displayType = displayType
+  }
 
   public addFilter = (filter: string) => this.filters.add(filter)
   public removeFilter = (filter: string) => this.filters.delete(filter)

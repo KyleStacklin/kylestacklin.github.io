@@ -4,6 +4,7 @@ import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
   button: {
+    height: '32px',
     padding: '8px 16px',
     borderRadius: '4px',
     backgroundColor: '#fff',

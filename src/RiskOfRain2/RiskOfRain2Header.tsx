@@ -52,14 +52,14 @@ const RiskOfRain2Header = observer(() => {
     styles.flexRow,
     styles.filterOptions
   )
-  const searchBarContainerClasses = clsx(
-    styles.flexRow,
-    styles.flexLeft,
+  const rarityFilterClasses = clsx(
+    filterOptionsClasses,
+    styles.rarityFilter
   )
 
   const rarities = ['Common', 'Uncommon', 'Legendary', 'Boss', 'Void', 'Lunar', 'Equipment']
 
-  const headerStyle = uiState.headerExpanded ? { height: '135px' } : { height: '24px' }
+  const headerStyle = uiState.headerExpanded ? { height: '128px' } : { height: '24px' }
 
   return (
     <div className={headerClasses} style={headerStyle}>
@@ -95,7 +95,7 @@ const RiskOfRain2Header = observer(() => {
             </Button>
           </div>
 
-          <div className={filterOptionsClasses}>
+          <div className={rarityFilterClasses}>
 
             {
               rarities.map((rarity, i) => {
@@ -121,23 +121,6 @@ const RiskOfRain2Header = observer(() => {
         </>
 
       }
-
-
-
-      {/* <div className={searchBarContainerClasses}>
-        <input
-          className={styles.searchBar}
-          type="text"
-          placeholder="Search..."
-          onChange={(e) => {
-            const filteredItems = items.filter((item) => {
-              return item.displayName.toLowerCase().includes(e.target.value.toLowerCase()) ||
-                item.nickname.toLowerCase().includes(e.target.value.toLowerCase()) ||
-                item.description.toLowerCase().includes(e.target.value.toLowerCase())
-          })
-          uiState.filteredList = filteredItems
-        }} />
-      </div> */}
     </div>
   )
 });
