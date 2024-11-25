@@ -1,0 +1,1851 @@
+[
+  {
+    "itemNumber": 102,
+    "rarity": 0,
+    "guid": "missinguid_repulsionArmorPlate",
+    "displayName": "Repulsion Armor Plate",
+    "itemStatus": "defense,armor,flat,reduction",
+    "nickname": "armor",
+    "description": "Reduce all {offense:incoming damage} by {offense:5} {+5}. Cannot be reduced below {offense:1}.",
+    "unlockTask": null,
+    "tierList": {
+      "all": "B"
+    }
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 0,
+    "guid": "missinguid_mocha",
+    "displayName": "Mocha",
+    "itemStatus": "utility,speed,attack,dual,coffee",
+    "nickname": "mocha",
+    "description": "Increases {offense:attack speed} by {offense:7.5%} {+7.5%} and {misc:movement speed} by {misc:7%} {+7%}.",
+    "unlockTask": null,
+    "tierList": {
+      "all": "A"
+    }
+  },
+  {
+    "itemNumber": 84,
+    "rarity": 0,
+    "guid": "BarrierOnKill",
+    "displayName": "Topaz Brooch",
+    "itemStatus": "defense,shield,on,kill",
+    "nickname": "shieldBrooch",
+    "description": "Gain a {defense:temporary barrier} on kill for {defense:15 health} {+15}.",
+    "unlockTask": null,
+    "tierList": {
+      "Commando": "B",
+      "Huntress": "S",
+      "Bandit": "B",
+      "MUL-T": "B",
+      "Engineer": "B",
+      "Artificer": "B",
+      "Mercenary": "S",
+      "Rex": "B",
+      "Loader": "F",
+      "Acrid": "S",
+      "Captain": "B",
+      "Railgunner": "B",
+      "Void_Fiend": "B"
+    }
+  },
+  {
+    "itemNumber": 1,
+    "rarity": 0,
+    "guid": "Bear",
+    "displayName": "Tougher Times",
+    "itemStatus": "defense,block,locked",
+    "nickname": "bear",
+    "description": "{defense:15%} {+15%} chance to {defense:block} incoming damage.\n{misc:Unaffected by the luck}.",
+    "unlockTask": "Die 5 times.",
+    "tierList": {
+      "all": "S"
+    }
+  },
+  {
+    "itemNumber": 20,
+    "rarity": 0,
+    "guid": "BleedOnHit",
+    "displayName": "Trip-Tip Dagger",
+    "itemStatus": "offense,dot",
+    "nickname": "tritip",
+    "description": "{offense:10%} {+10%} chance to {offense:bleed} an enemy for {offense:240%} base damage.",
+    "unlockTask": null,
+    "tierList": {
+      "Commando": "S",
+      "Huntress": "A",
+      "Bandit": "S",
+      "MUL-T": "S",
+      "Engineer": "A",
+      "Artificer": "B",
+      "Mercenary": "B",
+      "Rex": "A",
+      "Loader": "B",
+      "Acrid": "B",
+      "Captain": "S",
+      "Railgunner": "C",
+      "Void_Fiend": "B"
+    }
+  },
+  {
+    "itemNumber": 61,
+    "rarity": 0,
+    "guid": "BossDamageBonus",
+    "displayName": "Armor-Piercing Rounds",
+    "itemStatus": "offense,boss,ammo,bullet,locked",
+    "nickname": "bossDamage",
+    "description": "Deal an additional {offense:20%} damage {+20%} to bosses.",
+    "unlockTask": "Complete a Teleporter event.",
+    "tierList": {
+      "Commando": "B",
+      "Huntress": "B",
+      "Bandit": "A",
+      "MUL-T": "C",
+      "Engineer": "A",
+      "Artificer": "S",
+      "Mercenary": "A",
+      "Rex": "B",
+      "Loader": "A",
+      "Acrid": "A",
+      "Captain": "S",
+      "Railgunner": "S",
+      "Void_Fiend": "A"
+    }
+  },
+  {
+    "itemNumber": 7,
+    "rarity": 0,
+    "guid": "CritGlasses",
+    "displayName": "Lens-Maker's Glasses",
+    "itemStatus": "offense,critical,chance",
+    "nickname": "glasses",
+    "description": "Your attacks have a {offense:10%} {+10%} chance to \"{offense:Critically Strike}\", dealing {offense:double damage}.",
+    "unlockTask": null,
+    "tierList": {
+      "Commando": "A",
+      "Huntress": "A",
+      "Bandit": "F",
+      "MUL-T": "B",
+      "Engineer": "B",
+      "Artificer": "S",
+      "Mercenary": "A",
+      "Rex": "A",
+      "Loader": "S",
+      "Acrid": "C",
+      "Captain": "B",
+      "Railgunner": "C",
+      "Void_Fiend": "A"
+    }
+  },
+  {
+    "itemNumber": 17,
+    "rarity": 0,
+    "guid": "Crowbar",
+    "displayName": "Crowbar",
+    "itemStatus": "attack",
+    "nickname": "crowbar",
+    "description": "Deal {offense:75%} {+75%} damage to enemies above {offense:90% health}.",
+    "unlockTask": "Discover 10 unique white items."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 0,
+    "guid": "missinguid_warpedEcho",
+    "displayName": "WarpedEcho",
+    "itemStatus": "defense,on,hit,on,taken",
+    "nickname": "warpedEcho",
+    "description": "On damage taken {offense:50%} of the damage is dealt immediately while the other {offense:50%} is delayed for {offense:3} seconds.\nThis effect has a cooldown of {misc:10} seconds. {Every additional item$} increases how many instances of this effect the player has.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 42,
+    "rarity": 0,
+    "guid": "Firework",
+    "displayName": "Bundle of Fireworks",
+    "itemStatus": "offense,on,open,locked",
+    "nickname": "firework",
+    "description": "Activating an interactable {offense:launches 8} {+4} {offense:fireworks} that deal {offense:300%} base damage.",
+    "unlockTask": "Duplicate the same item 7 times in a row with a 3D printer."
+  },
+  {
+    "itemNumber": 91,
+    "rarity": 0,
+    "guid": "RegeOnKill",
+    "displayName": "Fresh Meat",
+    "itemStatus": "utility,heal,steack,steak,raw,health",
+    "nickname": "steak",
+    "description": "Increases {defense:maximum health} by {defense:25} {+25}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 0,
+    "guid": "missinguid_brokenWatch",
+    "displayName": "Delicate Watch",
+    "itemStatus": "utility,damage,breakable",
+    "nickname": "brokenWatch",
+    "description": "Increase damage by {offense:20%} {+20%}. Taking damage to below {debuff:25% health} {misc:breaks} this item.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 0,
+    "guid": "missinguid_pennies",
+    "displayName": "Roll of Pennies",
+    "itemStatus": "utility,damage,gold,scales",
+    "nickname": "pennies",
+    "description": "Gain {misc:3} {+3} {misc:gold} on {offense:taking damage} from an enemy. {misc:Scales over time}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 27,
+    "rarity": 0,
+    "guid": "HealWhileSafe",
+    "displayName": "Cautious Slug",
+    "itemStatus": "defense,heal",
+    "nickname": "slug",
+    "description": "Increases {defense:base health regeneration} by {defense:+3 hp/s} {+3 hp/s} while outside of combat.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 0,
+    "guid": "missinguid_elixir",
+    "displayName": "Power Elixir",
+    "itemStatus": "utility,heal,low,health",
+    "nickname": "elixir",
+    "description": "Taking damage to below {debuff:25% health} {misc:consumes} this item, {defense:healing} you for {defense:75%} of {defense:maximum health}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 8,
+    "rarity": 0,
+    "guid": "Hoof",
+    "displayName": "Paul's Goat Hoof",
+    "itemStatus": "defense,movespeed,locked",
+    "nickname": "goat",
+    "description": "Increases {misc:movement speed} by {misc:14%} {+14%}.",
+    "unlockTask": "Fail the Shrine of chance 3 times in a row."
+  },
+  {
+    "itemNumber": 39,
+    "rarity": 0,
+    "guid": "IgniteOnKill",
+    "displayName": "Gasoline",
+    "itemStatus": "offense,fire,on,kill",
+    "nickname": "gasoline",
+    "description": "Killing an enemy {offense:ignites} all enemies within {offense:12m} {+4m}.\nEnemies {offense:burn} for {offense:150%} {+75%} base damage.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 0,
+    "guid": "missinguid_chronicExpansion",
+    "displayName": "Chronic Expansion",
+    "itemStatus": "offense,buff,on,kill",
+    "nickname": "chronicExpansion",
+    "description": "Every {offense:5} enemies slain grants a damage counter bonus increasing the player's damage by {offense:10%} {+5%|per item stack}, lasting as long as the player stays in combat.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 0,
+    "guid": "missinguid_knockbackFin",
+    "displayName": "Knockback Fin",
+    "itemStatus": "utility,knockback,on,hit",
+    "nickname": "knockbackFin",
+    "description": "{misc:7.5%} {+7.5%} chance on hit to knock enemies into the air. {height increases}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 0,
+    "guid": "missinguid_bolsteringLantern",
+    "displayName": "Bolstering Lantern",
+    "itemStatus": "utility,damage,low,health,berzerk",
+    "nickname": "bolsteringLantern",
+    "description": "When below {debuff:50% health} receive a damage increase of {offense:20%} {+20% damage bonus|per item stack}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 36,
+    "rarity": 0,
+    "guid": "Medkit",
+    "displayName": "Medkit",
+    "itemStatus": "defense,heal,on,hit,locked",
+    "nickname": "medkit",
+    "description": "2 seconds after getting hurt, {defense:heal} for {defense:20} plus an additional {defense:5%} {+5%} of {defense:maximum health}.",
+    "unlockTask": "Defeat an Elite-type monster."
+  },
+  {
+    "itemNumber": 16,
+    "rarity": 0,
+    "guid": "Mushroom",
+    "displayName": "Bustling Fungus",
+    "itemStatus": "defense,heal,stand",
+    "nickname": "fungus",
+    "description": "After standing still for {defense:1} seconds create a zone that {defense:heals} for {defense:4.5%} {+2.25%} of your {defense:health} every second to all allies within {defense:3m} {+1.5m}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 87,
+    "rarity": 0,
+    "guid": "NearbyDamageBonus",
+    "displayName": "Focus Crystal",
+    "itemStatus": "offense,closen,boost,damage",
+    "nickname": "redCrystal",
+    "description": "Increase damage to enemies within {offense:13m} by {offense:20%} {+20%}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 0,
+    "guid": "missinguid_antlerShield",
+    "displayName": "Antler Shield",
+    "itemStatus": "utility,defense,reflect,mirror",
+    "nickname": "antlerShield",
+    "description": "{misc:55%} {+5%} chance on being hit to reflect {misc:10%} {+10%} damage back to the attacker.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 0,
+    "guid": "missinguid_opal",
+    "displayName": "Oddly-shaped Opal",
+    "itemStatus": "defense,armor,safe",
+    "nickname": "opal",
+    "description": "{defense:Increase armor} by {defense:100} {+100} while out of danger.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 29,
+    "rarity": 0,
+    "guid": "PersonalShield",
+    "displayName": "Personal Shield Generator",
+    "itemStatus": "defense,shield",
+    "nickname": "shield",
+    "description": "Gain a {defense:shield} equal to {defense:8%} {+8%} of your maximum health. Recharges outside of danger.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 0,
+    "guid": "missinguid_itemScrapWhite",
+    "displayName": "Item Scrap, White",
+    "itemStatus": "utility,3d,printer,white",
+    "nickname": "scraps1",
+    "description": "Does nothing. Prioritized when used with 3D Printers.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 58,
+    "rarity": 0,
+    "guid": "SecondarySkillMagazine",
+    "displayName": "Backup Magazine",
+    "itemStatus": "utility,charge,locked",
+    "nickname": "backupMag",
+    "description": "Add {misc:+1} {+1} charge of your {misc:Secondary skill}.",
+    "unlockTask": "Fully charge a Teleporter without getting hit."
+  },
+  {
+    "itemNumber": 57,
+    "rarity": 0,
+    "guid": "SprintBonus",
+    "displayName": "Energy Drink",
+    "itemStatus": "defense,movespeed",
+    "nickname": "drink",
+    "description": "{misc:Sprint speed} is improved by {misc:25%} {+25%}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 59,
+    "rarity": 0,
+    "guid": "StickyBomb",
+    "displayName": "Sticky Bomb",
+    "itemStatus": "offense,on,hit",
+    "nickname": "stickyBomb",
+    "description": "{offense:5%} {+5%} chance on hit to attach a {offense:bomb} to an enemy, detonating for {offense:180%} TOTAL damage.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 41,
+    "rarity": 0,
+    "guid": "StunChanceOnHit",
+    "displayName": "Stun Grenade",
+    "itemStatus": "offense,stun,on,hit",
+    "nickname": "stunGrenade",
+    "description": "{misc:5%} {+5%} chance on hit to {misc:stun} enemies for {misc:2} seconds.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 0,
+    "rarity": 0,
+    "guid": "Syringe",
+    "displayName": "Soldier's Syringe",
+    "itemStatus": "offense,speed",
+    "nickname": "syringe",
+    "description": "Increase {offense:Attack Speed} by {offense:15%} {+15%}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 6,
+    "rarity": 0,
+    "guid": "Tooth",
+    "displayName": "Monster Tooth",
+    "itemStatus": "defense,heal,on,kill",
+    "nickname": "monsterTooth",
+    "description": "Killing an enemy spawns a {defense:healing orb} that heals for {defense:8} plus an additional {defense:2%} {+2%} of {defense:maximum health}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 60,
+    "rarity": 0,
+    "guid": "TreasureCache",
+    "displayName": "Rusted Key",
+    "itemStatus": "utility,box,locked",
+    "nickname": "key",
+    "description": "A {misc:hidden cache} containing an item ({defense:80%}/{debuff:20%}) will appear in a random location {misc:on each stage}.\nOpening the cache {misc:consumes} this item.",
+    "unlockTask": "Defeat the Teleporter boss under 15 seconds."
+  },
+  {
+    "itemNumber": 24,
+    "rarity": 0,
+    "guid": "LevelBonus",
+    "displayName": "Warbanner",
+    "itemStatus": "utility,attack,speed,movespeed,on,level",
+    "nickname": "warbanner",
+    "description": "On {misc:level up} or starting the {misc:Teleporter event}, drop a banner that strengthens all allies within {misc:16m} {+8m}.\nRaise {offense:attack} and {misc:movement speed} by {offense:30%}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 19,
+    "rarity": 1,
+    "guid": "AttackSpeedOnCrit",
+    "displayName": "Predatory Instincts",
+    "itemStatus": "offense,critical,locked",
+    "nickname": "hat",
+    "description": "{offense:Critical Strikes} increase {offense:attack speed} by {offense:12%}.\nMaximum cap of {offense:36%} {+24%} {offense:attack speed}.",
+    "unlockTask": "Reach +200% attack speed."
+  },
+  {
+    "itemNumber": 37,
+    "rarity": 1,
+    "guid": "Bandolier",
+    "displayName": "Bandolier",
+    "itemStatus": "utility",
+    "nickname": "bandolier",
+    "description": "{misc:18%} {+10%} chance on kill to drop an ammo pack that {misc:resets all cooldowns}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 94,
+    "rarity": 1,
+    "guid": "BonusGoldPackOnKill",
+    "displayName": "Ghor's Tome",
+    "itemStatus": "utility,gold,book,treasure,flesh",
+    "nickname": "goldBook",
+    "description": "{misc:4%} {+4%} chance on kill to drop a treasure worth {misc:25$}. {misc:Scales over time.}",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 11,
+    "rarity": 1,
+    "guid": "ChainLightning",
+    "displayName": "Ukulele",
+    "itemStatus": "offense,on,hit",
+    "nickname": "ukulele",
+    "description": "{offense:25%} chance to fire a {offense:chain lightning} for {offense:80%} TOTAL damage up to {offense:3} {+2} targets within {offense:20m} {+2m}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 104,
+    "rarity": 1,
+    "guid": "missinguid_deathMark",
+    "displayName": "Death Mark",
+    "itemStatus": "offense,mark,death,debuff,increased,damage",
+    "nickname": "deathMark",
+    "description": "Enemies with {offense:4} or more debuffs are {offense:marked for death}, increasing damage taken by {offense:50%} from all sources for {misc:7} {+7} seconds.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 79,
+    "rarity": 1,
+    "guid": "EnergizedOnEquipmentUse",
+    "displayName": "War Horn",
+    "itemStatus": "offense,attack,speed,equipment,locked",
+    "nickname": "warHorn",
+    "description": "Activating your Equipment gives you {offense:+70% attack speed} for {offense:8s} {+4s}.",
+    "unlockTask": "Complete 3 Combat Shrines in a single stage."
+  },
+  {
+    "itemNumber": 30,
+    "rarity": 1,
+    "guid": "EquipmentMagazine",
+    "displayName": "Fuel Cell",
+    "itemStatus": "utility,charge,locked",
+    "nickname": "cell",
+    "description": "Hold an {misc:additional equipment charge} {+1}.\n{misc:Reduce equipment cooldown} by {misc:15%} {+15%}.",
+    "unlockTask": "Pickup 5 different types of Equipment."
+  },
+  {
+    "itemNumber": 78,
+    "rarity": 1,
+    "guid": "ExecuteLowHealthElite",
+    "displayName": "Old Guillotine",
+    "itemStatus": "offense,boss,locked",
+    "nickname": "guillotine",
+    "description": "Instantly kill Elite Monsters below {debuff:13%} {+13%} {debuff:health}.",
+    "unlockTask": "Defeat 500 Elite Monsters."
+  },
+  {
+    "itemNumber": 4,
+    "rarity": 1,
+    "guid": "ExplodeOnDeath",
+    "displayName": "Will-O'-the-wisp",
+    "itemStatus": "offense,on,kill",
+    "nickname": "wisp",
+    "description": "On killing an enemy, spawn a {offense:lava pillar} in a {offense:12m} {+2.4m} radius for {offense:350%} {+280%} base damage.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 1,
+    "guid": "missinguid_chanceDoll",
+    "displayName": "Chance Doll",
+    "itemStatus": "utility,drop,rarity,items,shrine,great,success,upgrade",
+    "nickname": "chanceDoll",
+    "description": "{misc:20%} {+8%} chance to get higher rarity items from chance shrines on success.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 1,
+    "guid": "missinguid_prayerBreads",
+    "displayName": "Prayer Beads",
+    "itemStatus": "utility,experience,weird",
+    "nickname": "prayerBreads",
+    "description": "Grows in power by absorbing experience, storing {misc:20%} {+5%|per item stack} of player stats per item level up. On removal, gain all stored stats.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 9,
+    "rarity": 1,
+    "guid": "Feather",
+    "displayName": "Hopoo Feather",
+    "itemStatus": "utility",
+    "nickname": "feather",
+    "description": "Gain {misc:+1} {+1} maximum {misc:jump count}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 64,
+    "rarity": 1,
+    "guid": "FireRing",
+    "displayName": "Kjaro's Band",
+    "itemStatus": "offense,on,hit,locked",
+    "nickname": "fireRing",
+    "description": "Hits that deal {offense:more than 400% damage} also blasts enemies with a {offense:runic flame tornado}, dealing {offense:300%} {+300%} TOTAL damage over time. Recharge every {misc:10} seconds.",
+    "unlockTask": "Discover the hidden chamber in the Abandoned Aqueduct."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 1,
+    "guid": "missinguid_for",
+    "displayName": "Shipping Request Form",
+    "itemStatus": "utility,item,selector,drop",
+    "nickname": "form",
+    "description": "A {misc:delivery} containing 2 items (79%/{defense:20%}/{debuff:1%}) will appear in a random location {misc:on each stage}. {Increases rarity chances of the items}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 26,
+    "rarity": 1,
+    "guid": "HealOnCrit",
+    "displayName": "Harvester's Scythe",
+    "itemStatus": "offense,defense,critical,heal,locked",
+    "nickname": "scythe",
+    "description": "Gain {offense:5% critical chance}.\n{offense:Critical strikes} {defense:heal} for {defense:8} {+4} {defense:health}.",
+    "unlockTask": "Complete a Prismatic Trial."
+  },
+  {
+    "itemNumber": 63,
+    "rarity": 1,
+    "guid": "IceRing",
+    "displayName": "Runald's Band",
+    "itemStatus": "offense,on,hit,locked",
+    "nickname": "iceRing",
+    "description": "Hits that deals {offense:more than 400% damage} also blasts enemies with a {offense:runic ice blast}, {misc:slowing} them by {misc:80%} for {misc:3s} {+3s} and dealing {offense:250%} {+250%} TOTAL damage. Recharge every {misc:10} seconds.",
+    "unlockTask": "Discover the hidden chamber in the Abandoned Aqueduct."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 1,
+    "guid": "missinguid_luminousShot",
+    "displayName": "Luminous Shot",
+    "itemStatus": "utility,secondary,skill,auto,attack,buff",
+    "nickname": "luminousShot",
+    "description": "Using the secondary skill charges the next primary attack, dealing {offense:+150%} damage {+25%|per item stack} per charge up to {misc:5} times {+1|per item stack}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 33,
+    "rarity": 1,
+    "guid": "Infusion",
+    "displayName": "Infusion",
+    "itemStatus": "defense,life,locked",
+    "nickname": "infusion",
+    "description": "Killing an enemy increases your {defense:health permanently} by {defense:1} {+1}, up to a {defense:maximum} of {defense:100} {+100} {defense:health}.",
+    "unlockTask": "Defeat 3000 enemies."
+  },
+  {
+    "itemNumber": 76,
+    "rarity": 1,
+    "guid": "JumpBoost",
+    "displayName": "Wax Quail",
+    "itemStatus": "defense,movespeed,pigeon,locked",
+    "nickname": "quail",
+    "description": "{defense:Jumping} while {defense:sprinting} boosts you forward by {defense:10m} {+10m}.",
+    "unlockTask": "Reach +300% movespeed (include sprinting)."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 1,
+    "guid": "missinguid_saleStar",
+    "displayName": "Sale Star",
+    "itemStatus": "utility,extra,item,drop,chest",
+    "nickname": "saleStar",
+    "description": "Gain an extra item on the first chest opened per stage. {Each additional Sale Star increase the chance of getting more items by 5%$}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 3,
+    "rarity": 1,
+    "guid": "Missile",
+    "displayName": "AtG Missile Mk. 1",
+    "itemStatus": "offense,on,hit",
+    "nickname": "missile_mk",
+    "description": "{offense:10%} chance to fire a missile that deals {offense:300%} {+300%} TOTAL damage.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 1,
+    "guid": "missinguid_harpoon",
+    "displayName": "Hunter's Harpoon",
+    "itemStatus": "utility,movement,speed,on,kill",
+    "nickname": "harpoon",
+    "description": "Killing an enemy increases {misc:movement speed} by {misc:125%}, fading over {misc:1} {+0.5} seconds.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 25,
+    "rarity": 1,
+    "guid": "Phasing",
+    "displayName": "Old War Stealthkit",
+    "itemStatus": "defense,phasing,invincible",
+    "nickname": "phasing",
+    "description": "Falling below {debuff:25% health} causes you to gain {misc:40% movement speed} and {misc:invisibility} for {misc:5s}. Recharges every {misc:30 seconds} {-50%}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 1,
+    "guid": "missinguid_shuriken",
+    "displayName": "Shuriken",
+    "itemStatus": "offense,on,attack,ninja",
+    "nickname": "shuriken",
+    "description": "Activation your {misc:Primary skill} also throws a {offense:shuriken} that deals {offense:400%} {+100%} base damage. You can hold up to {misc:3} {+1} {offense:shurikens} which all reload over {misc:10} seconds.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 1,
+    "guid": "missinguid_orangeScrap",
+    "displayName": "Regenerating Scrap",
+    "itemStatus": "utility,scrap,rare,shop",
+    "nickname": "orangeScrap",
+    "description": "Does nothing. Prioritized when used with {defense:Uncommon} 3D Printers. At the start of each stage, it regenerates.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 1,
+    "guid": "missinguid_itemScrapGreen",
+    "displayName": "Item Scrap, Green",
+    "itemStatus": "utility,3d,green",
+    "nickname": "scraps2",
+    "description": "Does nothing. Prioritized when used with 3D Printers.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 13,
+    "rarity": 1,
+    "guid": "Seed",
+    "displayName": "Leeching Seed",
+    "itemStatus": "defense,heal,on,hit",
+    "nickname": "seed",
+    "description": "Dealing damage {defense:heals} you for {defense:1} {+1} {defense:health}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 65,
+    "rarity": 1,
+    "guid": "SlowOnHit",
+    "displayName": "Chronobauble",
+    "itemStatus": "offense,on,hit",
+    "nickname": "bauble",
+    "description": "{misc:Slow} enemies for {misc:-60% movement speed} for {misc:2s} {+2s}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 62,
+    "rarity": 1,
+    "guid": "SprintArmor",
+    "displayName": "Rose Buckler",
+    "itemStatus": "defense,armour,shield",
+    "nickname": "buckler",
+    "description": "{defense:Increase armor} by {defense:30} {+30} while {misc:sprinting}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 21,
+    "rarity": 1,
+    "guid": "SprintOutOfCombat",
+    "displayName": "Red Whip",
+    "itemStatus": "defense,movespeed",
+    "nickname": "whip",
+    "description": "Leaving combat boosts {misc:movement speed} by {misc:30%} {+30%}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 103,
+    "rarity": 1,
+    "guid": "missinguid_squidPolyp",
+    "displayName": "Squid Polyp",
+    "itemStatus": "offense,summon,turret,squid,auto",
+    "nickname": "squidTurret",
+    "description": "Activating an interactable summons a {offense:Squid Turret} that attacks nearby enemies at {offense:100%} {+100%} {offense:attack speed}. Lasts {misc:30} seconds.",
+    "unlockTask": "Activate 6 turrets in a single run."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 1,
+    "guid": "missinguid_tank",
+    "displayName": "Ignition Tank",
+    "itemStatus": "offense,ignite,fire,dot",
+    "nickname": "tank",
+    "description": "Ignite effects deal {offense:+300%} {+300%} more damage over time.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 86,
+    "rarity": 1,
+    "guid": "TPHealingNova",
+    "displayName": "Lepton Daisy",
+    "itemStatus": "defense,heal,flower",
+    "nickname": "healFlower",
+    "description": "Release a {defense:healing nova} during the Teleporter event, {defense:healing} all nearby allies for {defense:50%} of their maximum health. Occurs {defense:1} {+1} times.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 1,
+    "guid": "missinguid_unstableTramsmitter",
+    "displayName": "Unstable Transmitter",
+    "itemStatus": "low,health,survival,explosion",
+    "nickname": "unstableTramsmitter",
+    "description": "When reaching below {defense:25%} health the Survivor explodes, dealing {offense:350%} {+350%|per item stack} damage to nearby enemies and teleporting to a random location.\nThis effect has a cooldown of {misc:2} minutes {-5%|per item stack}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 90,
+    "rarity": 1,
+    "guid": "Thorns",
+    "displayName": "Razorwire",
+    "itemStatus": "offense,on,hit,radius",
+    "nickname": "razorHeadband",
+    "description": "Getting hit causes you to explode in a burst of razors, dealing {offense:160% damage}.\nHits up to {offense:5} {+2} targets in a {offense:25m} {+10m} radius.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 1,
+    "guid": "missinguid_noxiousThorn",
+    "displayName": "Noxious Thorn",
+    "itemStatus": "on,hit,nearby,mirror,bleed,debuff,stack",
+    "nickname": "noxiousThorn",
+    "description": "{offense:25% chance} on being hit to inflict nearby enemies with {offense:2} {+1} stacks of bleed.\nIf enemies are already inflicted with one or more stackable debuffs, add {offense:1} {+1} to those debuffs instead.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 46,
+    "rarity": 1,
+    "guid": "WarCryOnMultiKill",
+    "displayName": "Berzerker's Pauldron",
+    "itemStatus": "offense,movespeed,on,kill,locked",
+    "nickname": "berzerk",
+    "description": "{offense:Killing 4 enemies} within {offense:1} second sends you into a {offense:frenzy} for {offense:6s} {+4s}.\nIncreases {misc:movement speed} by {misc:50%} and {offense:attack speed} by {offense:100%}.",
+    "unlockTask": "Charge the Teleporter with less than 10% health."
+  },
+  {
+    "itemNumber": 50,
+    "rarity": 2,
+    "guid": "AlienHead",
+    "displayName": "Alien Head",
+    "itemStatus": "utility",
+    "nickname": "alien",
+    "description": "{misc:Reduce skill cooldown} by {misc:25%} {+25%}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 85,
+    "rarity": 2,
+    "guid": "ArmorReductionOnHit",
+    "displayName": "Shattering Justice",
+    "itemStatus": "offense,armor,break,hammer,hit",
+    "nickname": "hammer",
+    "description": "After hitting an enemy {offense:5} times, reduce their {offense:armor} by {offense:60} for {offense:8} {+8} seconds.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 80,
+    "rarity": 2,
+    "guid": "BarrierOnOverHeal",
+    "displayName": "Aegis",
+    "itemStatus": "utility,heal,defense",
+    "nickname": "fullBarrier",
+    "description": "Healing past full grants you a {defense:temporary barrier} for {defense:50%} {+50%} of the amount you {defense:healed}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 2,
+    "rarity": 2,
+    "guid": "Behemoth",
+    "displayName": "Brilliant Behemoth",
+    "itemStatus": "offense,explosion,on,hit",
+    "nickname": "behemoth",
+    "description": "All your {offense:attacks explode} in a {offense:4m} {+1.5m} radius for a bonus {offense:60%} TOTAL damage to nearby enemies.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 2,
+    "guid": "missinguid_growthNectar",
+    "displayName": "Growth Nectar",
+    "itemStatus": "buff,utility,stack,stats",
+    "nickname": "growthNectar",
+    "description": "While benefiting from 5+ unique buffs, gain {misc:20%} {+20%} bonus stats for {misc:5} seconds.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 38,
+    "rarity": 2,
+    "guid": "BounceNearby",
+    "displayName": "Sentient Meat Hook",
+    "itemStatus": "offense,utility,grab,locked",
+    "nickname": "hook",
+    "description": "{offense:20%} {+20%} chance on hit to {offense:fire homing hooks} at up to {offense:10} {+5} enemies for {offense:100%} TOTAL damage.",
+    "unlockTask": "Loop back to the first stage."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 2,
+    "guid": "missinguid_defensiveMicrobots",
+    "displayName": "Defensive Microbots",
+    "itemStatus": "defense,projectile,protection,shield",
+    "nickname": "microbot",
+    "description": "Shoot down {offense:1} {+1} projectiles within {offense:20m} every {offense:0.5 seconds}. {misc:Recharge rate scales with attack speed}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 35,
+    "rarity": 2,
+    "guid": "Clover",
+    "displayName": "57 Leaf Clover",
+    "itemStatus": "utility,locked",
+    "nickname": "clover",
+    "description": "All random effects are rolled {misc:+1} {+1} {misc:times for a favorable outcome}.",
+    "unlockTask": "Complete 20 stages in a single run."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 2,
+    "guid": "missinguid_",
+    "displayName": "Laser scope",
+    "itemStatus": "offence,critical,damage,x2",
+    "nickname": "scope",
+    "description": "{offense:Critical Strikes} deal an additional {offense:100% damage} {+100%}",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 5,
+    "rarity": 2,
+    "guid": "Dagger",
+    "displayName": "Ceremonial Dagger",
+    "itemStatus": "offense,on,kill,tracking,attack",
+    "nickname": "dagger",
+    "description": "Killing an enemy fires out {offense:3 homing daggers} that deal {offense:150%} {+150%} base damage.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 2,
+    "guid": "missinguid_droneBox",
+    "displayName": "Spare Drone Parts",
+    "itemStatus": "offense,drones,useless",
+    "nickname": "droneBox",
+    "description": "Gain {offense:Col. Droneman}.\nDrones gain {offense:+50%} {+50%} attack speed and cooldown reduction.\nDrones gain {offense:10%} chance to fire a {offense:missile} on hit, dealing {offense:300%} TOTAL damage.\nDrones gain an {offense:automatic chain gun} that deals {offense:6x100%} damage, bouncing to {offense:2} enemies.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 66,
+    "rarity": 2,
+    "guid": "ExtraLife",
+    "displayName": "Dio's Best Friend",
+    "itemStatus": "utility,bear,death,jojo,revive,res,locked",
+    "nickname": "dio",
+    "description": "{misc:Upon Death}, this item will be {misc:consumed} and you will {defense:return to life} with {defense:3 seconds of invulnerability}.",
+    "unlockTask": "Stay alive for 30 consecutive minutes."
+  },
+  {
+    "itemNumber": 22,
+    "rarity": 2,
+    "guid": "FallBoots",
+    "displayName": "H3AD-5T v2",
+    "itemStatus": "defense,attack,fall",
+    "nickname": "cuffs",
+    "description": "Increase {misc:jump height}.\nCreates a {offense:5m-100m} radius {offense:kinetic explosion} on hitting the ground, dealing {offense:1000%-10000%} base damage that scales up with {offense:fall distance}.\nRecharges in {offense:10} {-50%} seconds.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 15,
+    "rarity": 2,
+    "guid": "GhostOnKill",
+    "displayName": "Happiest Mask",
+    "itemStatus": "offense,on,kill",
+    "nickname": "mask",
+    "description": "Killing enemies has a {offense:7%} chance to {offense:spawn a ghost} of the killed enemy with {offense:1500%} damage. Lasts {offense:30s} {+30s}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 2,
+    "guid": "missinguid_warBonds",
+    "displayName": "War Bonds",
+    "itemStatus": "utility,gold,stack,difficulty,level",
+    "nickname": "warBonds",
+    "description": "Yields {offense:75} gold {+25 gold|per item stack} based on current difficulty level and the survivor's level at the start of every stage.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 69,
+    "rarity": 2,
+    "guid": "HeadHunter",
+    "displayName": "Wake of Vultures",
+    "itemStatus": "utility,elite,poe,headhunter",
+    "nickname": "headhunter",
+    "description": "Gain the {offense:power} of any killed elite monster for {offense:8s} {+5s}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 14,
+    "rarity": 2,
+    "guid": "Icicle",
+    "displayName": "Frost Relic",
+    "itemStatus": "offense,on,kill",
+    "nickname": "ice",
+    "description": "Killing an enemy surrounds you with an {offense:ice storm} that deals {offense:1200% damage per second} and {misc:slows} enemies by {misc:80%} for {misc:1.5s}.\nThe storm {offense:grows with every kill}, increasing its radius by {offense:2m}.\nStacks up to {offense:18m} {+12m}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 2,
+    "guid": "missinguid_rainCoat",
+    "displayName": "Ben's Raincot",
+    "itemStatus": "defense,debuff,cleanse,tank",
+    "nickname": "rainCoat",
+    "description": "Prevents {misc:1} {+1} {offense:debuff} and instead grants a {defense:temporary barrier} for {defense:10%} of {defense:maximum health}. Recharges every {misc:5} seconds.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 75,
+    "rarity": 2,
+    "guid": "IncreaseHealing",
+    "displayName": "Rejuvenation Rack",
+    "itemStatus": "defense,heal,double,locked",
+    "nickname": "horn",
+    "description": "{defense:Heal +100%} {+100%} more.",
+    "unlockTask": "Without healing, reach and complete the 3rd Teleporter event."
+  },
+  {
+    "itemNumber": 70,
+    "rarity": 2,
+    "guid": "KillEliteFrenzy",
+    "displayName": "Brainstalks",
+    "itemStatus": "offense,locked",
+    "nickname": "brain",
+    "description": "Upon killing an elite monster, {offense:enter a frenzy} for {offense:4s} {+4s} where {misc:skills have no cooldowns}.",
+    "unlockTask": "Defeat an Elite boss on Monsoon difficulty."
+  },
+  {
+    "itemNumber": 95,
+    "rarity": 2,
+    "guid": "LaserTurbine",
+    "displayName": "Resonance Disc",
+    "itemStatus": "offense,charge,piercing,explode",
+    "nickname": "disc",
+    "description": "Killing {offense:4} enemies in {misc:7 seconds} charges the Resonance Disc.\nThe disc launches itself toward a target for {offense:300%} base damage {+300%}, piercing all enemies it doesn't kill, and then explodes for {offense:1000%} base damage {+1000%}.\nReturns to the user, striking all enemies along the way for {offense:300%} base damage {+300%}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 2,
+    "guid": "missinguid_runicLens",
+    "displayName": "Runic Lens",
+    "itemStatus": "on,hit,spawn,meteor,target,targeted",
+    "nickname": "runicLens",
+    "description": "{misc:Overspill}. {misc:5%} chance {+1%|per 100% done on initial hit plus 1% per item stack} on hit to summon a meteor on the target, dealing {offense:2000%} damage {+50% damage|per 100% damage done on initial hit plus +50% damage per item stack}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 2,
+    "guid": "missinguid_hugeMissile",
+    "displayName": "Pocket I.C.B.M",
+    "itemStatus": "offense,missile,triple",
+    "nickname": "hugeMissile",
+    "description": "All missile items and equipment fire an additional {offense:2 missiles}. Increase missile damage by {offense:0%} {+50%}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 31,
+    "rarity": 2,
+    "guid": "NovaOnHeal",
+    "displayName": "N'kuhana's Opinion",
+    "itemStatus": "offense,locked",
+    "nickname": "opinion",
+    "description": "Store {defense:100%} {+100%} of healing as {defense:Soul Energy}.\nAfter your {defense:Soul Energy} reaches {defense:10%} of your {defense:maximum health}, {offense:fire a skull} that deals {offense:250%} of your {defense:Soul Energy} as {offense:damage}.",
+    "unlockTask": "Find the Altar to N'kuhana."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 2,
+    "guid": "missinguid_scorpion",
+    "displayName": "Symbiotic Scorpion",
+    "itemStatus": "utility,debuff,stack",
+    "nickname": "scorpion",
+    "description": "{offense:100%} chance on hit to reduce {offense:armor} by {offense:2} {+2} {offense:permanently}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 105,
+    "rarity": 2,
+    "guid": "missinguid_interstellarDeskPlant",
+    "displayName": "Interstellar Desk Plant",
+    "itemStatus": "heal,defense,on kill",
+    "nickname": "deskPlant",
+    "description": "On kill, plant a {defense:healing} fruit seed that grows into a plant after {misc:5} seconds.\nThe plant {defense:heals} for {defense:10%} of {defense:maximum health} every second to all allies within {defense:5m} {+5m}. Lasts {misc:10} seconds.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 2,
+    "guid": "missinguid_bottle",
+    "displayName": "Bottled Chaos",
+    "itemStatus": "utility,trigger,equipment,useless",
+    "nickname": "bottle",
+    "description": "Trigger a {offense:random equipment} effect {offense:1} {+1} time(s).",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 2,
+    "guid": "missinguid_sonorousWhispers",
+    "displayName": "Sonorous Whispers",
+    "itemStatus": "on,kill,utility,drop,item",
+    "nickname": "sonorousWhispers",
+    "description": "When a large monster is killed it will always drop an item. All elites have a {misc:15%} chance of dropping an item {+5%|per item stack}.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 2,
+    "guid": "missinguid_itemScrapRed",
+    "displayName": "Item Scrap, Red",
+    "itemStatus": "utility,3d,rare,red",
+    "nickname": "scraps3",
+    "description": "Does nothing. Prioritized when used with 3D Printers.",
+    "unlockTask": null
+  },
+  {
+    "itemNumber": 32,
+    "rarity": 2,
+    "guid": "ShockNearby",
+    "displayName": "Unstable Tesla Coil",
+    "itemStatus": "offense,close,locked",
+    "nickname": "tesla",
+    "description": "Fire out {offense:lightning} that hits {offense:3} {+2} enemies for {offense:200%} base damage every {offense:0.5s}.\nThe Tesla Coil switches off every {offense:10 seconds}.",
+    "unlockTask": "Deal 5000 damage in one shot."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 2,
+    "guid": "missinguid_electricBoomerang",
+    "displayName": "Electric Boomerang",
+    "itemStatus": "better,guitar,on,hit,electric,stun",
+    "nickname": "electricBoomerang",
+    "description": "{offense:15%} chance on hit to fire an electric boomerang that travels a short distance before returning, dealing {offense:30%} {+30%} damage and stunning all enemies hit."
+  },
+  {
+    "itemNumber": 51,
+    "rarity": 2,
+    "guid": "Talisman",
+    "displayName": "Soulbound Catalyst",
+    "itemStatus": "utility,equipment,locked",
+    "nickname": "soul",
+    "description": "{offense:Kills reduce} {misc:equipment cooldown} by {misc:4s} {+2s}.",
+    "unlockTask": "Discover and activate 8 unique Newt Altars."
+  },
+  {
+    "itemNumber": 68,
+    "rarity": 2,
+    "guid": "UtilitySkillMagazine",
+    "displayName": "Hardlight Afterburner",
+    "itemStatus": "utility,charge",
+    "nickname": "burner",
+    "description": "Add {misc:+2} {+2} charges of your {misc:Utility skill}.\n{misc:Reduces Utility skill cooldown} by {misc:33%}."
+  },
+  {
+    "itemNumber": 101,
+    "rarity": 3,
+    "guid": "missinguid_artifactKey",
+    "displayName": "Artifact Key",
+    "itemStatus": "activation",
+    "nickname": "artifactKey",
+    "description": "A stone shard with immense power."
+  },
+  {
+    "itemNumber": 53,
+    "rarity": 3,
+    "guid": "BeetleGland",
+    "displayName": "Queen's Gland",
+    "itemStatus": "utility,invocation",
+    "nickname": "beetle",
+    "description": "Every 30 seconds, {misc:summon a Beetle Guard} with bonus {offense:300%} damage and {defense:100%} health.\nCan have up to {misc:1} {+1} Guards at a time."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 3,
+    "guid": "missinguid_shatterspleen",
+    "displayName": "Shatterspleen",
+    "itemStatus": "offense,critical hit,bleed,explode,on death",
+    "nickname": "critBleed",
+    "description": "{offense:Critical Strikes bleed} enemies for {offense:240%} base damage. {offense:Bleeding} enemies {offense:explode} on death for {offense:400%} {+400%} damage, plus an additional {offense:15%} {+15%} of their maximum health."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 3,
+    "guid": "missinguid_moltenPerforator",
+    "displayName": "Molten Perforator",
+    "itemStatus": "offense,magma,on hit",
+    "nickname": "magmaTooth",
+    "description": "{offense:10%} chance on hit to call forth {offense:3 magma balls} from an enemy, dealing {offense:300%} {+300%} damage and {offense:igniting} all enemies."
+  },
+  {
+    "itemNumber": 52,
+    "rarity": 3,
+    "guid": "Knurl",
+    "displayName": "Titanic Knurl",
+    "itemStatus": "defense,life",
+    "nickname": "knurl",
+    "description": "{defense:Increases maximum health} by {defense:40} {+40} and {defense:base health regeneration} by {defense:+1.6 hp/s} {+1.6 hp/s}."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 3,
+    "guid": "missinguid_chargedPerforator",
+    "displayName": "Charged Perforator",
+    "itemStatus": "offense,lightning,random,new",
+    "nickname": "whiteHook",
+    "description": "{offense:10%} chance on hit to do down a lightning strike, dealing {offense:500%} {+500%} damage."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 3,
+    "guid": "missinguid_defenseNucleus",
+    "displayName": "Defense Nucleus",
+    "itemStatus": "utility,summon,triangle",
+    "nickname": "triangleSummon",
+    "description": "Killing elite monsters spawns an {offense:Alpha Construct}. Limited to {misc:4} {+4}."
+  },
+  {
+    "itemNumber": 97,
+    "rarity": 3,
+    "guid": "NovaOnLowHealth",
+    "displayName": "Genesis Loop",
+    "itemStatus": "low,health,nova,explode,recharge,cooldown",
+    "nickname": "weirdTail",
+    "description": "Falling below {debuff:25% health} causes you to explode, dealing {offense:6000% base damage}. Recharges every {misc:30 seconds} {-50%}."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 3,
+    "guid": "missinguid_planula",
+    "displayName": "Planula",
+    "itemStatus": "defense,heal,egg,flat,incoming,new",
+    "nickname": "magmaEgg",
+    "description": "Heal from {offense:incoming damage} for {defense:15} {+15}"
+  },
+  {
+    "itemNumber": 92,
+    "rarity": 3,
+    "guid": "Pearl",
+    "displayName": "Pearl",
+    "itemStatus": "defense,health,maximum",
+    "nickname": "pearl",
+    "description": "Increases {defense:maximum health} by {defense:10%} {+10%}."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 3,
+    "guid": "missinguid_empathyCores",
+    "displayName": "Empathy Cores",
+    "itemStatus": "offense,summon,drone,boost,new",
+    "nickname": "doubleDrone",
+    "description": "Every 30 seconds, {misc:summon two Solus Probes} that gain {offense:+100%} {+100%} damage per {misc:ally on your team}."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 3,
+    "guid": "missinguid_itemScrapYellow",
+    "displayName": "Item Scrap, Yellow",
+    "itemStatus": "utility,3d,unique,yelllow",
+    "nickname": "scraps4",
+    "description": "Does nothing. Prioritized when used with 3D Printers."
+  },
+  {
+    "itemNumber": 93,
+    "rarity": 3,
+    "guid": "ShinyPearl",
+    "displayName": "Irradiant Pearl",
+    "itemStatus": "defense,boost,statistics",
+    "nickname": "shinyPearl",
+    "description": "Increases {misc:ALL stats} by {misc:10%} {+10%}."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 3,
+    "guid": "missinguid_miredUrn",
+    "displayName": "Mired Urn",
+    "itemStatus": "offense,heal,slow,near,proximity",
+    "nickname": "tarUrn",
+    "description": "While in combat, the nearest 1 {+1} characters to you within {offense:13m} will be \"tethered\" to you, dealing {offense:100%} damage per second, applying {offense:tar}, and {defense:healing} you for {defense:100%} of the damage dealt."
+  },
+  {
+    "itemNumber": 83,
+    "rarity": 3,
+    "guid": "SprintWisp",
+    "displayName": "Little Disciple",
+    "itemStatus": "offense,tracking,sprint,attack",
+    "nickname": "sprintingWisp",
+    "description": "Fire a {offense:tracking wisp} for {offense:300%} {+300%} {offense:damage}.\nFires every 1.6 seconds while sprinting. Fire rate increases with {misc:movement speed}."
+  },
+  {
+    "itemNumber": 82,
+    "rarity": 3,
+    "guid": "TitanGoldDuringTP",
+    "displayName": "Halcyon Seed",
+    "itemStatus": "utility,invocation,boss,summon",
+    "nickname": "goldenSeed",
+    "description": "Summon {offense:Aurelionite} during the teleporter event.\nIt has {offense:100%} {+50%} {offense:damage} and {defense:100%} {+100%} {defense:health}."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 4,
+    "guid": "missinguid_corruptedBear",
+    "displayName": "Safer Spaces",
+    "itemStatus": "defense,cooldown,block",
+    "nickname": "corruptedBear",
+    "description": "{defense:Block} incoming damage once. Recharges after {misc:15 seconds} {-10%}.\n{corrupt:Corrupts all Tougher Times}."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 4,
+    "guid": "missinguid_needletick",
+    "displayName": "Needletick",
+    "itemStatus": "offense,utility,collapse",
+    "nickname": "needletick",
+    "description": "{offense:10%} {+10%} chance to {offense:collapse} an enemy for {offense:400%} base damage.\n{corrupt:Corrupts all Tri-Tip Daggers}."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 4,
+    "guid": "missinguid_corruptedGlasses",
+    "displayName": "Lost Seer's Lenses",
+    "itemStatus": "offense,crit,insta,kill,elite",
+    "nickname": "corruptedGlasses",
+    "description": "Your attacks have a {offense:0.5%} {+0.5%} chance to {offense:instantly kill} a {offense:non-Boss enemy}.\n{corrupt:Corrupts all Lens-Maker's Glasses}."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 4,
+    "guid": "missinguid_weirdShroom",
+    "displayName": "Weeping Fungus",
+    "itemStatus": "defense,sprint,heal,percent",
+    "nickname": "weirdShroom",
+    "description": "{defense:Heals} for {defense:2%} {+2%} of your {defense:health} every second {misc:while sprinting}.\n{corrupt:Corrupts all Bustling Fungi}."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 4,
+    "guid": "missinguid_corruptedKey",
+    "displayName": "Encrusted Key",
+    "itemStatus": "uility,chest,void",
+    "nickname": "corruptedKey",
+    "description": "A {misc:hidden cache} containing an item (60%/{defense:30%}/{debuff:10%}) will appear in a random location {misc:on each stage}. Opening the cache {misc:consumes} this item.\n{corrupt:Corrupts all Rusted Key}."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 4,
+    "guid": "missinguid_corruptedThing",
+    "displayName": "Polylute",
+    "itemStatus": "offense,lightning,group",
+    "nickname": "corruptedThing",
+    "description": "{offense:25%} chance to fire {offense:lightning} for {offense:60%} TOTAL damage up to {offense:3} {+3} times.\n{corrupt:Corrupts all Ukuleles}."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 4,
+    "guid": "missinguid_superRing",
+    "displayName": "Singularity Band",
+    "itemStatus": "offense,blackhole,grab,on,hit",
+    "nickname": "superRing",
+    "description": "Hits that deal {offense:more than 400% damage} also fire a black hole that {misc:draws enemies within 15m into its center}.\nLasts {misc:5} seconds before collapsing, dealing {offense:100%} {+100%} TOTAL damage.\nRecharges every {misc:20} seconds.\n{corrupt:Corrupts all Kjaro's Band and Runald's Band}."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 4,
+    "guid": "missinguid_superCell",
+    "displayName": "Lysate Cell",
+    "itemStatus": "utility,stack,add,skill",
+    "nickname": "purpleCell",
+    "description": "Add {misc:+1} {+1} charge of your {misc:Special skill}.\n{corrupt:Corrupts all Fuell Cells}."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 4,
+    "guid": "missinguid_flame",
+    "displayName": "Voidsent Flame",
+    "itemStatus": "offense,on,hit,burst,damage,zone,great",
+    "nickname": "flame",
+    "description": "Upon hitting an enemy at or above {offense:100% health}, {offense:detonate} them in a {offense:12m} {+2.4m} radius burst for {offense:260%} {+156%} base damage.\n{corrupt:Corrupts all Will-o'-the-wisps}."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 4,
+    "guid": "missinguid_shrimp",
+    "displayName": "Plasma Shrimp",
+    "itemStatus": "offense,on,attack,missile",
+    "nickname": "superMissile",
+    "description": "Gain a {defense:shield} equal to {defense:10%} of your maximum health. While you have a {defense:shield}, hitting an enemy fires a missile that deals {offense:40%} {+50%} TOTAL damage.\n{corrupt:Corrupts all AtG Missile Mk. 1s}."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 4,
+    "guid": "missinguid_plantTentacle",
+    "displayName": "Tentabauble",
+    "itemStatus": "utility,root,on,hit",
+    "nickname": "plantTentacle",
+    "description": "{misc:5%} {+5%} chance on hit to {offense:root} enemies for {misc:1s} {+1s}.\n{corrupt:Corrupts all Chronobaubles}."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 4,
+    "guid": "missinguid_corruptedClover",
+    "displayName": "Benthic Bloom",
+    "itemStatus": "utility,upgrade,next,tier",
+    "nickname": "corruptedClover",
+    "description": "{misc:Upgrades 3} {+3} randoms items to items of the next {misc:higher rarity} at the {misc:start of each stage}.\n{corrupt:Corrupts all 57 Leaf Clovers}."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 4,
+    "guid": "missinguid_hauntedBear",
+    "displayName": "Pluripotent Larva",
+    "itemStatus": "utility,on,death,corrupt,consume",
+    "nickname": "hauntedBear",
+    "description": "{misc:Upon death}, this item will be {misc:consumed} and you will {defense:return to life} with {defense:3 seconds of invulnerability}, and all of your items that can be {misc:corrupted} will be.\n{corrupt:Corrupts all Dio's Best Friends}."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 4,
+    "guid": "missinguid_corruptedScorpion",
+    "displayName": "Newly Hatched Zoea",
+    "itemStatus": "offense,summon,void,ally",
+    "nickname": "corruptedScorpion",
+    "description": "Every {misc:60} {-50%} seconds, gain a random {corrupt:Void} ally. Can have up to {misc:1} {+1} allies at a time.\n{corrupt:Corrupts all Unique Items}."
+  },
+  {
+    "itemNumber": 74,
+    "rarity": 5,
+    "guid": "AutoCastEquipment",
+    "displayName": "Gesture of the Drowned",
+    "itemStatus": "utility,equipment,locked",
+    "nickname": "fossil",
+    "description": "{misc:Reduce equipment cooldown} by {misc:50%} {+15%}.\nForces your Equipment to {misc:activate} whenever it is off {misc:cooldown}.",
+    "unlockCondition": "Kill 20 Hermit Crabs by chasing them off the edge of the map."
+  },
+  {
+    "itemNumber": 107,
+    "rarity": 5,
+    "guid": "missinguid_focusedConvergence",
+    "displayName": "Focused Convergence",
+    "itemStatus": "utility,teleporter,event,smaller,faster",
+    "nickname": "orb",
+    "description": "Teleporters charge {misc:30%} {+30%} {misc:faster}, but the size of the Teleporter zone is {debuff:50%} {-50%} smaller.",
+    "unlockCondition": "In 4 consecutive stages, don't leave the teleporter radius until it is fully charged."
+  },
+  {
+    "itemNumber": 44,
+    "rarity": 5,
+    "guid": "GoldOnHit",
+    "displayName": "Brittle Crown",
+    "itemStatus": "utility",
+    "nickname": "crown",
+    "description": "{misc:30% chance on hit} to gain {misc:2} {+2} {misc:gold}. {misc:Scales over time}.\nOn taking damage, {debuff:lose gold} equal to {debuff:100%} {+100%} of the maximum health percentage you lost."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 5,
+    "guid": "missinguid_coolJacket",
+    "displayName": "Light Flux Pauldron",
+    "itemStatus": "utility,skill,cooldown,bad,trade",
+    "nickname": "coolJacket",
+    "description": "Decrease {misc:skill cooldowns} by {misc:50%} {+50%}. Decrease {offense:attack speed} by {offense:50%} {+50%}."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 5,
+    "guid": "missinguid_pauldron",
+    "displayName": "Stone Flux Pauldron",
+    "itemStatus": "utility,bad,trade",
+    "nickname": "pauldron",
+    "description": "Increase {defense:max health} by {defense:100%} {+100%}. Reduce {misc:movement speed} by {misc:50%} {+50%}."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 5,
+    "guid": "missinguid_purity",
+    "displayName": "Purity",
+    "itemStatus": "utility,cooldown,reduction,bad luck,reroll",
+    "nickname": "snowflake",
+    "description": "All skill cooldowns are reduced by {misc:2} {+1} seconds. All random effects are rolled {misc:+1} {+1} times for an {debuff:unfavorable outcome}.",
+    "unlockCondition": "Beat the game in Monsoon difficulty."
+  },
+  {
+    "itemNumber": 43,
+    "rarity": 5,
+    "guid": "LunarDagger",
+    "displayName": "Shaped Glass",
+    "itemStatus": "offense,suicide",
+    "nickname": "sword",
+    "description": "Increase base damage by {offense:100%} {+100%}.\n{defense:Reduce maximum health by 50%} {+50%}."
+  },
+  {
+    "itemNumber": 96,
+    "rarity": 5,
+    "guid": "LunarPrimaryReplacement",
+    "displayName": "Visions of Heresy",
+    "itemStatus": "active,primary,replace,offense,damage,recharge,cooldown,skill,orb",
+    "nickname": "weirdOrb",
+    "description": "{misc:Replace your Primary Skill} with {misc:Hungering Gaze}.\nFire a flurry of {misc:tracking shards} that detonate after a delay, dealing {offense:120%} base damage. Hold up to 12 charges {+12} that reload after 2 seconds {+2}."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 5,
+    "guid": "missinguid_hookOfHeresy",
+    "displayName": "Hook of Heresy",
+    "itemStatus": "active,secondary,replace,offense,skill,explode",
+    "nickname": "purpleBlade",
+    "description": "{misc:Replace your Secondary Skill} with {misc:Slicing Maelstrom}.\nCharge up a projectile that deals {offense:175% damage per second} to nearby enemies, exploding after {misc:3} seconds to deal {offense:700% damage} and {offense:root} enemies for {misc:3} {+3} seconds. Recharges after 5 {+5} seconds.",
+    "unlockCondition": "Kill 15 boss monsters in a single run."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 5,
+    "guid": "missinguid_essenceOfHeresy",
+    "displayName": "Essence of Heresy",
+    "itemStatus": "active,special,replace,offense,skill,stack,explode",
+    "nickname": "ocarina",
+    "description": "{misc:Replace your Special Skill} with {misc:Ruin}.\nDealing damage adds a stack of {offense:Ruin} for 10 {+10} seconds. Activating the skill {offense:detonates} all Ruin stack at unlimited range, dealing {offense:300% damage} plus {offense:120% damage per stack of Ruin}.\nRecharges after 8 {+8} seconds.",
+    "unlockCondition": "Kill 15 boss monsters in a single run."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 5,
+    "guid": "missinguid_whiteBall",
+    "displayName": "Egocentrism",
+    "itemStatus": "utility,sacrifice,item",
+    "nickname": "whiteBall",
+    "description": "Every {misc:3} {-50%} seconds, gain an {offense:orbiting bomb} that detonates on impact for {offense:360%} damage, up to a maximum of {misc:3} {+1} {misc:bombs}.\nEvery {misc:60} seconds, a random item is {misc:converted} into this item."
+  },
+  {
+    "itemNumber": 98,
+    "rarity": 5,
+    "guid": "LunarTrinket",
+    "displayName": "Beads of Fealty",
+    "itemStatus": "secret,unlock,zone,no,effect",
+    "nickname": "beads",
+    "description": "Seems to do nothing... {debuff:but...}",
+    "unlockCondition": "Unlock the new zone from the \"Hidden Realms\" update when you obliterate with this item."
+  },
+  {
+    "itemNumber": 88,
+    "rarity": 5,
+    "guid": "LunarUtilityReplacement",
+    "displayName": "Strides of Heresy",
+    "itemStatus": "utility,movement,skill,arm,speed,heal,defense",
+    "nickname": "weirdArm",
+    "description": "{misc:Replace your Utility Skill} with {misc:Shadowfade}.\nFade away, becoming {misc:intangible} and gaining {misc:+30% movement speed}. {defense:Heal} for {defense:25%} {+25%} {defense:of your maximum health}. Lasts 3 {+3} seconds.",
+    "unlockCondition": "Kill 15 boss monsters in a single run."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 5,
+    "guid": "missinguid_defiantGouge",
+    "displayName": "Defiant Gouge",
+    "itemStatus": "offense,summon,shrine,on use",
+    "nickname": "tools",
+    "description": "Using a Shrine summons {debuff:enemies} nearby. {misc:Scales over time}."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 5,
+    "guid": "missinguid_longstandingSolitude",
+    "displayName": "Longstanding Solitude",
+    "itemStatus": "on,level,up,free,purchase,conversion,increase,downsize",
+    "nickname": "longstandingSolitude",
+    "description": "{misc:On level up} gain a free unlock for the next purchase {+1 free unlock|per item stack} but {debuff:all gold is converted to experience. Anything that costs gold is increased by 100%} {+100%|per item stack}{debuff:.}"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 5,
+    "guid": "missinguid_mercurialRachis",
+    "displayName": "Mercurial Rachis",
+    "itemStatus": "offense,power,zone,damage",
+    "nickname": "spin",
+    "description": "Creates a Ward of Power in a random location nearby that buffs both enemies and allies within {misc:16m} {+50%}, causing them to deal {offense:+50%} damage."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 5,
+    "guid": "missinguid_domino",
+    "displayName": "Eulogy Zero",
+    "itemStatus": "utility,convert,chance,lunar",
+    "nickname": "domino",
+    "description": "Items have a {misc:5%} {+5%} chance to become a {misc:Lunar} item instead."
+  },
+  {
+    "itemNumber": 71,
+    "rarity": 5,
+    "guid": "RepeatHeal",
+    "displayName": "Corpsebloom",
+    "itemStatus": "defense,heal,dot",
+    "nickname": "flower",
+    "description": "{defense:Heal +100%} {+100%} more.\n{defense:All healing is applied over time}.\nCan {defense:heal} for a {defense:maximum} of {defense:10%} {-50%} of your {defense:health per second}."
+  },
+  {
+    "itemNumber": 49,
+    "rarity": 5,
+    "guid": "ShieldOnly",
+    "displayName": "Transcendence",
+    "itemStatus": "defense,chaos",
+    "nickname": "transc",
+    "description": "{defense:Convert} all but {defense:1 health} into {defense:regenerating shields}.\n{defense:Gain 50%} {+25%} {defense:maximum health}."
+  },
+  {
+    "itemNumber": 23,
+    "rarity": 5,
+    "guid": "BurnNearby",
+    "displayName": "Helfire Tincture",
+    "itemStatus": "offense,suicide,fire,equipment,locked",
+    "nickname": "burn",
+    "description": "Ignite ALL characters within 8m. Deal {offense:5% of your maximum health/second as burning} to yourself.\nThe burn is {offense:0.5x} stronger on allies, and {offense:24x} stronger on enemies.\nCooldown: {misc:45s}",
+    "unlockCondition": "Kill 15 enemies simultaneously."
+  },
+  {
+    "itemNumber": 26,
+    "rarity": 5,
+    "guid": "CrippleWard",
+    "displayName": "Effigy of Grief",
+    "itemStatus": "utility,equipment",
+    "nickname": "slow",
+    "description": "ALL characters are {misc:slowed by 50%} and has their {offense:armor reduced by 20}.\nCan place up to {misc:5}.\nCooldown: {misc:15s}"
+  },
+  {
+    "itemNumber": 3,
+    "rarity": 5,
+    "guid": "Meteor",
+    "displayName": "Glowing Meteorite",
+    "itemStatus": "offense,suicide,equipment,locked",
+    "nickname": "meteorite",
+    "description": "{offense:Rain meteors} from the sky, damaging ALL characters for {offense:600% damage per blast}.\nLast 20 seconds.",
+    "unlockCondition": "Carry 5 Lunar items in a single run."
+  },
+  {
+    "itemNumber": 28,
+    "rarity": 5,
+    "guid": "Tonic",
+    "displayName": "Spinel Affliction",
+    "itemStatus": "utility,buff,debuff,attack,speed,movespeed,health,regen",
+    "nickname": "tonic",
+    "description": "Drink the Tonic, gaining a boost for 15 seconds.\nIncreases {offense:damage} by {offense:+100%}.\nIncreases {offense:attack speed} by {offense:+70%}.\nIncreases {offense:armor} by {offense:+20}.\nIncreases {defense:maximum health} by {defense:+50%}.\nIncreases {defense:passive health regeneration} by {defense:+300%}.\nIncreases {misc:movespeed} by {misc:+30%}.\nWhen the tonic wears off, you have {debuff:20%} chance to gain a {debuff:Tonic Affliction, reducing all of your stats} by {debuff:-5%} {-5%}",
+    "unlockCondition": "Discover and enter three unique portals."
+  },
+  {
+    "itemNumber": 16,
+    "rarity": 6,
+    "guid": "BFG",
+    "displayName": "Preon Accumulator",
+    "itemStatus": "offense,locked",
+    "nickname": "beam",
+    "description": "Fires preon tendrils, zapping enemies within 35m up to {offense:600% damage/second}.\nOn contact, detonate in an enormous 20m explosion for {offense:4000% damage}.\nCooldown: {misc:140s}",
+    "unlockCondition": "Open the Timed Security Chest on Rallypoint Delta."
+  },
+  {
+    "itemNumber": 11,
+    "rarity": 6,
+    "guid": "Blackhole",
+    "displayName": "Blackhole",
+    "itemStatus": "offense,stack",
+    "nickname": "blackhole",
+    "description": "Fire a black hole that {misc:draws enemies within 30m into its center}. Last 10 seconds.\nCooldown: {misc:60s}"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 6,
+    "guid": "missinguid_oldGun",
+    "displayName": "Trophy Hunter's Tricorn",
+    "itemStatus": "utility,one,shoot,boss,drop,item",
+    "nickname": "oldGun",
+    "description": "{offense:Execute} any enemy capable of spawning a {offense:unique reward}, and it will drop that {offense:item}. Equipment is {misc:consumed} on use."
+  },
+  {
+    "itemNumber": 30,
+    "rarity": 6,
+    "guid": "Cleanse",
+    "displayName": "Blast Shower",
+    "itemStatus": "utility,defense,cleanse,debuff",
+    "nickname": "potThing",
+    "description": "{misc:Cleanse} all negative effects. Includes debuffs, damage over time, and nearby projectiles.\nCooldown: {misc:20s}",
+    "unlockCondition": "Die three fiery deaths."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 6,
+    "guid": "CommandMissile",
+    "displayName": "Disposable Missile Launcher",
+    "itemStatus": "attack",
+    "nickname": "missile",
+    "description": "Fire a swarm of {offense:12} missiles that deal {offense:12x300%} damage.\nCooldown: {misc:45s}"
+  },
+  {
+    "itemNumber": 13,
+    "rarity": 6,
+    "guid": "CritOnUse",
+    "displayName": "Ocular HUD",
+    "itemStatus": "attack",
+    "nickname": "hud",
+    "description": "Gain {offense:+100% Critical Strike Chance} for 8 seconds.\nCooldown: {misc:60s}"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 6,
+    "guid": "missinguid_forgiveMePlease",
+    "displayName": "Forgive Me Please",
+    "itemStatus": "offense,trigger,on kill",
+    "nickname": "voodoo",
+    "description": "Throw a cursed doll out that {offense:triggers} any {offense:On-kill} effects you have every {misc:1} second for {misc:8} seconds.\nCooldown: {misc:45}",
+    "unlockCondition": "Die 20 times."
+  },
+  {
+    "itemNumber": 14,
+    "rarity": 6,
+    "guid": "DroneBackup",
+    "displayName": "The Back-up",
+    "itemStatus": "utility,locked",
+    "nickname": "drone",
+    "description": "Call {offense:4 Strike Drones} to fight for you.\nLast 25 seconds.\nCooldown: {misc:100s}",
+    "unlockCondition": "Repair 30 drones or turrets."
+  },
+  {
+    "itemNumber": 31,
+    "rarity": 6,
+    "guid": "FireBallDash",
+    "displayName": "Volcania Egg",
+    "itemStatus": "utility,offense,detonate,movement",
+    "nickname": "egg",
+    "description": "Turn into a {offense:draconic fireball} for {offense:5} seconds. Deal {offense:500% damage} on impact.\nDetonates at the end for {offense:800% damage}.\nCooldown: {misc:30s}"
+  },
+  {
+    "itemNumber": 2,
+    "rarity": 6,
+    "guid": "Fruit",
+    "displayName": "Foreign Fruit",
+    "itemStatus": "defense,heal",
+    "nickname": "fruit",
+    "description": "Instantly heal for {defense:50% of your maximum health}.\nCooldown: {misc:45s}"
+  },
+  {
+    "itemNumber": 33,
+    "rarity": 6,
+    "guid": "GainArmor",
+    "displayName": "Jade Elephant",
+    "itemStatus": "utility,defense,resistance,armor",
+    "nickname": "elephant",
+    "description": "Gain {offense:500 armor} for {misc:5 seconds}.\nCooldown: {misc:45s}"
+  },
+  {
+    "itemNumber": 27,
+    "rarity": 6,
+    "guid": "Gateway",
+    "displayName": "Eccentric Vase",
+    "itemStatus": "utility,scan,locked",
+    "nickname": "vase",
+    "description": "Create a {misc:quantum tunnel} of up to {misc:1000m} in length. Lasts 30 seconds.\nCooldown: {misc:45s}",
+    "unlockCondition": "Defeat the guardian of Gilded Coast without any beacons deactivating."
+  },
+  {
+    "itemNumber": 20,
+    "rarity": 6,
+    "guid": "GoldGat",
+    "displayName": "The Crowdfunder",
+    "itemStatus": "offense,troll,locked",
+    "nickname": "gatling",
+    "description": "Fires a continuous barrage that deals {offense:100% damage per bullet}.\nCosts $1 per bullet. Costs increases over time.\nCooldown: {misc:5s}",
+    "unlockCondition": "Collect $30,480 total gold."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 6,
+    "guid": "missinguid_goobo",
+    "displayName": "Goobo Jr.",
+    "itemStatus": "utility,clone,summon",
+    "nickname": "goobo",
+    "description": "Spawn a gummy clone that has {offense:300% damage} and {defense:300% health}. Expires in {misc:30} seconds.\nCooldown: {misc:100s}"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 6,
+    "guid": "missinguid_seedOfLife",
+    "displayName": "Seed of Life",
+    "itemStatus": "utility,revive,bear",
+    "nickname": "seedOfLife",
+    "description": "Revives the user when killed or dead allies on activation. Consumed on use.\nCooldown: {misc:60s}",
+    "unlockCondition": "Journey to the Prime Meridian and defeat the False Son."
+  },
+  {
+    "itemNumber": 18,
+    "rarity": 6,
+    "guid": "Jetpack",
+    "displayName": "Milky Chrisalis",
+    "itemStatus": "utility,movespeed",
+    "nickname": "larva",
+    "description": "Sprout wings and {misc:fly for 15 seconds}.\nGain {misc:+20% movement speed} for the duration.\nCooldown: {misc:60s}"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 6,
+    "guid": "missinguid_superMassiveLeech",
+    "displayName": "Super Massive Leech",
+    "itemStatus": "defense,heal,leech,on hit",
+    "nickname": "leech",
+    "description": "{defense:Heal} for {defense:20%} of the {offense:damage} you deal. Lasts {defense:8} seconds.\nCooldown: {misc:60s}"
+  },
+  {
+    "itemNumber": 19,
+    "rarity": 6,
+    "guid": "Lightning",
+    "displayName": "Royal Capacitor",
+    "itemStatus": "offense,locked",
+    "nickname": "lightning",
+    "description": "Call down a lightning strike on a targeted monster, dealing {offense:3000% damage} and {offense:stunning} nearby monsters.\nCooldown: {misc:20s}",
+    "unlockCondition": "Defeat the Teleporter bosses after activating 2 Shrines of the Mountain."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 6,
+    "guid": "missinguid_molotov",
+    "displayName": "Molotov (6-Pack)",
+    "itemStatus": "offense,fire",
+    "nickname": "molotov",
+    "description": "Throw {offense:6} molotov cocktails that {offense:ignites} enemies for {offense:500% base damage}. Each molotov leaves a burning area for {offense:200% damage per second}.\nCooldown: {misc:45s}"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 6,
+    "guid": "missinguid_creditCard",
+    "displayName": "Executive Card",
+    "itemStatus": "utility,shop,money,gold",
+    "nickname": "creditCard",
+    "description": "Whenever you make a gold purchase, get {misc:10%} of the spent gold back. If the purchase is a {misc:multishop} terminal, the other terminals will {misc:remaing open}.\nCooldown: {misc:0.1s}"
+  },
+  {
+    "itemNumber": 21,
+    "rarity": 6,
+    "guid": "PassiveHealing",
+    "displayName": "Gnarled Woodsprite",
+    "itemStatus": "defense,heal,locked",
+    "nickname": "spirit",
+    "description": "Gain a Woodsprite follower that heals a friendly target for {defense:10% of their maximum health} instantly, then {defense:1.5% of your maximum health} every second.\nActivating the equipment assigns a new target, or yourself if there are no targets available.\nCooldown: {misc:15s}",
+    "unlockCondition": "Fully upgrade a Shrine of the Woods."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 6,
+    "guid": "missinguid_recycler",
+    "displayName": "Recycler",
+    "itemStatus": "utility,reroll,recycle,transform",
+    "nickname": "recycler",
+    "description": "{misc:Transform} an Item or Equipment into a different one. {misc:Can only be converted in the same tier one time}.\nCooldown: {misc:45s}",
+    "unlockCondition": "Destroy 20 flying rocks in Sky Meadow."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 6,
+    "guid": "missinguid_sawmerang",
+    "displayName": "Sawmerang",
+    "itemStatus": "offense,boomerang",
+    "nickname": "metalSpin",
+    "description": "Throw {offense:three large saw blades} that slice through enemies for {offense:3x400%} damage.\nAlso deals an additional {offense:3x100% damage per second} while {offense:bleeding} enemies.\nCan {offense:strike} enemies again on the way back.\nCooldown: {misc:45s}"
+  },
+  {
+    "itemNumber": 25,
+    "rarity": 6,
+    "guid": "Scanner",
+    "displayName": "Radar Scanner",
+    "itemStatus": "utility,scan,locked",
+    "nickname": "radar",
+    "description": "{misc:Reveal} all interactables within 500m for {misc:10 seconds}.\nCooldown: {misc:45s}",
+    "unlockCondition": "Collect 10 Monster or Environment Logs."
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 6,
+    "guid": "missinguid_goragsOpus",
+    "displayName": "Gorag's Opus",
+    "itemStatus": "utility,offense,frenzy,movement speed,attack speed",
+    "nickname": "drum",
+    "description": "All allies enter a {offense:frenzy} for {misc:7} seconds. Increases {misc:movement speed} by {misc:50%} and {offense:attack speed} by {offense:100%}.\nCooldown: {misc:45s}"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 6,
+    "guid": "missinguid_fridge",
+    "displayName": "Remote Caffeinator",
+    "itemStatus": "utility,heal,drop,coffee,deliver",
+    "nickname": "fridge",
+    "description": "Request an {offense:Eclipse Zero Vending Machine} from the {offense:UES Safe Travels}. Delivery guaranteed in {misc:5 seconds}, dealing {offense:2000% damage}. {defense:Heal} up to 3 targets for {defense:25% of their maximum health}.\nCooldown: {misc:60s}"
+  }
+]
