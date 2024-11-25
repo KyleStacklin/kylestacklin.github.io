@@ -4,22 +4,23 @@ import Button from "./Button";
 import { rarityConverter, rarityTextToNum } from "./RiskOfRainBusinessLogic";
 import riskOfRainUiState from "./RiskOfRainUiState";
 import { useStyles } from "./useStyles";
+import { observer } from "mobx-react-lite";
+import RiskOfRain2HeaderHamburger from "./RiskOfRain2HeaderHamburger";
 
-type Props = {
-
-};
-
-const RiskOfRain2Header = (props: Props) => {
+const RiskOfRain2Header = observer(() => {
   const styles = useStyles();
   const uiState = riskOfRainUiState
   const items = uiState.list
   const showGrid = uiState.displayType === 'grid'
   const showList = uiState.displayType === 'list'
-  const showTierList = uiState.displayType === 'tierList'
   const showFlashCards = uiState.displayType === 'flashCards'
 
   const changeDisplayType = (display: string) => {
     uiState.setDisplayType(display)
+  }
+
+  const handleHamburgerClick = () => {
+    uiState.headerExpanded = !uiState.headerExpanded
   }
 
   const handleFilter = (filter?: string) => {
@@ -58,59 +59,72 @@ const RiskOfRain2Header = (props: Props) => {
 
   const rarities = ['Common', 'Uncommon', 'Legendary', 'Boss', 'Void', 'Lunar', 'Equipment']
 
+  const headerStyle = uiState.headerExpanded ? { height: '135px' } : { height: '24px' }
+
   return (
-    <div className={headerClasses}>
-      <div className={styles.flexRow}>Risk of Rain 2 Database</div>
-
-      <div className={filterOptionsClasses}>
-        <Button
-          onClick={() => changeDisplayType('grid')}
-          toggle={true}
-          toggleActive={showGrid}
-        >
-          Grid
-        </Button>
-        <Button
-          onClick={() => changeDisplayType('list')}
-          toggle={true}
-          toggleActive={showList}
-        >
-          List
-        </Button>
-        <Button
-          onClick={() => changeDisplayType('flashCards')}
-          toggle={true}
-          toggleActive={showFlashCards}
-        >
-          Flash Cards
-        </Button>
+    <div className={headerClasses} style={headerStyle}>
+      <div className={styles.flexSpaceBetween}>
+        <div className={styles.headerTitle}>Risk of Rain 2 Database</div>
+        <RiskOfRain2HeaderHamburger expanded={uiState.headerExpanded} onClick={handleHamburgerClick} />
       </div>
 
-      <div className={filterOptionsClasses} style={{overflow: 'auto'}}>
+      { uiState.headerExpanded &&
 
-        {
-          rarities.map((rarity, i) => {
-            const active = uiState.filters.has(rarity)
-            const { background: bgColor, rarityColor } = rarityConverter(rarityTextToNum(rarity))
-            const background = (bgColor && active) ?
-              { background: bgColor, border: `1px solid ${rarityColor}` } :
-              { border: `1px solid ${rarityColor}`, color: rarityColor }
-            return (
-              <Button
-                key={i}
-                onClick={handleFilter}
-                style={background}
-                toggle={true}
-                toggleActive={active}
-              >
-                  {rarity}
-              </Button>
-            )
-          })
-        }
-      </div>
+        <>
+          <div className={filterOptionsClasses}>
+            <Button
+              onClick={() => changeDisplayType('grid')}
+              toggle={true}
+              toggleActive={showGrid}
+            >
+              Grid
+            </Button>
+            <Button
+              onClick={() => changeDisplayType('list')}
+              toggle={true}
+              toggleActive={showList}
+            >
+              List
+            </Button>
+            <Button
+              onClick={() => changeDisplayType('flashCards')}
+              toggle={true}
+              toggleActive={showFlashCards}
+            >
+              Flash Cards
+            </Button>
+          </div>
 
-      <div className={searchBarContainerClasses}>
+          <div className={filterOptionsClasses}>
+
+            {
+              rarities.map((rarity, i) => {
+                const active = uiState.filters.has(rarity)
+                const { background: bgColor, rarityColor } = rarityConverter(rarityTextToNum(rarity))
+                const background = (bgColor && active) ?
+                  { background: bgColor, border: `1px solid ${rarityColor}` } :
+                  { border: `1px solid ${rarityColor}`, color: rarityColor }
+                return (
+                  <Button
+                    key={i}
+                    onClick={handleFilter}
+                    style={background}
+                    toggle={true}
+                    toggleActive={active}
+                  >
+                      {rarity}
+                  </Button>
+                )
+              })
+            }
+          </div>
+        </>
+
+      }
+
+
+
+      {/* <div className={searchBarContainerClasses}>
         <input
           className={styles.searchBar}
           type="text"
@@ -123,9 +137,9 @@ const RiskOfRain2Header = (props: Props) => {
           })
           uiState.filteredList = filteredItems
         }} />
-      </div>
+      </div> */}
     </div>
   )
-};
+});
 
 export default RiskOfRain2Header;

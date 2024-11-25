@@ -8,13 +8,15 @@ import { useStyles } from "./useStyles";
 import RiskOfRain2Header from "./RiskOfRain2Header";
 import RiskOfRain2TierList from "./RiskOfRain2TierList";
 import RiskOfRain2FlashCards from "./RiskOfRain2FlashCards";
+import GridContainer from "./GridListContainer";
+import GridListContainer from "./GridListContainer";
 
 
 
 const RiskOfRain2 = observer(() => {
   const styles = useStyles();
   const uiState = riskOfRainUiState
-  const items = uiState.filteredList
+  const filteredList = uiState.filteredList
 
   const showGrid = uiState.displayType === 'grid'
   const showList = uiState.displayType === 'list'
@@ -35,15 +37,19 @@ const RiskOfRain2 = observer(() => {
       <RiskOfRain2Header />
 
       { showList &&
-        <div className={styles.list}>
-          { items.map((item, i) => <RiskOfRainListItem key={i} item={item} />) }
-        </div>
+        <GridListContainer>
+          <div className={styles.list}>
+            { filteredList.map((item, i) => <RiskOfRainListItem key={i} item={item} />) }
+          </div>
+        </GridListContainer>
       }
 
       { showGrid &&
-        <div className={styles.grid}>
-          { items.map((item, i) => <RiskOfRain2ItemTile key={i} item={item} />) }
-        </div>
+        <GridListContainer>
+          <div className={styles.grid}>
+            { filteredList.map((item, i) => <RiskOfRain2ItemTile key={i} item={item} />) }
+          </div>
+        </GridListContainer>
       }
 
       { showFlashCards &&

@@ -30,7 +30,7 @@ export const rarityConverter = (rarityNumber: number): RarityConverter => {
       }
     case 4:
       return {
-        background: 'linear-gradient(90deg, rgba(104,23,117,1) 0%, rgba(72,7,76,1) 70%, rgba(49,2,49,1) 100%)',
+        background: 'linear-gradient(90deg, rgba(104,23,117,1) 0%, rgba(80,15,76,1) 70%, rgba(70,13,80,1) 100%)',
         rarityString: 'Void',
         rarityColor: '#641572'
       }

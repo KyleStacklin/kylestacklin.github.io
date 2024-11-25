@@ -1,6 +1,7 @@
 import React from "react"
 import { descriptionParser } from "./RiskOfRainBusinessLogic";
 import { createUseStyles } from "react-jss";
+import clsx from "clsx";
 
 const useStyles = createUseStyles({
   description: {
@@ -10,14 +11,21 @@ const useStyles = createUseStyles({
 })
 
 type Props = {
+  className?: string,
   description: string
 };
 
-const RiskOfRain2ItemTileDescription = ({ description }: Props) => {
+const RiskOfRain2ItemTileDescription = ({ className = '', description }: Props) => {
   const styles = useStyles()
+
+  const descriptionClasses = clsx(
+    styles.description,
+    {[className]: className}
+  )
+
   return (
     <div
-      className={styles.description}
+      className={descriptionClasses}
       dangerouslySetInnerHTML={{ __html: descriptionParser(description) }}
     />
   )

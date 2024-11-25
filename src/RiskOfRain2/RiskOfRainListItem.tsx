@@ -2,6 +2,7 @@ import React from "react"
 import { createUseStyles } from "react-jss";
 import RiskOfRain2ItemTileDescription from "./RiskOfRain2ItemTileDescription";
 import { rarityConverter } from "./RiskOfRainBusinessLogic";
+import clsx from "clsx";
 
 const useStyles = createUseStyles({
   itemNumber: {
@@ -10,7 +11,7 @@ const useStyles = createUseStyles({
   },
   bold: {
     fontWeight: '700',
-    fontSize: '22px',
+    fontSize: '16px',
     textShadow: `
       -1px -1px 0 #000, /* Top-left shadow */
       1px -1px 0 #000,  /* Top-right shadow */
@@ -47,14 +48,24 @@ const useStyles = createUseStyles({
     display: 'flex',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    height: 100,
-    borderRadius: 4,
-    gap: '16px',
   },
   flexSpaceBetween: {
     display: 'flex',
     justifyContent: 'space-between',
   },
+  description: {
+    fontSize: '12px',
+  },
+  listItem: {
+    height: 145,
+    borderRadius: 4,
+    gap: '16px',
+    padding: '8px',
+  },
+  listItemHr: {
+    width: '100%',
+    border: '1px solid grey',
+  }
 })
 
 type Props = {
@@ -67,13 +78,21 @@ const RiskOfRainListItem = ({ item }: Props) => {
 
   const { background } = rarityConverter(rarity)
 
+  const listItemClasses = clsx(
+    styles.flexLeftJustify,
+    styles.listItem
+  )
+
   return (
-    <div className={styles.flexLeftJustify} style={{background}}>
+    <div className={listItemClasses} style={{background}}>
       <div className={styles.flexCenter}>
         <img src={require(`./ror2_items_img/${nickname}.webp`)} />
       </div>
-      <div className={styles.bold}>{displayName}</div>
-      <RiskOfRain2ItemTileDescription description={description} />
+      <div className={styles.flexColumn}>
+        <div className={styles.bold}>{displayName}</div>
+        <hr className={styles.listItemHr} />
+        <RiskOfRain2ItemTileDescription className={styles.description} description={description} />
+      </div>
     </div>
   )
 };

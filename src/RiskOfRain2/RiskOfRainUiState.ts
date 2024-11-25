@@ -8,6 +8,11 @@ class RiskOfRainUiState {
   private _filteredList: any[] = [];
   private _list: any[] = [];
 
+
+  // Header
+  private _headerExpanded: boolean = false;
+
+  // Flash Cards
   private _usedFlashCardItems: any[] = []
   private _currentItemToGuess: any = {}
   private _currentUsedItems: any[] = []
@@ -24,8 +29,6 @@ class RiskOfRainUiState {
     this._list = ror2_items as any[]
 
 
-
-
     makeAutoObservable(this)
   }
 
@@ -34,7 +37,9 @@ class RiskOfRainUiState {
   get filteredList() { return this._filteredList; }
   get list() { return this._list; }
   get tierListSelectedCharacter() { return this._tierListSelectedCharacter; }
-
+  // Header
+  get headerExpanded() { return this._headerExpanded; }
+  // Flash Cards
   get usedFlashCardItems() { return this._usedFlashCardItems; }
   get currentItemToGuess() { return this._currentItemToGuess; }
   get currentUsedItems() { return this._currentUsedItems; }
@@ -45,7 +50,9 @@ class RiskOfRainUiState {
   set filteredList(value: any[]) { this._filteredList = value; }
   set list(value: any[]) { this._list = value; }
   set tierListSelectedCharacter(value: string) { this._tierListSelectedCharacter = value; }
-
+  // Header
+  set headerExpanded(value: boolean) { this._headerExpanded = value; }
+  // Flash Cards
   set usedFlashCardItems(value: any[]) { this._usedFlashCardItems = value; }
   set currentItemToGuess(value: any) { this._currentItemToGuess = value; }
   set currentUsedItems(value: any[]) { this._currentUsedItems = value; }

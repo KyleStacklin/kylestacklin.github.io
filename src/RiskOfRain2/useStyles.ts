@@ -11,6 +11,7 @@ export const useStyles = createUseStyles({
     overflowY: 'auto',
     overflowX: 'hidden',
     fontFamily: 'Helvetica Neue, Arial, sans-serif',
+    paddingBottom: '16px',
   },
   flexRow: {
     display: 'flex',
@@ -33,6 +34,10 @@ export const useStyles = createUseStyles({
     display: 'flex',
     alignItems: 'center',
   },
+  flexSpaceBetween: {
+    display: 'flex',
+    justifyContent: 'space-between',
+  },
   padding16X: { paddingLeft: '16px', paddingRight: '16px' },
   padding16Y: { paddingTop: '16px', paddingBottom: '16px' },
   gap4: { gap: '4px' },
@@ -46,11 +51,11 @@ export const useStyles = createUseStyles({
     top: 0,
     gap: '16px',
     backgroundColor: '#0d5175',
+    color: '#ffffff',
     padding: '16px',
-
-    height: '175px',
     transition: 'height 0.5s ease',
   },
+  headerTitle: { fontWeight: '700', textDecoration: 'underline' },
   searchBar: {
     width: '100%',
     height: '32px',
@@ -59,6 +64,11 @@ export const useStyles = createUseStyles({
     borderRadius: '4px',
     outline: 'none',
     fontSize: '16px',
+  },
+  filterOptions: {
+    gap: '16px',
+    overflowX: 'auto',
+    overflowY: 'hidden',
   },
 
 
@@ -108,14 +118,13 @@ export const useStyles = createUseStyles({
 
 
 
-  filterOptions: {
-    gap: '16px',
-  },
+
   list: {
     display: 'flex',
     flexDirection: 'column',
     gap: '16px',
     padding: '16px',
+    overflow: 'hidden'
   },
   grid: {
     display: 'flex',
