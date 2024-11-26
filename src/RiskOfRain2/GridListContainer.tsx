@@ -7,7 +7,8 @@ import clsx from "clsx";
 
 const useComponentStyles = createUseStyles({
   gridListContainer: {
-    padding: '0px 16px 0px 16px'
+    padding: '0px 16px 0px 16px',
+    marginTop: 72,
   },
   searchBarContainer: {
     marginBottom: 16

@@ -46,7 +46,8 @@ const RiskOfRain2Header = observer(() => {
 
   const headerClasses = clsx(
     styles.flexColumn,
-    styles.header
+    styles.header,
+    styles.fillAvailableWidth
   )
   const filterOptionsClasses = clsx(
     styles.flexRow,

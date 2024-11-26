@@ -3,8 +3,9 @@ import { createUseStyles } from "react-jss";
 import RiskOfRain2ItemTileDescription from "./RiskOfRain2ItemTileDescription";
 import { rarityConverter } from "./RiskOfRainBusinessLogic";
 import clsx from "clsx";
+import { useStyles } from "./useStyles";
 
-const useStyles = createUseStyles({
+const useComponentStyles = createUseStyles({
   itemNumber: {
     display: 'flex',
     justifyContent: 'flex-end',
@@ -35,23 +36,10 @@ const useStyles = createUseStyles({
     cursor: 'pointer',
     color: 'blue',
   },
-  flexColumn: {
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  flexCenter: {
-    display: 'flex',
-    justifyContent: 'center',
-    width: 100
-  },
   flexLeftJustify: {
     display: 'flex',
     justifyContent: 'flex-start',
     alignItems: 'center',
-  },
-  flexSpaceBetween: {
-    display: 'flex',
-    justifyContent: 'space-between',
   },
   description: {
     fontSize: '12px',
@@ -65,7 +53,8 @@ const useStyles = createUseStyles({
   listItemHr: {
     width: '100%',
     border: '1px solid grey',
-  }
+    margin: '8px 0px',
+  },
 })
 
 type Props = {
@@ -74,24 +63,23 @@ type Props = {
 
 const RiskOfRainListItem = ({ item }: Props) => {
   const { displayName, nickname, rarity, description, itemNumber, unlockTask } = item
-  const styles = useStyles();
+  const styles = useStyles()
+  const componentStyles = useComponentStyles()
 
   const { background } = rarityConverter(rarity)
 
-  const listItemClasses = clsx(
-    styles.flexLeftJustify,
-    styles.listItem
-  )
+  const listItemClasses = clsx(componentStyles.flexLeftJustify, componentStyles.listItem)
+  const itemDescriptionClasses = clsx(styles.flexColumn, styles.flexCenterX, styles.fillAvailableWidth)
 
   return (
     <div className={listItemClasses} style={{background}}>
-      <div className={styles.flexCenter}>
+      <div className={styles.flexCenterY} style={{width: 100}}>
         <img src={require(`./ror2_items_img/${nickname}.webp`)} />
       </div>
-      <div className={styles.flexColumn}>
-        <div className={styles.bold}>{displayName}</div>
-        <hr className={styles.listItemHr} />
-        <RiskOfRain2ItemTileDescription className={styles.description} description={description} />
+      <div className={itemDescriptionClasses}>
+        <div className={componentStyles.bold}>{displayName}</div>
+        <hr className={componentStyles.listItemHr} />
+        <RiskOfRain2ItemTileDescription className={componentStyles.description} description={description} />
       </div>
     </div>
   )

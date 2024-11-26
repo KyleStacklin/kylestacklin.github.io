@@ -43,12 +43,26 @@ export const useStyles = createUseStyles({
   gap4: { gap: '4px' },
   gap8: { gap: '8px' },
   gap16: { gap: '16px' },
+  fillAvailableWidth: {
+    '@supports (width: -webkit-fill-available)': {
+      width: '-webkit-fill-available',
+    },
+    '@supports not (width: -webkit-fill-available)': {
+      '@supports (width: -moz-available)': {
+        width: '-moz-available',
+      },
+      '@supports not (width: -moz-available)': {
+        width: 'fill-available',
+      },
+    },
+  },
 
 
   // Header
   header: {
-    position: 'sticky',
+    position: 'absolute',
     top: 0,
+    zIndex: 2,
     gap: '16px',
     backgroundColor: '#0d5175',
     color: '#ffffff',
@@ -128,7 +142,6 @@ export const useStyles = createUseStyles({
     display: 'flex',
     flexDirection: 'column',
     gap: '16px',
-    padding: '16px',
     overflow: 'hidden'
   },
   grid: {
