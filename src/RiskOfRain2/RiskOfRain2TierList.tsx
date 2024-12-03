@@ -45,7 +45,7 @@ const RiskOfRain2TierList = observer((props: Props) => {
   const tiers = ['S', 'A', 'B', 'C', 'F']
 
   const characterColumn = (characters: string[]) => {
-    const classes = clsx(styles.flexColumn, styles.flexCenterX, styles.gap8)
+    const classes = clsx(styles.flexColumn, styles.flexCenterY, styles.gap8)
     return (
       <div className={classes}>
         { characters.map((character, i) => {

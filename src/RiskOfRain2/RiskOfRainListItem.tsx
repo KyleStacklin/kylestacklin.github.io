@@ -70,11 +70,11 @@ const RiskOfRainListItem = ({ item }: Props) => {
   const { background } = rarityConverter(rarity)
 
   const listItemClasses = clsx(componentStyles.flexLeftJustify, componentStyles.listItem)
-  const itemDescriptionClasses = clsx(styles.flexColumn, styles.flexCenterX, styles.fillAvailableWidth)
+  const itemDescriptionClasses = clsx(styles.flexColumn, styles.flexCenterY, styles.fillAvailableWidth)
 
   return (
     <div className={listItemClasses} style={{background}}>
-      <div className={styles.flexCenterY} style={{width: 100}}>
+      <div className={styles.flexCenterX} style={{width: 100}}>
         <img src={require(`./ror2_items_img/${nickname}.webp`)} />
       </div>
       <div className={itemDescriptionClasses} style={{height: '100%'}}>

@@ -26,11 +26,11 @@ export const useStyles = createUseStyles({
     display: 'flex',
     justifyContent: 'start',
   },
-  flexCenterY: {
+  flexCenterX: {
     display: 'flex',
     justifyContent: 'center',
   },
-  flexCenterX: {
+  flexCenterY: {
     display: 'flex',
     alignItems: 'center',
   },

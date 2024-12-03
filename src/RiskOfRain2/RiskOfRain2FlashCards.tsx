@@ -7,21 +7,22 @@ import { descriptionParser } from './RiskOfRainBusinessLogic';
 import RiskOfRain2ItemTileDescription from "./RiskOfRain2ItemTileDescription";
 import RiskOfRainFlashCardOptions from "./RiskOfRainFlashCards/RiskOfRainFlashCardOptions";
 import { observer } from "mobx-react-lite";
+import { useStyles } from "./useStyles";
 
-const useStyles = createUseStyles({
-  flexColumn: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  flexRow: {
-    display: 'flex',
-    flexDirection: 'row',
-  },
-  flexCenter: {
-    display: 'flex',
-    alignItems: 'center',
-  },
+const useComponentStyles = createUseStyles({
+  // flexColumn: {
+  //   display: 'flex',
+  //   flexDirection: 'column',
+  //   alignItems: 'center',
+  // },
+  // flexRow: {
+  //   display: 'flex',
+  //   flexDirection: 'row',
+  // },
+  // flexCenter: {
+  //   display: 'flex',
+  //   alignItems: 'center',
+  // },
 
   flashCardContainer: {
     padding: 16,
@@ -61,11 +62,12 @@ type Props = {
 
 const RiskOfRain2FlashCards = observer((props: Props) => {
   const styles = useStyles()
+  const componentStyles = useComponentStyles()
   const uiState = riskOfRainUiState
   const items = uiState.filteredList
 
-  const flashCardContainerClasses = clsx(styles.flashCardContainer, styles.flexColumn, styles.flexCenter)
-  const flashCardClasses = clsx(styles.flexCenter, styles.flashCard)
+  const flashCardContainerClasses = clsx(componentStyles.flashCardContainer, styles.flexColumn, styles.flexCenterX)
+  const flashCardClasses = clsx(styles.flexCenterY, componentStyles.flashCard)
 
   const calculateNewFlashCard = () => {
     uiState.resetCurrentUsedItems()
@@ -98,6 +100,8 @@ const RiskOfRain2FlashCards = observer((props: Props) => {
 
   useEffect(calculateNewFlashCard, [])
 
+  const flashCardImageClasses = clsx(styles.flexColumn, styles.flexCenterY)
+
   return (
     <>
       <div style={{height: 34}}>
@@ -108,12 +112,12 @@ const RiskOfRain2FlashCards = observer((props: Props) => {
         { uiState.currentUsedItems.length === 4 &&
           <div className={flashCardClasses} style={{width: '100%'}}>
 
-            <div className={styles.flexRow} style={{width: '100%'}}>
-              <div className={styles.flexColumn}>
+            <div className={styles.flexCenterX} style={{width: '100%'}}>
+              <div className={flashCardImageClasses}>
                 { uiState.currentItemToGuess.nickname &&
-                  <img style={{}} src={require(`./ror2_items_img/${uiState.currentItemToGuess.nickname}.webp`)} />
+                  <img className={componentStyles.flashCardItemImage} src={require(`./ror2_items_img/${uiState.currentItemToGuess.nickname}.webp`)} />
                 }
-                <div className={styles.flashCardItemToGuessInfo}>
+                <div className={componentStyles.flashCardItemToGuessInfo}>
                   {uiState.itemHasBeenGuessed ? uiState.currentItemToGuess.displayName : ''}
                 </div>
               </div>
