@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.f855e6bc.css",
-    "main.js": "/static/js/main.75dabf63.js",
+    "main.js": "/static/js/main.f521579e.js",
     "static/js/453.3127a433.chunk.js": "/static/js/453.3127a433.chunk.js",
     "static/media/longstandingSolitude.webp": "/static/media/longstandingSolitude.bc50318300cc19dc835c.webp",
     "static/media/seedOfLife.webp": "/static/media/seedOfLife.0d8df73f105c2f143862.webp",
@@ -196,11 +196,11 @@
     "index.html": "/index.html",
     "static/media/whiteSquare.webp": "/static/media/whiteSquare.4cc238ef609028f18255.webp",
     "main.f855e6bc.css.map": "/static/css/main.f855e6bc.css.map",
-    "main.75dabf63.js.map": "/static/js/main.75dabf63.js.map",
+    "main.f521579e.js.map": "/static/js/main.f521579e.js.map",
     "453.3127a433.chunk.js.map": "/static/js/453.3127a433.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.75dabf63.js"
+    "static/js/main.f521579e.js"
   ]
 }
