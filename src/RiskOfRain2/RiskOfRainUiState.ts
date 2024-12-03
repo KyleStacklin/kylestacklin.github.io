@@ -16,6 +16,7 @@ class RiskOfRainUiState {
   private _usedFlashCardItems: any[] = []
   private _currentItemToGuess: any = {}
   private _currentUsedItems: any[] = []
+  private _itemsGuessed: any[] = []
   private _itemHasBeenGuessed: boolean = false
 
   // Tier List
@@ -43,6 +44,7 @@ class RiskOfRainUiState {
   get usedFlashCardItems() { return this._usedFlashCardItems; }
   get currentItemToGuess() { return this._currentItemToGuess; }
   get currentUsedItems() { return this._currentUsedItems; }
+  get itemsGuessed() { return this._itemsGuessed; }
   get itemHasBeenGuessed() { return this._itemHasBeenGuessed; }
 
   set displayType(value: string) { this._displayType = value; }
@@ -56,6 +58,7 @@ class RiskOfRainUiState {
   set usedFlashCardItems(value: any[]) { this._usedFlashCardItems = value; }
   set currentItemToGuess(value: any) { this._currentItemToGuess = value; }
   set currentUsedItems(value: any[]) { this._currentUsedItems = value; }
+  set itemsGuessed(value: any[]) { this._itemsGuessed = value; }
   set itemHasBeenGuessed(value: boolean) { this._itemHasBeenGuessed = value; }
 
   public setDisplayType = (displayType: string) => {
@@ -68,6 +71,13 @@ class RiskOfRainUiState {
 
   addCurrentUsedItem = (item: any) => this.currentUsedItems.push(item)
   resetCurrentUsedItems = () => this.currentUsedItems = []
+
+  addItemGuessed = (item: any) => this.itemsGuessed.push(item)
+  resetItemsGuessed = () => this.itemsGuessed = []
+
+  randomizeItemOrder = () => {
+    this.currentUsedItems.sort(() => Math.random() - 0.5)
+  }
 
   itemAlreadyPresent = (item: any) => {
     return this.currentUsedItems.some((usedItem) => usedItem.nickname === item.nickname)

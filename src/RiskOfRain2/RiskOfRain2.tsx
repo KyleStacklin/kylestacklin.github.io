@@ -6,10 +6,8 @@ import { observer } from "mobx-react-lite";
 import RiskOfRainListItem from "./RiskOfRainListItem";
 import { useStyles } from "./useStyles";
 import RiskOfRain2Header from "./RiskOfRain2Header";
-import RiskOfRain2TierList from "./RiskOfRain2TierList";
 import RiskOfRain2FlashCards from "./RiskOfRain2FlashCards";
-import GridContainer from "./GridListContainer";
-import GridListContainer from "./GridListContainer";
+import PageContainer from "./PageContainer";
 
 
 
@@ -37,23 +35,25 @@ const RiskOfRain2 = observer(() => {
       <RiskOfRain2Header />
 
       { showList &&
-        <GridListContainer>
+        <PageContainer search={true}>
           <div className={styles.list}>
             { filteredList.map((item, i) => <RiskOfRainListItem key={i} item={item} />) }
           </div>
-        </GridListContainer>
+        </PageContainer>
       }
 
       { showGrid &&
-        <GridListContainer>
+        <PageContainer search={true}>
           <div className={styles.grid}>
             { filteredList.map((item, i) => <RiskOfRain2ItemTile key={i} item={item} />) }
           </div>
-        </GridListContainer>
+        </PageContainer>
       }
 
       { showFlashCards &&
-        <RiskOfRain2FlashCards />
+        <PageContainer>
+          <RiskOfRain2FlashCards />
+        </PageContainer>
       }
 
 

@@ -6,7 +6,7 @@ import { createUseStyles } from "react-jss";
 import clsx from "clsx";
 
 const useComponentStyles = createUseStyles({
-  gridListContainer: {
+  pageContainer: {
     padding: '0px 16px 0px 16px',
     marginTop: 72,
   },
@@ -17,25 +17,29 @@ const useComponentStyles = createUseStyles({
 
 type Props = {
   children: React.ReactNode
+  search?: boolean
 }
 
-const GridListContainer = ({ children }: Props) => {
+const PageContainer = ({ children, search }: Props) => {
   const styles = useStyles()
   const componentStyles = useComponentStyles()
 
   const containerClasses = clsx(
     styles.flexColumn,
-    componentStyles.gridListContainer
+    styles.fillAvailableHeight,
+    componentStyles.pageContainer
   )
 
   return (
     <div className={containerClasses}>
-      <div className={componentStyles.searchBarContainer}>
-        <SearchBar />
-      </div>
+      { search && (
+        <div className={componentStyles.searchBarContainer}>
+          <SearchBar />
+        </div>
+      )}
       { children }
     </div>
   )
 };
 
-export default GridListContainer;
+export default PageContainer;

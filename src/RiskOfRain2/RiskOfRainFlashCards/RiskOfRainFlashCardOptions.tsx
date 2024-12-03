@@ -1,9 +1,10 @@
-import React from "react"
+import React, { useState } from "react"
 import Button from "../Button";
 import { createUseStyles } from "react-jss";
 import RiskOfRain2ItemTileDescription from "../RiskOfRain2ItemTileDescription";
 import riskOfRainUiState from "../RiskOfRainUiState";
 import { observer } from "mobx-react-lite";
+import clsx from 'clsx';
 
 const useStyles = createUseStyles({
   flexColumn: {
@@ -34,26 +35,35 @@ const useStyles = createUseStyles({
     width: '50%',
     margin: 8,
 
-    background: '#767499',
+    background: '#20388857',
     border: '1px solid #000',
 
     overflow: 'auto',
+
+    '&:hover': {
+      background: '#20388487',
+    },
+  },
+  flashCardOptionButtonIncorrect: {
+    background: '#88382057 !important',
+
+    '&:hover': {
+      background: '#88382057 !important',
+    },
   }
 })
 
 const RiskOfRainFlashCardOptions = observer(() => {
   const styles = useStyles()
   const uiState = riskOfRainUiState
-  const options = uiState.currentUsedItems
-  const correctItem = options[0]
+  const { currentUsedItems, currentItemToGuess, itemsGuessed } = uiState
+  const options = currentUsedItems
 
   const handleOptionSelect = (option: any) => {
-    console.log(option);
-    if (option.displayName === correctItem.displayName) {
+    if (option.displayName === currentItemToGuess.displayName) {
       uiState.itemHasBeenGuessed = true
-      console.log('Correct!');
     } else {
-      console.log('Incorrect!');
+      uiState.addItemGuessed(option)
     }
   }
 
@@ -63,11 +73,10 @@ const RiskOfRainFlashCardOptions = observer(() => {
         <div className={styles.flexRow}>
           {options
         .slice(0, 2)
-        .sort(() => Math.random() - 0.5)
         .map((option, index) => (
           <Button
             key={index}
-            className={styles.flashCardOptionButton}
+            className={clsx(styles.flashCardOptionButton, {[styles.flashCardOptionButtonIncorrect]: itemsGuessed.includes(option)})}
             onClick={() => handleOptionSelect(option)}
             onClickPassBack={option}
           >
@@ -78,11 +87,10 @@ const RiskOfRainFlashCardOptions = observer(() => {
         <div className={styles.flexRow}>
           {options
         .slice(2, 4)
-        .sort(() => Math.random() - 0.5)
         .map((option, index) => (
           <Button
             key={index + 2}
-            className={styles.flashCardOptionButton}
+            className={clsx(styles.flashCardOptionButton, {[styles.flashCardOptionButtonIncorrect]: itemsGuessed.includes(option)})}
             onClick={() => handleOptionSelect(option)}
             onClickPassBack={option}
           >

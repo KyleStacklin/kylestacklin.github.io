@@ -27,12 +27,18 @@ const useStyles = createUseStyles({
     padding: 16,
     margin: 16,
     borderRadius: 4,
-    background: 'linear-gradient(90deg, rgba(39,39,40,1) 0%, rgba(68,63,69,1) 70%, rgba(102,95,102,1) 100%)',
+    background: 'linear-gradient(360deg, rgba(102,95,102,1) 0%, rgba(45,44,42,1) 100%, rgba(102,95,102,1) 0%)',
   },
   flashCard: {
     display: 'flex',
     flexDirection: 'column',
     width: '100%',
+  },
+  flashCardItemImage: {
+    height: '125px',
+    width: '125px',
+    border: '1px solid grey',
+    borderRadius: 4,
   },
   flashCardItemToGuessInfo: {
     fontSize: 24,
@@ -44,7 +50,7 @@ const useStyles = createUseStyles({
     width: '50%',
     margin: 8,
 
-    background: '#9b96e3',
+    background: '#20388857',
     border: '1px solid #000',
   }
 })
@@ -63,9 +69,11 @@ const RiskOfRain2FlashCards = observer((props: Props) => {
 
   const calculateNewFlashCard = () => {
     uiState.resetCurrentUsedItems()
+    uiState.resetItemsGuessed()
     uiState.itemHasBeenGuessed = false
     calculateItemToGuess()
     calculateThreeRandomItems()
+    uiState.randomizeItemOrder()
   }
 
   const calculateItemToGuess = () => {
@@ -92,7 +100,7 @@ const RiskOfRain2FlashCards = observer((props: Props) => {
 
   return (
     <>
-      <div style={{height: 34, marginBottom: 16}}>
+      <div style={{height: 34}}>
         <Button onClick={calculateNewFlashCard}>New</Button>
       </div>
 
@@ -100,10 +108,10 @@ const RiskOfRain2FlashCards = observer((props: Props) => {
         { uiState.currentUsedItems.length === 4 &&
           <div className={flashCardClasses} style={{width: '100%'}}>
 
-            <div className={styles.flexRow}>
+            <div className={styles.flexRow} style={{width: '100%'}}>
               <div className={styles.flexColumn}>
                 { uiState.currentItemToGuess.nickname &&
-                  <img style={{height: '150px', width: '150px'}} src={require(`./ror2_items_img/${uiState.currentItemToGuess.nickname}.webp`)} />
+                  <img style={{}} src={require(`./ror2_items_img/${uiState.currentItemToGuess.nickname}.webp`)} />
                 }
                 <div className={styles.flashCardItemToGuessInfo}>
                   {uiState.itemHasBeenGuessed ? uiState.currentItemToGuess.displayName : ''}

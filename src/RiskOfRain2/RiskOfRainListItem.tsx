@@ -43,9 +43,10 @@ const useComponentStyles = createUseStyles({
   },
   description: {
     fontSize: '12px',
+    overflowY: 'auto',
   },
   listItem: {
-    height: 145,
+    height: 120,
     borderRadius: 4,
     gap: '16px',
     padding: '8px',
@@ -76,7 +77,7 @@ const RiskOfRainListItem = ({ item }: Props) => {
       <div className={styles.flexCenterY} style={{width: 100}}>
         <img src={require(`./ror2_items_img/${nickname}.webp`)} />
       </div>
-      <div className={itemDescriptionClasses}>
+      <div className={itemDescriptionClasses} style={{height: '100%'}}>
         <div className={componentStyles.bold}>{displayName}</div>
         <hr className={componentStyles.listItemHr} />
         <RiskOfRain2ItemTileDescription className={componentStyles.description} description={description} />

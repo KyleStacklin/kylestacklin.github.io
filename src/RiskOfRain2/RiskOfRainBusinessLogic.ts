@@ -30,13 +30,13 @@ export const rarityConverter = (rarityNumber: number): RarityConverter => {
       }
     case 4:
       return {
-        background: 'linear-gradient(90deg, rgba(104,23,117,1) 0%, rgba(80,15,76,1) 70%, rgba(70,13,80,1) 100%)',
+        background: 'linear-gradient(90deg, rgba(104,23,117,1) 0%, rgba(90,18,99,1) 70%, rgba(76,15,95,1) 100%)',
         rarityString: 'Void',
         rarityColor: '#641572'
       }
     case 5:
       return {
-        background: 'linear-gradient(90deg, rgba(23,133,153,1) 0%, rgba(23,133,153,1) 70%, rgba(23,133,153,1) 100%)',
+        background: 'rgb(12 129 150)',
         rarityString: 'Lunar',
         rarityColor: '#178599'
       }
@@ -79,7 +79,7 @@ const combatTypeColor = (combatType: string) => {
     case 'defense':
       return '#00aa00'
     case 'misc':
-      return '#24A4C2'
+      return '#c4cb4a'
     default:
       return '#000'
   }

@@ -56,6 +56,19 @@ export const useStyles = createUseStyles({
       },
     },
   },
+  fillAvailableHeight: {
+    '@supports (width: -webkit-fill-available)': {
+      height: '-webkit-fill-available',
+    },
+    '@supports not (width: -webkit-fill-available)': {
+      '@supports (width: -moz-available)': {
+        height: '-moz-available',
+      },
+      '@supports not (width: -moz-available)': {
+        height: 'fill-available',
+      },
+    },
+  },
 
 
   // Header
