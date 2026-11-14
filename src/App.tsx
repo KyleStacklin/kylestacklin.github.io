@@ -1,4 +1,5 @@
 import React from 'react';
+import { HashRouter } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 import RiskOfRain2 from './RiskOfRain2/RiskOfRain2';
@@ -20,7 +21,9 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <RiskOfRain2 />
+      <HashRouter>
+        <RiskOfRain2 />
+      </HashRouter>
     </div>
   );
 }

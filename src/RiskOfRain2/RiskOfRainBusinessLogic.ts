@@ -1,6 +1,22 @@
+import type { CSSProperties } from "react"
 import riskOfRainUiState from "./RiskOfRainUiState"
 
 type RarityConverter = { background: string, rarityString: string, rarityColor: string }
+
+// WCAG contrast: picks white or near-black text so small pill labels stay >= 4.5:1
+const pickPillTextColor = (backgroundColor: string): string => {
+  const channels = [0, 2, 4].map(i => parseInt(backgroundColor.replace('#', '').slice(i, i + 2), 16) / 255)
+    .map(v => (v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4)))
+  const luminance = 0.2126 * channels[0] + 0.7152 * channels[1] + 0.0722 * channels[2]
+  const white = 1.05 / (luminance + 0.05)
+  return white >= 4.5 ? '#ffffff' : '#171207'
+}
+
+// Shared pill style used by tiles, list rows and the header rarity filters
+export const rarityPillStyle = (rarityColor: string, active = false): CSSProperties =>
+  active
+    ? { backgroundColor: rarityColor, border: `1px solid ${rarityColor}`, color: pickPillTextColor(rarityColor) }
+    : { backgroundColor: `${rarityColor}2b`, border: `1px solid ${rarityColor}77`, color: '#dfe4ee' }
 
 export const rarityConverter = (rarityNumber: number): RarityConverter => {
   switch (rarityNumber) {
@@ -75,33 +91,40 @@ export const rarityTextToNum = (rarityText: string) => {
 const combatTypeColor = (combatType: string) => {
   switch (combatType) {
     case 'offense':
-      return '#f02929'
+      return '#ff5252'
     case 'defense':
-      return '#00aa00'
+      return '#35c45d'
     case 'misc':
       return '#c4cb4a'
+    case 'debuff':
+      return '#ff7ab8'
+    case 'corrupt':
+      return '#b07ef5'
     default:
-      return '#000'
+      return '#dfe4ee'
   }
 }
 
 export const descriptionParser = (description: string) => {
-  let color = '#000'
-  // Handle {} with colon by removing {}
+  // Handle {type:text} by wrapping the text in a colored span
   const withColonProcessed =
-    description.replace(/{([^:{}]+):([^{}]+)}/g, (_, beforeColon, afterColon) => {
-      color = combatTypeColor(beforeColon)
-      return `<span style="color: ${color}; font-weight: 500;">${afterColon}</span>`
-    })
-
-  // Handle {} without colon by adding () around the text and "per stack"
-  const finalResult =
-    withColonProcessed.replace(/{([^:{}]+)}/g, (_, innerText) =>
-      `<span style="color: #c8c8d5">(${innerText} per stack)</span>`
+    description.replace(/{([^:{}]+):([^{}]+)}/g, (_, combatType, text) =>
+      `<span style="color: ${combatTypeColor(combatType)}; font-weight: 500;">${text}</span>`
     )
 
-  
-  return finalResult;
+  // Handle {text|suffix} by adding () around the text with the custom suffix
+  const withPipeProcessed =
+    withColonProcessed.replace(/{([^:{}|]+)\|([^{}]+)}/g, (_, text, suffix) =>
+      `<span style="color: #c8c8d5">(${text} ${suffix})</span>`
+    )
+
+  // Handle {text} by adding () around the text and "per stack"
+  const finalResult =
+    withPipeProcessed.replace(/{([^:{}]+)}/g, (_, text) =>
+      `<span style="color: #c8c8d5">(${text} per stack)</span>`
+    )
+
+  return finalResult
 }
 
 

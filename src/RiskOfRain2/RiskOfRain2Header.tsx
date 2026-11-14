@@ -1,77 +1,77 @@
 import React from "react"
 import clsx from "clsx";
+import { useNavigate } from "react-router-dom";
 import Button from "./Button";
-import { rarityConverter, rarityTextToNum } from "./RiskOfRainBusinessLogic";
+import { rarityConverter, rarityPillStyle, rarityTextToNum } from "./RiskOfRainBusinessLogic";
 import riskOfRainUiState from "./RiskOfRainUiState";
 import { useStyles } from "./useStyles";
 import { observer } from "mobx-react-lite";
 import RiskOfRain2HeaderHamburger from "./RiskOfRain2HeaderHamburger";
+import SearchBar from "./common/SearchBar";
+import { filtersAreDefault, RARITY_NAMES, DisplayType } from "./RiskOfRain2Types";
+import { DISPLAY_TYPE_PATHS } from "./routing";
 
 const RiskOfRain2Header = observer(() => {
   const styles = useStyles();
+  const navigate = useNavigate()
   const uiState = riskOfRainUiState
-  const items = uiState.list
   const showGrid = uiState.displayType === 'grid'
   const showList = uiState.displayType === 'list'
   const showFlashCards = uiState.displayType === 'flashCards'
 
-  const changeDisplayType = (display: string) => {
-    uiState.setDisplayType(display)
+  const changeDisplayType = (display: DisplayType) => {
+    navigate(DISPLAY_TYPE_PATHS[display])
   }
 
   const handleHamburgerClick = () => {
-    uiState.headerExpanded = !uiState.headerExpanded
+    uiState.toggleHeaderExpanded()
   }
 
   const handleFilter = (filter?: string) => {
-    if (filter) {
+    if (!filter) return
 
-      if (uiState.filters.has(filter)) {
-        uiState.removeFilter(filter)
-      } else {
-        uiState.addFilter(filter)
-      }
-
-      let filteredList = items
-      if (uiState.filters.size > 0) {
-        filteredList = items.filter((item) => {
-          const {rarityString} = rarityConverter(item.rarity)
-          return uiState.filters.has(rarityString)
-        })
-      }
-
-      uiState.filteredList = filteredList
+    if (uiState.filters.has(filter)) {
+      uiState.removeFilter(filter)
+    } else {
+      uiState.addFilter(filter)
     }
   }
 
-  const headerClasses = clsx(
-    styles.flexColumn,
-    styles.header,
-    styles.fillAvailableWidth
-  )
+  const rarities = RARITY_NAMES
+
+  const filterPillStyle = (rarity: string) => {
+    const { rarityColor } = rarityConverter(rarityTextToNum(rarity))
+    return rarityPillStyle(rarityColor, uiState.filters.has(rarity))
+  }
+
+  const showResetFilters = !filtersAreDefault(uiState.filters)
+
+  const headerClasses = clsx(styles.header, styles.fillAvailableWidth)
   const filterOptionsClasses = clsx(
     styles.flexRow,
     styles.filterOptions
   )
   const rarityFilterClasses = clsx(
-    filterOptionsClasses,
+    styles.flexRow,
     styles.rarityFilter
   )
 
-  const rarities = ['Common', 'Uncommon', 'Legendary', 'Boss', 'Void', 'Lunar', 'Equipment']
-
-  const headerStyle = uiState.headerExpanded ? { height: '128px' } : { height: '24px' }
+  const expanded = uiState.headerExpanded
 
   return (
-    <div className={headerClasses} style={headerStyle}>
-      <div className={styles.flexSpaceBetween}>
+    <div className={headerClasses}>
+      <div className={styles.headerTitleRow}>
         <div className={styles.headerTitle}>Risk of Rain 2 Database</div>
-        <RiskOfRain2HeaderHamburger expanded={uiState.headerExpanded} onClick={handleHamburgerClick} />
+        <div className={styles.resultCount}>{uiState.filteredList.length} items</div>
+        <SearchBar />
+        <RiskOfRain2HeaderHamburger expanded={expanded} onClick={handleHamburgerClick} />
       </div>
 
-      { uiState.headerExpanded &&
-
-        <>
+      <div
+        className={styles.headerControls}
+        style={{ maxHeight: expanded ? 240 : 0, opacity: expanded ? 1 : 0 }}
+      >
+        <div className={styles.headerControlsRow}>
           <div className={filterOptionsClasses}>
             <Button
               onClick={() => changeDisplayType('grid')}
@@ -97,19 +97,14 @@ const RiskOfRain2Header = observer(() => {
           </div>
 
           <div className={rarityFilterClasses}>
-
             {
               rarities.map((rarity, i) => {
                 const active = uiState.filters.has(rarity)
-                const { background: bgColor, rarityColor } = rarityConverter(rarityTextToNum(rarity))
-                const background = (bgColor && active) ?
-                  { background: bgColor, border: `1px solid ${rarityColor}` } :
-                  { border: `1px solid ${rarityColor}`, color: rarityColor }
                 return (
                   <Button
                     key={i}
                     onClick={handleFilter}
-                    style={background}
+                    style={filterPillStyle(rarity)}
                     toggle={true}
                     toggleActive={active}
                   >
@@ -118,10 +113,18 @@ const RiskOfRain2Header = observer(() => {
                 )
               })
             }
+            {showResetFilters &&
+              <button
+                type="button"
+                className={styles.resetFilterLink}
+                onClick={() => uiState.resetFilters()}
+              >
+                Reset
+              </button>
+            }
           </div>
-        </>
-
-      }
+        </div>
+      </div>
     </div>
   )
 });

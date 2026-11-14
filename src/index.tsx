@@ -3,6 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { resolveInitialPath } from './RiskOfRain2/routing';
+import { loadStoredRoute } from './RiskOfRain2/localStorage';
+
+if (typeof window !== 'undefined') {
+  const initialPath = resolveInitialPath(window.location.hash, loadStoredRoute())
+  if (window.location.hash.replace(/^#/, '') !== initialPath) {
+    window.location.replace(
+      `${window.location.pathname}${window.location.search}#${initialPath}`
+    )
+  }
+}
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

@@ -5,8 +5,11 @@ import clsx from "clsx";
 
 const useStyles = createUseStyles({
   description: {
-    color: '#ffffff',
+    color: '#c3cbd9',
     textAlign: 'left',
+    fontSize: '13px',
+    lineHeight: 1.5,
+    whiteSpace: 'pre-line',
   },
 })
 

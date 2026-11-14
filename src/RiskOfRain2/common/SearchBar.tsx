@@ -2,20 +2,21 @@ import React from "react"
 import { useStyles } from "../useStyles";
 import clsx from "clsx";
 import riskOfRainUiState from "../RiskOfRainUiState";
+import { observer } from "mobx-react-lite";
 
 type Props = {
 
 };
 
-const SearchBar = (props: Props) => {
+const SearchBar = observer((props: Props) => {
   const styles = useStyles()
 
   const uiState = riskOfRainUiState
-  const items = uiState.list
 
   const searchBarContainerClasses = clsx(
     styles.flexRow,
     styles.flexLeft,
+    styles.headerSearch,
   )
 
   return (
@@ -23,17 +24,11 @@ const SearchBar = (props: Props) => {
       <input
         className={styles.searchBar}
         type="text"
-        placeholder="Search..."
-        onChange={(e) => {
-          const filteredItems = items.filter((item) => {
-            return item.displayName.toLowerCase().includes(e.target.value.toLowerCase()) ||
-              item.nickname.toLowerCase().includes(e.target.value.toLowerCase()) ||
-              item.description.toLowerCase().includes(e.target.value.toLowerCase())
-        })
-        uiState.filteredList = filteredItems
-      }} />
+        placeholder="Search items..."
+        value={uiState.searchQuery}
+        onChange={(e) => uiState.setSearchQuery(e.target.value)} />
     </div>
   )
-};
+});
 
 export default SearchBar;

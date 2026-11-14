@@ -1,16 +1,28 @@
 import { makeAutoObservable } from "mobx";
-import ror2_items from "./ror2_items.json"
+import ror2_items from "./ror2_items.json";
+import {
+  loadStoredDisplayType,
+  loadStoredFilters,
+  loadStoredHeaderExpanded,
+  saveDisplayType,
+  saveFilters,
+  saveHeaderExpanded,
+} from "./localStorage";
+import { defaultFilters, DisplayType, RARITY_NAMES } from "./RiskOfRain2Types";
+
+const rarityToString = (rarity: number) => RARITY_NAMES[rarity] ?? ''
 
 class RiskOfRainUiState {
 
-  private _displayType: string = 'list';
+  private _displayType: DisplayType = 'grid';
   private _filters: Set<string> = new Set<string>();
   private _filteredList: any[] = [];
   private _list: any[] = [];
+  private _searchQuery: string = '';
 
 
   // Header
-  private _headerExpanded: boolean = false;
+  private _headerExpanded: boolean = true;
 
   // Flash Cards
   private _usedFlashCardItems: any[] = []
@@ -23,20 +35,25 @@ class RiskOfRainUiState {
   private _tierListSelectedCharacter: string = 'Commando';
 
   constructor() {
-    this._filters = new Set<string>(
-      ['Common', 'Uncommon', 'Legendary', 'Boss', 'Void', 'Lunar', 'Equipment']
-    )
+    const storedDisplayType = loadStoredDisplayType()
+    if (storedDisplayType) this._displayType = storedDisplayType
+    const storedFilters = loadStoredFilters()
+    this._filters = storedFilters ? new Set<string>(storedFilters) : defaultFilters()
+    const storedHeaderExpanded = loadStoredHeaderExpanded()
+    if (storedHeaderExpanded !== null) this._headerExpanded = storedHeaderExpanded
+
     this._filteredList = ror2_items as any[]
     this._list = ror2_items as any[]
 
-
     makeAutoObservable(this)
+    this.applyFilters()
   }
 
   get displayType() { return this._displayType; }
   get filters() { return this._filters; }
   get filteredList() { return this._filteredList; }
   get list() { return this._list; }
+  get searchQuery() { return this._searchQuery; }
   get tierListSelectedCharacter() { return this._tierListSelectedCharacter; }
   // Header
   get headerExpanded() { return this._headerExpanded; }
@@ -47,10 +64,11 @@ class RiskOfRainUiState {
   get itemsGuessed() { return this._itemsGuessed; }
   get itemHasBeenGuessed() { return this._itemHasBeenGuessed; }
 
-  set displayType(value: string) { this._displayType = value; }
+  set displayType(value: DisplayType) { this._displayType = value; }
   set filters(value: Set<string>) { this._filters = value; }
   set filteredList(value: any[]) { this._filteredList = value; }
   set list(value: any[]) { this._list = value; }
+  set searchQuery(value: string) { this._searchQuery = value; }
   set tierListSelectedCharacter(value: string) { this._tierListSelectedCharacter = value; }
   // Header
   set headerExpanded(value: boolean) { this._headerExpanded = value; }
@@ -61,13 +79,50 @@ class RiskOfRainUiState {
   set itemsGuessed(value: any[]) { this._itemsGuessed = value; }
   set itemHasBeenGuessed(value: boolean) { this._itemHasBeenGuessed = value; }
 
-  public setDisplayType = (displayType: string) => {
-    this.filteredList = this.list
-    this.displayType = displayType
+  // Applies the search query and rarity filters together
+  public applyFilters = () => {
+    const query = this.searchQuery.trim().toLowerCase()
+    this.filteredList = this.list.filter((item) => {
+      if (this.filters.size > 0 && !this.filters.has(rarityToString(item.rarity))) return false
+      if (!query) return true
+      return item.displayName.toLowerCase().includes(query) ||
+        item.nickname.toLowerCase().includes(query) ||
+        item.description.toLowerCase().includes(query)
+    })
   }
 
-  public addFilter = (filter: string) => this.filters.add(filter)
-  public removeFilter = (filter: string) => this.filters.delete(filter)
+  public setDisplayType = (displayType: DisplayType) => {
+    this.applyFilters()
+    this.displayType = displayType
+    saveDisplayType(displayType)
+  }
+
+  public setSearchQuery = (query: string) => {
+    this.searchQuery = query
+    this.applyFilters()
+  }
+
+  public addFilter = (filter: string) => {
+    this.filters.add(filter)
+    this.applyFilters()
+    saveFilters(this.filters)
+  }
+  public removeFilter = (filter: string) => {
+    this.filters.delete(filter)
+    this.applyFilters()
+    saveFilters(this.filters)
+  }
+
+  public resetFilters = () => {
+    this.filters = defaultFilters()
+    this.applyFilters()
+    saveFilters(this.filters)
+  }
+
+  public toggleHeaderExpanded = () => {
+    this.headerExpanded = !this.headerExpanded
+    saveHeaderExpanded(this.headerExpanded)
+  }
 
   addCurrentUsedItem = (item: any) => this.currentUsedItems.push(item)
   resetCurrentUsedItems = () => this.currentUsedItems = []

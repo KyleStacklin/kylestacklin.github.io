@@ -1,60 +1,92 @@
 import React from "react"
 import { createUseStyles } from "react-jss";
 import RiskOfRain2ItemTileDescription from "./RiskOfRain2ItemTileDescription";
-import { rarityConverter } from "./RiskOfRainBusinessLogic";
-import clsx from "clsx";
-import { useStyles } from "./useStyles";
+import { rarityConverter, rarityPillStyle } from "./RiskOfRainBusinessLogic";
 
 const useComponentStyles = createUseStyles({
-  itemNumber: {
+  listItem: {
+    position: 'relative',
+    overflow: 'hidden',
     display: 'flex',
-    justifyContent: 'flex-end',
+    alignItems: 'center',
+    gap: '16px',
+    padding: '14px 16px',
+    borderRadius: '12px',
+    background: 'linear-gradient(180deg, #242b3a 0%, #1a202c 100%)',
+    border: '1px solid rgba(255,255,255,0.08)',
+    boxShadow: '0 2px 10px rgba(0, 0, 0, 0.3)',
+    transition: 'transform 0.15s ease, box-shadow 0.15s ease',
+    '&::before': {
+      content: '""',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      right: 0,
+      height: '3px',
+      background: 'var(--tile-accent)',
+      opacity: 0.9,
+    },
+    '&:hover': {
+      transform: 'translateY(-2px)',
+      boxShadow: '0 8px 20px rgba(0, 0, 0, 0.45)',
+    },
   },
-  bold: {
-    fontWeight: '700',
-    fontSize: '16px',
-    textShadow: `
-      -1px -1px 0 #000, /* Top-left shadow */
-      1px -1px 0 #000,  /* Top-right shadow */
-      -1px 1px 0 #000,  /* Bottom-left shadow */
-      1px 1px 0 #000   /* Bottom-right shadow */
-    `,
-    color: '#fff'
+  imageFrame: {
+    flexShrink: 0,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '64px',
+    height: '64px',
+    padding: '6px',
+    boxSizing: 'border-box',
+    borderRadius: '10px',
+    background: 'rgba(0, 0, 0, 0.35)',
+    border: '1px solid rgba(255,255,255,0.1)',
+  },
+  image: {
+    width: '100%',
+    height: '100%',
+    objectFit: 'contain',
+  },
+  content: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '6px',
+    minWidth: 0,
+    flex: 1,
+  },
+  nameRow: {
+    display: 'flex',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    gap: '8px',
   },
   displayName: {
-    display: 'flex',
-    paddingBottom: '8px',
-    borderBottom: '1px solid black',
-    marginBottom: '4px',
-  },
-  attributes: {
-    listStyleType: 'circle',
     margin: 0,
-    padding: '8px 0px 8px 24px',
+    fontWeight: '700',
+    fontSize: '15px',
+    color: '#ffffff',
   },
-  howToUnlock: {
-    cursor: 'pointer',
-    color: 'blue',
-  },
-  flexLeftJustify: {
-    display: 'flex',
-    justifyContent: 'flex-start',
-    alignItems: 'center',
+  rarityPill: {
+    fontSize: '10px',
+    fontWeight: '600',
+    letterSpacing: '0.4px',
+    textTransform: 'uppercase',
+    borderRadius: '999px',
+    padding: '2px 8px',
+    width: 'fit-content',
   },
   description: {
+    fontSize: '12.5px',
+  },
+  unlockTask: {
     fontSize: '12px',
-    overflowY: 'auto',
+    color: '#a8b2c5',
   },
-  listItem: {
-    height: 120,
-    borderRadius: 4,
-    gap: '16px',
-    padding: '8px',
-  },
-  listItemHr: {
-    width: '100%',
-    border: '1px solid grey',
-    margin: '8px 0px',
+  unlockLabel: {
+    fontWeight: '700',
+    color: '#e2a94f',
   },
 })
 
@@ -63,24 +95,29 @@ type Props = {
 };
 
 const RiskOfRainListItem = ({ item }: Props) => {
-  const { displayName, nickname, rarity, description, itemNumber, unlockTask } = item
-  const styles = useStyles()
+  const { displayName, nickname, rarity, description, unlockTask } = item
   const componentStyles = useComponentStyles()
 
-  const { background } = rarityConverter(rarity)
-
-  const listItemClasses = clsx(componentStyles.flexLeftJustify, componentStyles.listItem)
-  const itemDescriptionClasses = clsx(styles.flexColumn, styles.flexCenterY, styles.fillAvailableWidth)
+  const { rarityString, rarityColor } = rarityConverter(rarity)
 
   return (
-    <div className={listItemClasses} style={{background}}>
-      <div className={styles.flexCenterX} style={{width: 100}}>
-        <img src={require(`./ror2_items_img/${nickname}.webp`)} />
+    <div className={componentStyles.listItem} style={{ '--tile-accent': rarityColor } as React.CSSProperties}>
+      <div className={componentStyles.imageFrame}>
+        <img className={componentStyles.image} src={require(`./ror2_items_img/${nickname}.webp`)} alt={displayName} />
       </div>
-      <div className={itemDescriptionClasses} style={{height: '100%'}}>
-        <div className={componentStyles.bold}>{displayName}</div>
-        <hr className={componentStyles.listItemHr} />
+      <div className={componentStyles.content}>
+        <div className={componentStyles.nameRow}>
+          <h3 className={componentStyles.displayName}>{displayName}</h3>
+          <span className={componentStyles.rarityPill} style={rarityPillStyle(rarityColor)}>
+            {rarityString}
+          </span>
+        </div>
         <RiskOfRain2ItemTileDescription className={componentStyles.description} description={description} />
+        { unlockTask &&
+          <div className={componentStyles.unlockTask}>
+            <span className={componentStyles.unlockLabel}>Unlock:</span> {unlockTask}
+          </div>
+        }
       </div>
     </div>
   )

@@ -4,28 +4,37 @@ import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
   button: {
-    height: '32px',
-    padding: '8px 16px',
-    borderRadius: '4px',
-    backgroundColor: '#fff',
-    color: '#007bff',
-    border: '1px solid #007bff',
+    height: '34px',
+    padding: '6px 14px',
+    borderRadius: '8px',
+    backgroundColor: 'rgba(255,255,255,0.06)',
+    color: '#c9d1e0',
+    border: '1px solid rgba(255,255,255,0.12)',
     cursor: 'pointer',
+    fontSize: '13px',
+    fontWeight: '600',
+    letterSpacing: '0.2px',
+    transition: 'background 0.15s ease, color 0.15s ease, border-color 0.15s ease',
     '&:hover': {
-      backgroundColor: '#e6e6e6',
+      backgroundColor: 'rgba(255,255,255,0.12)',
+      color: '#ffffff',
+      borderColor: 'rgba(255,255,255,0.22)',
     },
   },
   buttonActive: {
-    backgroundColor: '#007bff',
-    border: '1px solid #007bff',
-    color: '#fff',
+    backgroundColor: '#e8802e',
+    border: '1px solid #ff9d4d',
+    color: '#221507',
 
     '&:hover': {
-      backgroundColor: '#0056b3',
+      backgroundColor: '#f18c3c',
+      borderColor: '#ff9d4d',
+      color: '#221507',
     },
   },
   disabled: {
-    backgroundColor: '#ccc',
+    backgroundColor: 'rgba(255,255,255,0.05)',
+    color: '#5b6272',
     cursor: 'not-allowed',
   },
 })

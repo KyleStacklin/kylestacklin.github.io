@@ -1,42 +1,33 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import { useStyles } from "./useStyles";
-import RiskOfRain2ItemTile from "./RiskOfRain2ItemTile";
-import SearchBar from "./common/SearchBar";
 import { createUseStyles } from "react-jss";
 import clsx from "clsx";
 
 const useComponentStyles = createUseStyles({
   pageContainer: {
-    padding: '0px 16px 0px 16px',
-    marginTop: 72,
+    width: '100%',
+    maxWidth: '1400px',
+    margin: '0 auto',
+    padding: '20px 16px 40px',
+    boxSizing: 'border-box',
   },
-  searchBarContainer: {
-    marginBottom: 16
-  }
 })
 
 type Props = {
   children: React.ReactNode
-  search?: boolean
 }
 
-const PageContainer = ({ children, search }: Props) => {
+const PageContainer = ({ children }: Props) => {
   const styles = useStyles()
   const componentStyles = useComponentStyles()
 
   const containerClasses = clsx(
     styles.flexColumn,
-    styles.fillAvailableHeight,
     componentStyles.pageContainer
   )
 
   return (
     <div className={containerClasses}>
-      { search && (
-        <div className={componentStyles.searchBarContainer}>
-          <SearchBar />
-        </div>
-      )}
       { children }
     </div>
   )
