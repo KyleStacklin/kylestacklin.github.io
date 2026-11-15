@@ -1,7 +1,7 @@
 import React from "react"
 import { createUseStyles } from "react-jss"
 import Button from "../Button"
-import { FlashcardStats } from "./flashcardUtils"
+import { FlashcardMode, FlashcardStats } from "./flashcardUtils"
 
 const useComponentStyles = createUseStyles({
   startIn: {
@@ -78,6 +78,8 @@ const useComponentStyles = createUseStyles({
 })
 
 type Props = {
+  mode: FlashcardMode
+  onChangeMode: (mode: FlashcardMode) => void
   optionCount: number
   onChangeOptionCount: (count: number) => void
   sessionLength: number
@@ -87,7 +89,14 @@ type Props = {
   onStart: () => void
 }
 
+const MODE_OPTIONS: { value: FlashcardMode, label: string }[] = [
+  { value: 'description', label: 'Description → Item' },
+  { value: 'image', label: 'Image → Description' },
+]
+
 const RiskOfRainFlashCardStart = ({
+  mode,
+  onChangeMode,
   optionCount,
   onChangeOptionCount,
   sessionLength,
@@ -98,12 +107,29 @@ const RiskOfRainFlashCardStart = ({
 }: Props) => {
   const componentStyles = useComponentStyles()
   const hasRecords = stats.bestStreak > 0 || stats.bestAccuracy > 0
+  const subtitle =
+    mode === 'description'
+      ? 'Read the item description and guess which item it belongs to. The deck is shuffled every session.'
+      : 'Look at the item icon and pick the description that matches it. The deck is shuffled every session.'
 
   return (
     <div className={componentStyles.startPanel}>
       <h2 className={componentStyles.startTitle}>Item Flashcards</h2>
-      <div className={componentStyles.startSubtitle}>
-        Read the item description and guess which item it belongs to. The deck is shuffled every session.
+      <div className={componentStyles.startSubtitle}>{subtitle}</div>
+
+      <div className={componentStyles.difficultyRow}>
+        <span className={componentStyles.difficultyLabel}>Question style:</span>
+        {MODE_OPTIONS.map((option) => (
+          <Button
+            key={option.value}
+            onClick={onChangeMode}
+            onClickPassBack={option.value}
+            toggle={true}
+            toggleActive={mode === option.value}
+          >
+            {option.label}
+          </Button>
+        ))}
       </div>
 
       <div className={componentStyles.difficultyRow}>

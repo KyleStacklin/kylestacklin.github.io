@@ -1,8 +1,8 @@
 import React from "react"
 import { createUseStyles } from "react-jss"
 import clsx from "clsx"
-import { descriptionParser } from "../RiskOfRainBusinessLogic"
-import { FlashcardItem } from "./flashcardUtils"
+import { descriptionParser, rarityConverter, rarityPillStyle } from "../RiskOfRainBusinessLogic"
+import { FlashcardItem, FlashcardMode } from "./flashcardUtils"
 
 const useComponentStyles = createUseStyles({
   optionsIn: {
@@ -44,6 +44,14 @@ const useComponentStyles = createUseStyles({
       outlineOffset: '2px',
     },
   },
+  optionTile: {
+    position: 'relative',
+    flexDirection: 'column',
+    alignItems: 'center',
+    gap: '8px',
+    textAlign: 'center',
+    padding: '30px 12px 12px',
+  },
   optionNumber: {
     flexShrink: 0,
     display: 'flex',
@@ -61,6 +69,44 @@ const useComponentStyles = createUseStyles({
     lineHeight: 1,
     transition: 'background 0.15s ease, color 0.15s ease, border-color 0.15s ease',
   },
+  optionNumberCorner: {
+    position: 'absolute',
+    top: '8px',
+    left: '8px',
+    marginTop: 0,
+  },
+  optionImageFrame: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '72px',
+    height: '72px',
+    padding: '6px',
+    boxSizing: 'border-box',
+    borderRadius: '10px',
+    background: 'rgba(0, 0, 0, 0.35)',
+    border: '1px solid rgba(255,255,255,0.12)',
+  },
+  optionImage: {
+    width: '100%',
+    height: '100%',
+    objectFit: 'contain',
+  },
+  optionName: {
+    fontSize: '14px',
+    fontWeight: '700',
+    color: '#ffffff',
+    lineHeight: 1.3,
+  },
+  optionPill: {
+    fontSize: '10px',
+    fontWeight: '600',
+    letterSpacing: '0.4px',
+    textTransform: 'uppercase',
+    borderRadius: '999px',
+    padding: '2px 8px',
+    width: 'fit-content',
+  },
   optionDescription: {
     flex: 1,
     minWidth: 0,
@@ -68,6 +114,11 @@ const useComponentStyles = createUseStyles({
     fontSize: '12.5px',
     lineHeight: 1.5,
     whiteSpace: 'pre-line',
+    // Candidate descriptions are clamped so long entries stay scannable.
+    display: '-webkit-box',
+    WebkitLineClamp: 3,
+    WebkitBoxOrient: 'vertical',
+    overflow: 'hidden',
   },
   optionCorrect: {
     borderColor: '#35c45d',
@@ -93,6 +144,7 @@ const useComponentStyles = createUseStyles({
 })
 
 type Props = {
+  mode: FlashcardMode
   options: FlashcardItem[]
   correctItem: FlashcardItem
   selectedItem: FlashcardItem | null
@@ -100,8 +152,9 @@ type Props = {
   onPick: (item: FlashcardItem) => void
 }
 
-const RiskOfRainFlashCardOptions = ({ options, correctItem, selectedItem, answered, onPick }: Props) => {
+const RiskOfRainFlashCardOptions = ({ mode, options, correctItem, selectedItem, answered, onPick }: Props) => {
   const componentStyles = useComponentStyles()
+  const isImageMode = mode === 'image'
 
   const isCorrectOption = (option: FlashcardItem) => option.nickname === correctItem.nickname
   const isPickedOption = (option: FlashcardItem) =>
@@ -110,6 +163,7 @@ const RiskOfRainFlashCardOptions = ({ options, correctItem, selectedItem, answer
   const optionClasses = (option: FlashcardItem) =>
     clsx(
       componentStyles.option,
+      !isImageMode && componentStyles.optionTile,
       answered && isCorrectOption(option) && componentStyles.optionCorrect,
       answered && isPickedOption(option) && !isCorrectOption(option) && componentStyles.optionWrong,
       answered && !isCorrectOption(option) && !isPickedOption(option) && componentStyles.optionDimmed
@@ -118,27 +172,53 @@ const RiskOfRainFlashCardOptions = ({ options, correctItem, selectedItem, answer
   const numberClasses = (option: FlashcardItem) =>
     clsx(
       componentStyles.optionNumber,
+      !isImageMode && componentStyles.optionNumberCorner,
       answered && isCorrectOption(option) && componentStyles.optionNumberCorrect,
       answered && isPickedOption(option) && !isCorrectOption(option) && componentStyles.optionNumberWrong
     )
 
   return (
-    <div className={componentStyles.optionsGrid}>
-      {options.map((option, index) => (
-        <button
-          key={option.nickname}
-          type="button"
-          className={optionClasses(option)}
-          disabled={answered}
-          onClick={() => onPick(option)}
-        >
-          <span className={numberClasses(option)}>{index + 1}</span>
-          <span
-            className={componentStyles.optionDescription}
-            dangerouslySetInnerHTML={{ __html: descriptionParser(option.description) }}
-          />
-        </button>
-      ))}
+    <div className={componentStyles.optionsGrid} data-testid="flashcard-options">
+      {options.map((option, index) => {
+        const { rarityString, rarityColor } = rarityConverter(option.rarity)
+        return (
+          <button
+            key={option.nickname}
+            type="button"
+            data-testid="flashcard-option"
+            className={optionClasses(option)}
+            disabled={answered}
+            onClick={() => onPick(option)}
+          >
+            <span className={numberClasses(option)}>{index + 1}</span>
+            {isImageMode ? (
+              // Image → Description: options are candidate descriptions only.
+              // Rendering names or icons here would give the answer away.
+              <span
+                className={componentStyles.optionDescription}
+                dangerouslySetInnerHTML={{ __html: descriptionParser(option.description) }}
+              />
+            ) : (
+              // Description → Item: options are item tiles (icon + name + rarity).
+              // Rendering the description here would repeat the question.
+              <>
+                <span className={componentStyles.optionImageFrame}>
+                  <img
+                    className={componentStyles.optionImage}
+                    src={require(`../ror2_items_img/${option.nickname}.webp`)}
+                    alt={option.displayName}
+                    draggable={false}
+                  />
+                </span>
+                <span className={componentStyles.optionName}>{option.displayName}</span>
+                <span className={componentStyles.optionPill} style={rarityPillStyle(rarityColor)}>
+                  {rarityString}
+                </span>
+              </>
+            )}
+          </button>
+        )
+      })}
     </div>
   )
 }

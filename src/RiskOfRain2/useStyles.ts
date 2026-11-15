@@ -107,6 +107,10 @@ export const useStyles = createUseStyles({
     alignItems: 'center',
     flexWrap: 'wrap',
     gap: '12px',
+    '@media (max-width: 639px)': {
+      gap: '8px',
+      '& svg': { marginLeft: 'auto' },
+    },
   },
   headerTitle: {
     fontWeight: '700',
@@ -114,6 +118,9 @@ export const useStyles = createUseStyles({
     letterSpacing: '0.3px',
     color: '#ffffff',
     whiteSpace: 'nowrap',
+    '@media (max-width: 639px)': {
+      fontSize: '15px',
+    },
   },
   resultCount: {
     fontSize: '12px',
@@ -124,11 +131,21 @@ export const useStyles = createUseStyles({
     padding: '3px 10px',
     borderRadius: '999px',
     whiteSpace: 'nowrap',
+    '@media (max-width: 639px)': {
+      fontSize: '11px',
+      padding: '2px 8px',
+    },
   },
   headerSearch: {
     flex: '1 1 180px',
     maxWidth: '440px',
     marginLeft: 'auto',
+    '@media (max-width: 639px)': {
+      order: 3,
+      flex: '1 1 100%',
+      maxWidth: 'none',
+      marginLeft: 0,
+    },
   },
   headerControls: {
     overflow: 'hidden',
@@ -137,21 +154,86 @@ export const useStyles = createUseStyles({
   headerControlsRow: {
     display: 'flex',
     flexWrap: 'wrap',
-    alignItems: 'center',
+    alignItems: 'flex-end',
     justifyContent: 'space-between',
-    gap: '10px',
+    gap: '10px 16px',
+    '@media (max-width: 899px)': {
+      flexDirection: 'column',
+      alignItems: 'stretch',
+      justifyContent: 'flex-start',
+      gap: '10px',
+      '& button': { minHeight: '40px' },
+    },
   },
-  dlcFilter: {
+  filterGroups: {
     display: 'flex',
-    flexWrap: 'wrap',
-    alignItems: 'center',
-    gap: '8px',
+    alignItems: 'stretch',
+    flex: '1 1 0%',
+    minWidth: 0,
+    gap: '14px',
+    '@media (max-width: 899px)': {
+      flexDirection: 'column',
+      gap: '10px',
+    },
   },
-  dlcLabel: {
-    fontSize: '12px',
-    fontWeight: '600',
+  filterGroup: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'flex-end',
+    gap: '6px',
+    minWidth: 0,
+  },
+  dlcGroup: {
+    flex: '0 1 auto',
+  },
+  rarityGroup: {
+    flex: '1 1 0%',
+  },
+  groupLabel: {
+    fontSize: '10px',
+    fontWeight: '700',
+    lineHeight: 1,
+    letterSpacing: '1.2px',
+    textTransform: 'uppercase',
     color: '#a3adc2',
     whiteSpace: 'nowrap',
+  },
+  groupItemsRow: {
+    display: 'flex',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    gap: '8px',
+    minWidth: 0,
+    '& > button': {
+      flexShrink: 0,
+      whiteSpace: 'nowrap',
+    },
+    '@media (max-width: 899px)': {
+      flexWrap: 'nowrap',
+      overflowX: 'auto',
+      overflowY: 'hidden',
+      WebkitOverflowScrolling: 'touch',
+      scrollbarWidth: 'none',
+      msOverflowStyle: 'none',
+      padding: '4px 0',
+      '&::-webkit-scrollbar': { display: 'none' },
+    },
+  },
+  groupItemsRowEnd: {
+    justifyContent: 'flex-end',
+    '@media (max-width: 899px)': {
+      justifyContent: 'flex-start',
+    },
+  },
+  groupDivider: {
+    flex: '0 0 auto',
+    width: '1px',
+    alignSelf: 'stretch',
+    backgroundColor: 'rgba(255,255,255,0.14)',
+    '@media (max-width: 899px)': {
+      width: 'auto',
+      height: '1px',
+    },
   },
   dlcToggle: {
     display: 'flex',
@@ -217,14 +299,12 @@ export const useStyles = createUseStyles({
       backgroundColor: 'rgba(255,255,255,0.1)',
       boxShadow: '0 0 0 3px rgba(255, 139, 61, 0.18)',
     },
+    '@media (max-width: 639px)': {
+      height: '40px',
+      fontSize: '16px',
+    },
   },
   filterOptions: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    alignItems: 'center',
-    gap: '8px',
-  },
-  rarityFilter: {
     display: 'flex',
     flexWrap: 'wrap',
     alignItems: 'center',
@@ -249,6 +329,10 @@ export const useStyles = createUseStyles({
       outline: '2px solid rgba(232, 128, 46, 0.5)',
       outlineOffset: '2px',
       borderRadius: '4px',
+    },
+    '@media (max-width: 899px)': {
+      padding: '0 6px',
+      fontSize: '13px',
     },
   },
 

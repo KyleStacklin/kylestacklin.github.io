@@ -62,6 +62,24 @@ export const rarityConverter = (rarityNumber: number): RarityConverter => {
         rarityString: 'Equipment',
         rarityColor: '#734D12'
       }
+    case 7:
+      return {
+        background: 'linear-gradient(90deg, rgba(208,248,32,1) 0%, rgba(208,248,32,1) 70%, rgba(208,248,32,1) 100%)',
+        rarityString: 'Hex',
+        rarityColor: '#D0F820'
+      }
+    case 8:
+      return {
+        background: 'linear-gradient(90deg, rgba(155,115,249,1) 0%, rgba(155,115,249,1) 70%, rgba(155,115,249,1) 100%)',
+        rarityString: 'Hallowed',
+        rarityColor: '#9B73F9'
+      }
+    case 9:
+      return {
+        background: 'linear-gradient(90deg, rgba(42,139,255,1) 0%, rgba(42,139,255,1) 70%, rgba(42,139,255,1) 100%)',
+        rarityString: 'Page',
+        rarityColor: '#2A8BFF'
+      }
     default:
       return { background: '', rarityString: '', rarityColor: '' };
   }
@@ -83,6 +101,12 @@ export const rarityTextToNum = (rarityText: string) => {
       return 5
     case 'Equipment':
       return 6
+    case 'Hex':
+      return 7
+    case 'Hallowed':
+      return 8
+    case 'Page':
+      return 9
     default:
       return -1
   }

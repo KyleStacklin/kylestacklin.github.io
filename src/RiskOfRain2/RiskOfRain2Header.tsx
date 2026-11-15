@@ -52,13 +52,17 @@ const RiskOfRain2Header = observer(() => {
     styles.flexRow,
     styles.filterOptions
   )
-  const rarityFilterClasses = clsx(
-    styles.flexRow,
-    styles.rarityFilter
+  const dlcGroupClasses = clsx(
+    styles.filterGroup,
+    styles.dlcGroup
   )
-  const dlcFilterClasses = clsx(
-    styles.flexRow,
-    styles.dlcFilter
+  const rarityGroupClasses = clsx(
+    styles.filterGroup,
+    styles.rarityGroup
+  )
+  const dlcItemsClasses = clsx(
+    styles.groupItemsRow,
+    styles.groupItemsRowEnd
   )
 
   const expanded = uiState.headerExpanded
@@ -74,7 +78,7 @@ const RiskOfRain2Header = observer(() => {
 
       <div
         className={styles.headerControls}
-        style={{ maxHeight: expanded ? 320 : 0, opacity: expanded ? 1 : 0 }}
+        style={{ maxHeight: expanded ? 400 : 0, opacity: expanded ? 1 : 0 }}
       >
         <div className={styles.headerControlsRow}>
           <div className={filterOptionsClasses}>
@@ -101,72 +105,81 @@ const RiskOfRain2Header = observer(() => {
             </Button>
           </div>
 
-          <div className={rarityFilterClasses}>
-            {
-              rarities.map((rarity, i) => {
-                const active = uiState.filters.has(rarity)
-                return (
-                  <Button
-                    key={i}
-                    onClick={handleFilter}
-                    style={filterPillStyle(rarity)}
-                    toggle={true}
-                    toggleActive={active}
+          <div className={styles.filterGroups}>
+            <div className={dlcGroupClasses}>
+              <span className={styles.groupLabel}>DLC</span>
+              <div className={dlcItemsClasses}>
+                {DLC_CODES.map((code) => {
+                  const enabled = uiState.enabledDlcs.has(code)
+                  const dlcName = DLC_NAMES[code as DlcCode]
+                  const toggleClasses = clsx(
+                    styles.dlcToggle,
+                    enabled ? styles.dlcToggleActive : styles.dlcToggleInactive,
+                    code === 'base' && styles.dlcToggleText
+                  )
+                  return (
+                    <button
+                      key={code}
+                      type="button"
+                      className={toggleClasses}
+                      onClick={() => uiState.toggleDlc(code)}
+                      aria-pressed={enabled}
+                      aria-label={dlcName}
+                      title={dlcName}
+                    >
+                      {code === 'base'
+                        ? 'Base'
+                        : <img className={styles.dlcToggleImage} src={require(`./dlc_logos/${code}.webp`)} alt="" draggable={false} />}
+                    </button>
+                  )
+                })}
+                {showResetDlcs &&
+                  <button
+                    type="button"
+                    className={styles.resetFilterLink}
+                    aria-label="Reset DLC"
+                    title="Restore all DLCs"
+                    onClick={() => uiState.resetDlcs()}
                   >
-                      {rarity}
-                  </Button>
-                )
-              })
-            }
-            {showResetFilters &&
-              <button
-                type="button"
-                className={styles.resetFilterLink}
-                onClick={() => uiState.resetFilters()}
-              >
-                Reset
-              </button>
-            }
-          </div>
-        </div>
+                    Reset
+                  </button>
+                }
+              </div>
+            </div>
 
-        <div className={dlcFilterClasses}>
-          <span className={styles.dlcLabel}>DLC:</span>
-          {DLC_CODES.map((code) => {
-            const enabled = uiState.enabledDlcs.has(code)
-            const dlcName = DLC_NAMES[code as DlcCode]
-            const toggleClasses = clsx(
-              styles.dlcToggle,
-              enabled ? styles.dlcToggleActive : styles.dlcToggleInactive,
-              code === 'base' && styles.dlcToggleText
-            )
-            return (
-              <button
-                key={code}
-                type="button"
-                className={toggleClasses}
-                onClick={() => uiState.toggleDlc(code)}
-                aria-pressed={enabled}
-                aria-label={dlcName}
-                title={dlcName}
-              >
-                {code === 'base'
-                  ? 'Base'
-                  : <img className={styles.dlcToggleImage} src={require(`./dlc_logos/${code}.webp`)} alt="" draggable={false} />}
-              </button>
-            )
-          })}
-          {showResetDlcs &&
-            <button
-              type="button"
-              className={styles.resetFilterLink}
-              aria-label="Reset DLC"
-              title="Restore all DLCs"
-              onClick={() => uiState.resetDlcs()}
-            >
-              Reset
-            </button>
-          }
+            <div className={styles.groupDivider} aria-hidden="true" />
+
+            <div className={rarityGroupClasses}>
+              <span className={styles.groupLabel}>Rarity</span>
+              <div className={styles.groupItemsRow}>
+                {
+                  rarities.map((rarity, i) => {
+                    const active = uiState.filters.has(rarity)
+                    return (
+                      <Button
+                        key={i}
+                        onClick={handleFilter}
+                        style={filterPillStyle(rarity)}
+                        toggle={true}
+                        toggleActive={active}
+                      >
+                          {rarity}
+                      </Button>
+                    )
+                  })
+                }
+                {showResetFilters &&
+                  <button
+                    type="button"
+                    className={styles.resetFilterLink}
+                    onClick={() => uiState.resetFilters()}
+                  >
+                    Reset
+                  </button>
+                }
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

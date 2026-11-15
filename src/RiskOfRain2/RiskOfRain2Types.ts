@@ -11,15 +11,16 @@ export type RiskOfRain2Item = {
   dlc?: DlcCode;
 }
 
-export type DlcCode = 'base' | 'sotv' | 'sots' | 'alloyed'
+export type DlcCode = 'base' | 'sotv' | 'sots' | 'alloyed' | 'hallowed'
 
-export const DLC_CODES: readonly DlcCode[] = ['base', 'sotv', 'sots', 'alloyed']
+export const DLC_CODES: readonly DlcCode[] = ['base', 'sotv', 'sots', 'alloyed', 'hallowed']
 
 export const DLC_NAMES: Record<DlcCode, string> = {
   base: 'Base Game',
   sotv: 'Survivors of the Void',
   sots: 'Seekers of the Storm',
   alloyed: 'Alloyed Collective',
+  hallowed: 'Hallowed Concepts',
 }
 
 export const DEFAULT_DLC_FILTERS: readonly DlcCode[] = DLC_CODES
@@ -42,6 +43,9 @@ export const RARITY_NAMES: readonly string[] = [
   'Void',
   'Lunar',
   'Equipment',
+  'Hex',
+  'Hallowed',
+  'Page',
 ]
 
 export const DEFAULT_RARITY_FILTERS: readonly string[] = RARITY_NAMES

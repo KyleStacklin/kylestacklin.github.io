@@ -4,11 +4,10 @@
   "private": true,
   "homepage": "https://kylestacklin.github.io",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
+    "@testing-library/react": "^14.3.1",
+    "@testing-library/user-event": "^14.6.10",
     "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.119",
+    "@types/node": "^18.19.130",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "clsx": "^2.1.1",
@@ -26,9 +25,17 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:unit": "vitest run",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
+  },
+  "jest": {
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{js,mjs,cjs,jsx,ts,tsx}",
+      "<rootDir>/src/**/*.{spec,test}.{js,mjs,cjs,jsx,ts,tsx}",
+      "!**/src/RiskOfRain2/__tests__/**"
+    ]
   },
   "eslintConfig": {
     "extends": [
@@ -49,6 +56,9 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.2.0"
+    "@testing-library/jest-dom": "^6.9.1",
+    "gh-pages": "^6.2.0",
+    "jsdom": "^31.0.1",
+    "vitest": "^3.2.7"
   }
 }

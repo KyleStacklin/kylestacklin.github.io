@@ -53,8 +53,11 @@ class RiskOfRainUiState {
     const storedHeaderExpanded = loadStoredHeaderExpanded()
     if (storedHeaderExpanded !== null) this._headerExpanded = storedHeaderExpanded
 
-    this._filteredList = ror2_items as any[]
-    this._list = ror2_items as any[]
+    this._list = (ror2_items as any[])
+      .map((item, index) => ({ item, index }))
+      .sort((a, b) => (Number(a.item.rarity) || 0) - (Number(b.item.rarity) || 0) || a.index - b.index)
+      .map(({ item }) => item)
+    this._filteredList = this._list
 
     makeAutoObservable(this)
     this.applyFilters()

@@ -12,6 +12,12 @@ export type FlashcardQuestion = {
   options: FlashcardItem[]
 }
 
+// 'description': the question shows the parsed item description, options are
+// item image tiles. 'image': the question shows the item icon, options are
+// candidate descriptions. The question/options pair must never reveal the
+// answer in both places at once.
+export type FlashcardMode = 'description' | 'image'
+
 export type MissedItem = {
   item: FlashcardItem
   picked: FlashcardItem | null
@@ -56,6 +62,7 @@ export const buildQuestions = (
 
 const STATS_KEY = 'ror2-flashcards-stats'
 const OPTION_COUNT_KEY = 'ror2-flashcards-option-count'
+const MODE_KEY = 'ror2-flashcards-mode'
 
 const readStorage = (key: string): string | null => {
   if (typeof window === 'undefined') return null
@@ -99,4 +106,12 @@ export const loadOptionCount = (): number => {
 
 export const saveOptionCount = (count: number): void => {
   writeStorage(OPTION_COUNT_KEY, String(count))
+}
+
+export const loadMode = (): FlashcardMode => {
+  return readStorage(MODE_KEY) === 'image' ? 'image' : 'description'
+}
+
+export const saveMode = (mode: FlashcardMode): void => {
+  writeStorage(MODE_KEY, mode)
 }

@@ -11,13 +11,16 @@ import RiskOfRainFlashCardStart from "./RiskOfRainFlashCards/RiskOfRainFlashCard
 import RiskOfRainFlashCardSummary from "./RiskOfRainFlashCards/RiskOfRainFlashCardSummary"
 import {
   FlashcardItem,
+  FlashcardMode,
   FlashcardQuestion,
   MissedItem,
   FlashcardStats,
   accuracyPercent,
   buildQuestions,
+  loadMode,
   loadOptionCount,
   loadStats,
+  saveMode,
   saveOptionCount,
   saveStats,
 } from "./RiskOfRainFlashCards/flashcardUtils"
@@ -86,6 +89,24 @@ const useComponentStyles = createUseStyles({
     fontSize: '16px',
     lineHeight: 1.6,
     whiteSpace: 'pre-line',
+  },
+  questionImageFrame: {
+    alignSelf: 'center',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '132px',
+    height: '132px',
+    padding: '12px',
+    boxSizing: 'border-box',
+    borderRadius: '12px',
+    background: 'rgba(0, 0, 0, 0.35)',
+    border: '1px solid rgba(255,255,255,0.12)',
+  },
+  questionImage: {
+    width: '100%',
+    height: '100%',
+    objectFit: 'contain',
   },
   revealIn: {
     from: { opacity: 0, transform: 'translateY(4px)' },
@@ -160,6 +181,13 @@ const useComponentStyles = createUseStyles({
     fontWeight: '700',
     color: '#e2a94f',
   },
+  revealDescription: {
+    color: '#c3cbd9',
+    fontSize: '13px',
+    lineHeight: 1.5,
+    whiteSpace: 'pre-line',
+    width: '100%',
+  },
   continueRow: {
     display: 'flex',
     alignItems: 'center',
@@ -215,6 +243,7 @@ const RiskOfRain2FlashCards = observer(() => {
   const canPlay = poolSize >= 2
 
   const [phase, setPhase] = useState<Phase>('setup')
+  const [mode, setMode] = useState<FlashcardMode>(() => loadMode())
   const [optionCount, setOptionCount] = useState<number>(() => loadOptionCount())
   const [questions, setQuestions] = useState<FlashcardQuestion[]>([])
   const [questionIndex, setQuestionIndex] = useState(0)
@@ -252,6 +281,11 @@ const RiskOfRain2FlashCards = observer(() => {
   const handleOptionCountChange = (count: number) => {
     setOptionCount(count)
     saveOptionCount(count)
+  }
+
+  const handleModeChange = (nextMode: FlashcardMode) => {
+    setMode(nextMode)
+    saveMode(nextMode)
   }
 
   const handlePick = (picked: FlashcardItem) => {
@@ -373,6 +407,8 @@ const RiskOfRain2FlashCards = observer(() => {
     <div className={componentStyles.flashcardsRoot}>
       {phase === 'setup' &&
         <RiskOfRainFlashCardStart
+          mode={mode}
+          onChangeMode={handleModeChange}
           optionCount={optionCount}
           onChangeOptionCount={handleOptionCountChange}
           sessionLength={Math.min(SESSION_LENGTH, poolSize)}
@@ -395,15 +431,38 @@ const RiskOfRain2FlashCards = observer(() => {
             onEndSession={handleEndSession}
           />
 
-          <div className={clsx(componentStyles.panel, componentStyles.questionCard)} key={questionIndex}>
-            <div className={componentStyles.questionLabel}>Which item is this?</div>
-            <div
-              className={componentStyles.questionDescription}
-              dangerouslySetInnerHTML={{ __html: descriptionParser(question.item.description) }}
-            />
+          <div
+            className={clsx(componentStyles.panel, componentStyles.questionCard)}
+            key={`question-${questionIndex}`}
+            data-testid="flashcard-question"
+          >
+            <div className={componentStyles.questionLabel}>
+              {mode === 'description' ? 'Which item is this?' : 'What does this item do?'}
+            </div>
+
+            {mode === 'description' ? (
+              // Description → Item: only the parsed description is shown.
+              // Rendering the item's image or name here would give the answer away.
+              <div
+                className={componentStyles.questionDescription}
+                dangerouslySetInnerHTML={{ __html: descriptionParser(question.item.description) }}
+              />
+            ) : (
+              // Image → Description: only the item icon is shown. The alt text
+              // must stay empty so the item name never leaks into the question.
+              <div className={componentStyles.questionImageFrame}>
+                <img
+                  className={componentStyles.questionImage}
+                  src={require(`./ror2_items_img/${question.item.nickname}.webp`)}
+                  alt=""
+                  draggable={false}
+                  data-testid="flashcard-question-image"
+                />
+              </div>
+            )}
 
             {phase === 'feedback' &&
-              <div className={componentStyles.reveal}>
+              <div className={componentStyles.reveal} data-testid="flashcard-reveal">
                 <div className={componentStyles.revealImageFrame}>
                   <img
                     className={componentStyles.revealImage}
@@ -427,13 +486,20 @@ const RiskOfRain2FlashCards = observer(() => {
                       <span className={componentStyles.revealUnlockLabel}>Unlock:</span> {question.item.unlockTask}
                     </div>
                   }
+                  {mode === 'image' &&
+                    <div
+                      className={componentStyles.revealDescription}
+                      dangerouslySetInnerHTML={{ __html: descriptionParser(question.item.description) }}
+                    />
+                  }
                 </div>
               </div>
             }
           </div>
 
           <RiskOfRainFlashCardOptions
-            key={questionIndex}
+            key={`options-${questionIndex}`}
+            mode={mode}
             options={question.options}
             correctItem={question.item}
             selectedItem={selectedItem}
