@@ -1,8 +1,9 @@
-import { DISPLAY_TYPES, DisplayType, RARITY_NAMES } from './RiskOfRain2Types'
+import { DISPLAY_TYPES, DisplayType, DLC_CODES, RARITY_NAMES } from './RiskOfRain2Types'
 
 const KEYS = {
   view: 'ror2.v1.view',
   filters: 'ror2.v1.filters',
+  dlcs: 'ror2.v1.dlcs',
   headerExpanded: 'ror2.v1.headerExpanded',
   lastRoute: 'ror2.v1.lastRoute',
 } as const
@@ -52,6 +53,25 @@ export const loadStoredFilters = (): string[] | null => {
 export const saveFilters = (filters: Set<string> | string[]): void => {
   const list = Array.isArray(filters) ? filters : Array.from(filters)
   writeString(KEYS.filters, JSON.stringify(list))
+}
+
+export const loadStoredDlcs = (): string[] | null => {
+  const raw = readString(KEYS.dlcs)
+  if (!raw) return null
+  try {
+    const parsed = JSON.parse(raw)
+    if (!Array.isArray(parsed)) return null
+    return parsed.filter(
+      (entry) => typeof entry === 'string' && (DLC_CODES as readonly string[]).includes(entry)
+    )
+  } catch (error) {
+    return null
+  }
+}
+
+export const saveDlcs = (dlcs: Set<string> | string[]): void => {
+  const list = Array.isArray(dlcs) ? dlcs : Array.from(dlcs)
+  writeString(KEYS.dlcs, JSON.stringify(list))
 }
 
 export const loadStoredHeaderExpanded = (): boolean | null => {

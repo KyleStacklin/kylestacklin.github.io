@@ -2,6 +2,7 @@ import React from "react"
 import { createUseStyles } from "react-jss";
 import { rarityConverter, rarityPillStyle } from "./RiskOfRainBusinessLogic";
 import RiskOfRain2ItemTileDescription from "./RiskOfRain2ItemTileDescription";
+import { DLC_NAMES, DlcCode } from "./RiskOfRain2Types";
 
 const useStyles = createUseStyles({
   tile: {
@@ -61,6 +62,9 @@ const useStyles = createUseStyles({
     flexDirection: 'column',
     gap: '6px',
     minWidth: 0,
+    // Reserve the top-right corner for the DLC badge so long names never
+    // collide with it.
+    paddingRight: '26px',
   },
   displayName: {
     margin: 0,
@@ -116,6 +120,31 @@ const useStyles = createUseStyles({
     color: '#e2a94f',
     whiteSpace: 'nowrap',
   },
+  dlcBadge: {
+    position: 'absolute',
+    top: '10px',
+    right: '10px',
+    zIndex: 1,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    boxSizing: 'border-box',
+    width: '22px',
+    height: '22px',
+    padding: '2px',
+    borderRadius: '6px',
+    background: 'rgba(8, 10, 16, 0.7)',
+    border: '1px solid rgba(255,255,255,0.28)',
+    boxShadow: '0 1px 4px rgba(0, 0, 0, 0.45)',
+    overflow: 'hidden',
+  },
+  dlcBadgeImage: {
+    width: '100%',
+    height: '100%',
+    objectFit: 'contain',
+    borderRadius: '4px',
+    display: 'block',
+  },
 })
 
 type Props = {
@@ -123,17 +152,29 @@ type Props = {
 };
 
 const RiskOfRain2ItemTile = ({ item }: Props) => {
-  const { displayName, nickname, rarity, description, itemNumber, unlockTask } = item
+  const { displayName, nickname, rarity, description, itemNumber, unlockTask, dlc } = item
   const { rarityString, rarityColor } = rarityConverter(rarity)
   const styles = useStyles()
 
   const hasItemNumber = itemNumber !== -1
+  const dlcName = dlc && dlc !== 'base' ? DLC_NAMES[dlc as DlcCode] : null
 
   return (
     <div
       className={styles.tile}
       style={{ '--tile-accent': rarityColor } as React.CSSProperties}
     >
+      {dlcName &&
+        <span className={styles.dlcBadge} aria-hidden={true}>
+          <img
+            className={styles.dlcBadgeImage}
+            src={require(`./dlc_logos/${dlc}.webp`)}
+            alt=""
+            title={dlcName}
+            draggable={false}
+          />
+        </span>
+      }
       <div className={styles.tileHeader}>
         <div className={styles.imageFrame}>
           <img className={styles.image} src={require(`./ror2_items_img/${nickname}.webp`)} alt={displayName} />

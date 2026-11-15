@@ -10,7 +10,8 @@
     "unlockTask": null,
     "tierList": {
       "all": "B"
-    }
+    },
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -23,7 +24,8 @@
     "unlockTask": null,
     "tierList": {
       "all": "A"
-    }
+    },
+    "dlc": "sotv"
   },
   {
     "itemNumber": 84,
@@ -48,7 +50,8 @@
       "Captain": "B",
       "Railgunner": "B",
       "Void_Fiend": "B"
-    }
+    },
+    "dlc": "base"
   },
   {
     "itemNumber": 1,
@@ -61,13 +64,14 @@
     "unlockTask": "Die 5 times.",
     "tierList": {
       "all": "S"
-    }
+    },
+    "dlc": "base"
   },
   {
     "itemNumber": 20,
     "rarity": 0,
     "guid": "BleedOnHit",
-    "displayName": "Trip-Tip Dagger",
+    "displayName": "Tri-Tip Dagger",
     "itemStatus": "offense,dot",
     "nickname": "tritip",
     "description": "{offense:10%} {+10%} chance to {offense:bleed} an enemy for {offense:240%} base damage.",
@@ -86,7 +90,8 @@
       "Captain": "S",
       "Railgunner": "C",
       "Void_Fiend": "B"
-    }
+    },
+    "dlc": "base"
   },
   {
     "itemNumber": 61,
@@ -111,7 +116,8 @@
       "Captain": "S",
       "Railgunner": "S",
       "Void_Fiend": "A"
-    }
+    },
+    "dlc": "base"
   },
   {
     "itemNumber": 7,
@@ -136,7 +142,8 @@
       "Captain": "B",
       "Railgunner": "C",
       "Void_Fiend": "A"
-    }
+    },
+    "dlc": "base"
   },
   {
     "itemNumber": 17,
@@ -146,17 +153,19 @@
     "itemStatus": "attack",
     "nickname": "crowbar",
     "description": "Deal {offense:75%} {+75%} damage to enemies above {offense:90% health}.",
-    "unlockTask": "Discover 10 unique white items."
+    "unlockTask": "Discover 10 unique white items.",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
     "rarity": 0,
     "guid": "missinguid_warpedEcho",
-    "displayName": "WarpedEcho",
+    "displayName": "Warped Echo",
     "itemStatus": "defense,on,hit,on,taken",
     "nickname": "warpedEcho",
     "description": "On damage taken {offense:50%} of the damage is dealt immediately while the other {offense:50%} is delayed for {offense:3} seconds.\nThis effect has a cooldown of {misc:10} seconds. {Every additional item$} increases how many instances of this effect the player has.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "sots"
   },
   {
     "itemNumber": 42,
@@ -166,17 +175,19 @@
     "itemStatus": "offense,on,open,locked",
     "nickname": "firework",
     "description": "Activating an interactable {offense:launches 8} {+4} {offense:fireworks} that deal {offense:300%} base damage.",
-    "unlockTask": "Duplicate the same item 7 times in a row with a 3D printer."
+    "unlockTask": "Duplicate the same item 7 times in a row with a 3D printer.",
+    "dlc": "base"
   },
   {
     "itemNumber": 91,
     "rarity": 0,
     "guid": "RegeOnKill",
-    "displayName": "Fresh Meat",
+    "displayName": "Bison Steak",
     "itemStatus": "utility,heal,steack,steak,raw,health",
     "nickname": "steak",
     "description": "Increases {defense:maximum health} by {defense:25} {+25}.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -186,7 +197,8 @@
     "itemStatus": "utility,damage,breakable",
     "nickname": "brokenWatch",
     "description": "Increase damage by {offense:20%} {+20%}. Taking damage to below {debuff:25% health} {misc:breaks} this item.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "sotv"
   },
   {
     "itemNumber": -1,
@@ -196,7 +208,8 @@
     "itemStatus": "utility,damage,gold,scales",
     "nickname": "pennies",
     "description": "Gain {misc:3} {+3} {misc:gold} on {offense:taking damage} from an enemy. {misc:Scales over time}.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "sotv"
   },
   {
     "itemNumber": 27,
@@ -206,7 +219,8 @@
     "itemStatus": "defense,heal",
     "nickname": "slug",
     "description": "Increases {defense:base health regeneration} by {defense:+3 hp/s} {+3 hp/s} while outside of combat.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -216,7 +230,8 @@
     "itemStatus": "utility,heal,low,health",
     "nickname": "elixir",
     "description": "Taking damage to below {debuff:25% health} {misc:consumes} this item, {defense:healing} you for {defense:75%} of {defense:maximum health}.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "sotv"
   },
   {
     "itemNumber": 8,
@@ -226,7 +241,8 @@
     "itemStatus": "defense,movespeed,locked",
     "nickname": "goat",
     "description": "Increases {misc:movement speed} by {misc:14%} {+14%}.",
-    "unlockTask": "Fail the Shrine of chance 3 times in a row."
+    "unlockTask": "Fail the Shrine of chance 3 times in a row.",
+    "dlc": "base"
   },
   {
     "itemNumber": 39,
@@ -236,7 +252,8 @@
     "itemStatus": "offense,fire,on,kill",
     "nickname": "gasoline",
     "description": "Killing an enemy {offense:ignites} all enemies within {offense:12m} {+4m}.\nEnemies {offense:burn} for {offense:150%} {+75%} base damage.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -246,17 +263,19 @@
     "itemStatus": "offense,buff,on,kill",
     "nickname": "chronicExpansion",
     "description": "Every {offense:5} enemies slain grants a damage counter bonus increasing the player's damage by {offense:10%} {+5%|per item stack}, lasting as long as the player stays in combat.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "sots"
   },
   {
     "itemNumber": -1,
-    "rarity": 0,
+    "rarity": 1,
     "guid": "missinguid_knockbackFin",
-    "displayName": "Knockback Fin",
+    "displayName": "Breaching Fin",
     "itemStatus": "utility,knockback,on,hit",
     "nickname": "knockbackFin",
-    "description": "{misc:7.5%} {+7.5%} chance on hit to knock enemies into the air. {height increases}.",
-    "unlockTask": null
+    "description": "Grounded enemies hit with any {misc:skill} are {misc:launched} and {misc:stunned}. Enemies hit while airborne are {misc:launched} again up to {misc:2 times} {+1}. Launched enemies take increased damage by {offense:10%} from all sources per launch. Recharges after {misc:15s}.",
+    "unlockTask": null,
+    "dlc": "sots"
   },
   {
     "itemNumber": -1,
@@ -266,7 +285,8 @@
     "itemStatus": "utility,damage,low,health,berzerk",
     "nickname": "bolsteringLantern",
     "description": "When below {debuff:50% health} receive a damage increase of {offense:20%} {+20% damage bonus|per item stack}.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "sots"
   },
   {
     "itemNumber": 36,
@@ -276,7 +296,8 @@
     "itemStatus": "defense,heal,on,hit,locked",
     "nickname": "medkit",
     "description": "2 seconds after getting hurt, {defense:heal} for {defense:20} plus an additional {defense:5%} {+5%} of {defense:maximum health}.",
-    "unlockTask": "Defeat an Elite-type monster."
+    "unlockTask": "Defeat an Elite-type monster.",
+    "dlc": "base"
   },
   {
     "itemNumber": 16,
@@ -286,7 +307,8 @@
     "itemStatus": "defense,heal,stand",
     "nickname": "fungus",
     "description": "After standing still for {defense:1} seconds create a zone that {defense:heals} for {defense:4.5%} {+2.25%} of your {defense:health} every second to all allies within {defense:3m} {+1.5m}.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": 87,
@@ -296,17 +318,19 @@
     "itemStatus": "offense,closen,boost,damage",
     "nickname": "redCrystal",
     "description": "Increase damage to enemies within {offense:13m} by {offense:20%} {+20%}.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
     "rarity": 0,
     "guid": "missinguid_antlerShield",
-    "displayName": "Antler Shield",
+    "displayName": "Elusive Antlers",
     "itemStatus": "utility,defense,reflect,mirror",
     "nickname": "antlerShield",
-    "description": "{misc:55%} {+5%} chance on being hit to reflect {misc:10%} {+10%} damage back to the attacker.",
-    "unlockTask": null
+    "description": "Spawns orbs of energy nearby every {misc:10s} {-10%}, giving {misc:+12% movement speed} up to {misc:3} {+3} {misc:times} for {misc:12s}.",
+    "unlockTask": null,
+    "dlc": "sots"
   },
   {
     "itemNumber": -1,
@@ -316,7 +340,8 @@
     "itemStatus": "defense,armor,safe",
     "nickname": "opal",
     "description": "{defense:Increase armor} by {defense:100} {+100} while out of danger.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "sotv"
   },
   {
     "itemNumber": 29,
@@ -326,7 +351,8 @@
     "itemStatus": "defense,shield",
     "nickname": "shield",
     "description": "Gain a {defense:shield} equal to {defense:8%} {+8%} of your maximum health. Recharges outside of danger.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -336,7 +362,8 @@
     "itemStatus": "utility,3d,printer,white",
     "nickname": "scraps1",
     "description": "Does nothing. Prioritized when used with 3D Printers.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": 58,
@@ -346,7 +373,8 @@
     "itemStatus": "utility,charge,locked",
     "nickname": "backupMag",
     "description": "Add {misc:+1} {+1} charge of your {misc:Secondary skill}.",
-    "unlockTask": "Fully charge a Teleporter without getting hit."
+    "unlockTask": "Fully charge a Teleporter without getting hit.",
+    "dlc": "base"
   },
   {
     "itemNumber": 57,
@@ -356,7 +384,8 @@
     "itemStatus": "defense,movespeed",
     "nickname": "drink",
     "description": "{misc:Sprint speed} is improved by {misc:25%} {+25%}.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": 59,
@@ -366,7 +395,8 @@
     "itemStatus": "offense,on,hit",
     "nickname": "stickyBomb",
     "description": "{offense:5%} {+5%} chance on hit to attach a {offense:bomb} to an enemy, detonating for {offense:180%} TOTAL damage.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": 41,
@@ -376,7 +406,8 @@
     "itemStatus": "offense,stun,on,hit",
     "nickname": "stunGrenade",
     "description": "{misc:5%} {+5%} chance on hit to {misc:stun} enemies for {misc:2} seconds.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": 0,
@@ -386,7 +417,8 @@
     "itemStatus": "offense,speed",
     "nickname": "syringe",
     "description": "Increase {offense:Attack Speed} by {offense:15%} {+15%}.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": 6,
@@ -396,7 +428,8 @@
     "itemStatus": "defense,heal,on,kill",
     "nickname": "monsterTooth",
     "description": "Killing an enemy spawns a {defense:healing orb} that heals for {defense:8} plus an additional {defense:2%} {+2%} of {defense:maximum health}.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": 60,
@@ -406,7 +439,8 @@
     "itemStatus": "utility,box,locked",
     "nickname": "key",
     "description": "A {misc:hidden cache} containing an item ({defense:80%}/{debuff:20%}) will appear in a random location {misc:on each stage}.\nOpening the cache {misc:consumes} this item.",
-    "unlockTask": "Defeat the Teleporter boss under 15 seconds."
+    "unlockTask": "Defeat the Teleporter boss under 15 seconds.",
+    "dlc": "base"
   },
   {
     "itemNumber": 24,
@@ -416,7 +450,8 @@
     "itemStatus": "utility,attack,speed,movespeed,on,level",
     "nickname": "warbanner",
     "description": "On {misc:level up} or starting the {misc:Teleporter event}, drop a banner that strengthens all allies within {misc:16m} {+8m}.\nRaise {offense:attack} and {misc:movement speed} by {offense:30%}.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": 19,
@@ -426,7 +461,8 @@
     "itemStatus": "offense,critical,locked",
     "nickname": "hat",
     "description": "{offense:Critical Strikes} increase {offense:attack speed} by {offense:12%}.\nMaximum cap of {offense:36%} {+24%} {offense:attack speed}.",
-    "unlockTask": "Reach +200% attack speed."
+    "unlockTask": "Reach +200% attack speed.",
+    "dlc": "base"
   },
   {
     "itemNumber": 37,
@@ -436,7 +472,8 @@
     "itemStatus": "utility",
     "nickname": "bandolier",
     "description": "{misc:18%} {+10%} chance on kill to drop an ammo pack that {misc:resets all cooldowns}.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": 94,
@@ -446,7 +483,8 @@
     "itemStatus": "utility,gold,book,treasure,flesh",
     "nickname": "goldBook",
     "description": "{misc:4%} {+4%} chance on kill to drop a treasure worth {misc:25$}. {misc:Scales over time.}",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": 11,
@@ -456,7 +494,8 @@
     "itemStatus": "offense,on,hit",
     "nickname": "ukulele",
     "description": "{offense:25%} chance to fire a {offense:chain lightning} for {offense:80%} TOTAL damage up to {offense:3} {+2} targets within {offense:20m} {+2m}.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": 104,
@@ -466,7 +505,8 @@
     "itemStatus": "offense,mark,death,debuff,increased,damage",
     "nickname": "deathMark",
     "description": "Enemies with {offense:4} or more debuffs are {offense:marked for death}, increasing damage taken by {offense:50%} from all sources for {misc:7} {+7} seconds.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": 79,
@@ -476,7 +516,8 @@
     "itemStatus": "offense,attack,speed,equipment,locked",
     "nickname": "warHorn",
     "description": "Activating your Equipment gives you {offense:+70% attack speed} for {offense:8s} {+4s}.",
-    "unlockTask": "Complete 3 Combat Shrines in a single stage."
+    "unlockTask": "Complete 3 Combat Shrines in a single stage.",
+    "dlc": "base"
   },
   {
     "itemNumber": 30,
@@ -486,7 +527,8 @@
     "itemStatus": "utility,charge,locked",
     "nickname": "cell",
     "description": "Hold an {misc:additional equipment charge} {+1}.\n{misc:Reduce equipment cooldown} by {misc:15%} {+15%}.",
-    "unlockTask": "Pickup 5 different types of Equipment."
+    "unlockTask": "Pickup 5 different types of Equipment.",
+    "dlc": "base"
   },
   {
     "itemNumber": 78,
@@ -496,17 +538,19 @@
     "itemStatus": "offense,boss,locked",
     "nickname": "guillotine",
     "description": "Instantly kill Elite Monsters below {debuff:13%} {+13%} {debuff:health}.",
-    "unlockTask": "Defeat 500 Elite Monsters."
+    "unlockTask": "Defeat 500 Elite Monsters.",
+    "dlc": "base"
   },
   {
     "itemNumber": 4,
     "rarity": 1,
     "guid": "ExplodeOnDeath",
-    "displayName": "Will-O'-the-wisp",
+    "displayName": "Will-o'-the-wisp",
     "itemStatus": "offense,on,kill",
     "nickname": "wisp",
     "description": "On killing an enemy, spawn a {offense:lava pillar} in a {offense:12m} {+2.4m} radius for {offense:350%} {+280%} base damage.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -516,7 +560,8 @@
     "itemStatus": "utility,drop,rarity,items,shrine,great,success,upgrade",
     "nickname": "chanceDoll",
     "description": "{misc:20%} {+8%} chance to get higher rarity items from chance shrines on success.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "sots"
   },
   {
     "itemNumber": -1,
@@ -526,7 +571,8 @@
     "itemStatus": "utility,experience,weird",
     "nickname": "prayerBreads",
     "description": "Grows in power by absorbing experience, storing {misc:20%} {+5%|per item stack} of player stats per item level up. On removal, gain all stored stats.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "sots"
   },
   {
     "itemNumber": 9,
@@ -536,7 +582,8 @@
     "itemStatus": "utility",
     "nickname": "feather",
     "description": "Gain {misc:+1} {+1} maximum {misc:jump count}.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": 64,
@@ -546,7 +593,8 @@
     "itemStatus": "offense,on,hit,locked",
     "nickname": "fireRing",
     "description": "Hits that deal {offense:more than 400% damage} also blasts enemies with a {offense:runic flame tornado}, dealing {offense:300%} {+300%} TOTAL damage over time. Recharge every {misc:10} seconds.",
-    "unlockTask": "Discover the hidden chamber in the Abandoned Aqueduct."
+    "unlockTask": "Discover the hidden chamber in the Abandoned Aqueduct.",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -556,7 +604,8 @@
     "itemStatus": "utility,item,selector,drop",
     "nickname": "form",
     "description": "A {misc:delivery} containing 2 items (79%/{defense:20%}/{debuff:1%}) will appear in a random location {misc:on each stage}. {Increases rarity chances of the items}.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "sotv"
   },
   {
     "itemNumber": 26,
@@ -566,7 +615,8 @@
     "itemStatus": "offense,defense,critical,heal,locked",
     "nickname": "scythe",
     "description": "Gain {offense:5% critical chance}.\n{offense:Critical strikes} {defense:heal} for {defense:8} {+4} {defense:health}.",
-    "unlockTask": "Complete a Prismatic Trial."
+    "unlockTask": "Complete a Prismatic Trial.",
+    "dlc": "base"
   },
   {
     "itemNumber": 63,
@@ -576,7 +626,8 @@
     "itemStatus": "offense,on,hit,locked",
     "nickname": "iceRing",
     "description": "Hits that deals {offense:more than 400% damage} also blasts enemies with a {offense:runic ice blast}, {misc:slowing} them by {misc:80%} for {misc:3s} {+3s} and dealing {offense:250%} {+250%} TOTAL damage. Recharge every {misc:10} seconds.",
-    "unlockTask": "Discover the hidden chamber in the Abandoned Aqueduct."
+    "unlockTask": "Discover the hidden chamber in the Abandoned Aqueduct.",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -586,7 +637,8 @@
     "itemStatus": "utility,secondary,skill,auto,attack,buff",
     "nickname": "luminousShot",
     "description": "Using the secondary skill charges the next primary attack, dealing {offense:+150%} damage {+25%|per item stack} per charge up to {misc:5} times {+1|per item stack}.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "sots"
   },
   {
     "itemNumber": 33,
@@ -596,7 +648,8 @@
     "itemStatus": "defense,life,locked",
     "nickname": "infusion",
     "description": "Killing an enemy increases your {defense:health permanently} by {defense:1} {+1}, up to a {defense:maximum} of {defense:100} {+100} {defense:health}.",
-    "unlockTask": "Defeat 3000 enemies."
+    "unlockTask": "Defeat 3000 enemies.",
+    "dlc": "base"
   },
   {
     "itemNumber": 76,
@@ -606,7 +659,8 @@
     "itemStatus": "defense,movespeed,pigeon,locked",
     "nickname": "quail",
     "description": "{defense:Jumping} while {defense:sprinting} boosts you forward by {defense:10m} {+10m}.",
-    "unlockTask": "Reach +300% movespeed (include sprinting)."
+    "unlockTask": "Reach +300% movespeed (include sprinting).",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -616,7 +670,8 @@
     "itemStatus": "utility,extra,item,drop,chest",
     "nickname": "saleStar",
     "description": "Gain an extra item on the first chest opened per stage. {Each additional Sale Star increase the chance of getting more items by 5%$}.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "sots"
   },
   {
     "itemNumber": 3,
@@ -626,7 +681,8 @@
     "itemStatus": "offense,on,hit",
     "nickname": "missile_mk",
     "description": "{offense:10%} chance to fire a missile that deals {offense:300%} {+300%} TOTAL damage.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -636,7 +692,8 @@
     "itemStatus": "utility,movement,speed,on,kill",
     "nickname": "harpoon",
     "description": "Killing an enemy increases {misc:movement speed} by {misc:125%}, fading over {misc:1} {+0.5} seconds.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "sotv"
   },
   {
     "itemNumber": 25,
@@ -646,7 +703,8 @@
     "itemStatus": "defense,phasing,invincible",
     "nickname": "phasing",
     "description": "Falling below {debuff:25% health} causes you to gain {misc:40% movement speed} and {misc:invisibility} for {misc:5s}. Recharges every {misc:30 seconds} {-50%}.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -656,7 +714,8 @@
     "itemStatus": "offense,on,attack,ninja",
     "nickname": "shuriken",
     "description": "Activation your {misc:Primary skill} also throws a {offense:shuriken} that deals {offense:400%} {+100%} base damage. You can hold up to {misc:3} {+1} {offense:shurikens} which all reload over {misc:10} seconds.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "sotv"
   },
   {
     "itemNumber": -1,
@@ -666,7 +725,8 @@
     "itemStatus": "utility,scrap,rare,shop",
     "nickname": "orangeScrap",
     "description": "Does nothing. Prioritized when used with {defense:Uncommon} 3D Printers. At the start of each stage, it regenerates.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "sotv"
   },
   {
     "itemNumber": -1,
@@ -676,7 +736,8 @@
     "itemStatus": "utility,3d,green",
     "nickname": "scraps2",
     "description": "Does nothing. Prioritized when used with 3D Printers.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": 13,
@@ -686,7 +747,8 @@
     "itemStatus": "defense,heal,on,hit",
     "nickname": "seed",
     "description": "Dealing damage {defense:heals} you for {defense:1} {+1} {defense:health}.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": 65,
@@ -696,7 +758,8 @@
     "itemStatus": "offense,on,hit",
     "nickname": "bauble",
     "description": "{misc:Slow} enemies for {misc:-60% movement speed} for {misc:2s} {+2s}.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": 62,
@@ -706,7 +769,8 @@
     "itemStatus": "defense,armour,shield",
     "nickname": "buckler",
     "description": "{defense:Increase armor} by {defense:30} {+30} while {misc:sprinting}.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": 21,
@@ -716,7 +780,8 @@
     "itemStatus": "defense,movespeed",
     "nickname": "whip",
     "description": "Leaving combat boosts {misc:movement speed} by {misc:30%} {+30%}.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": 103,
@@ -726,7 +791,8 @@
     "itemStatus": "offense,summon,turret,squid,auto",
     "nickname": "squidTurret",
     "description": "Activating an interactable summons a {offense:Squid Turret} that attacks nearby enemies at {offense:100%} {+100%} {offense:attack speed}. Lasts {misc:30} seconds.",
-    "unlockTask": "Activate 6 turrets in a single run."
+    "unlockTask": "Activate 6 turrets in a single run.",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -736,7 +802,8 @@
     "itemStatus": "offense,ignite,fire,dot",
     "nickname": "tank",
     "description": "Ignite effects deal {offense:+300%} {+300%} more damage over time.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "sotv"
   },
   {
     "itemNumber": 86,
@@ -746,7 +813,8 @@
     "itemStatus": "defense,heal,flower",
     "nickname": "healFlower",
     "description": "Release a {defense:healing nova} during the Teleporter event, {defense:healing} all nearby allies for {defense:50%} of their maximum health. Occurs {defense:1} {+1} times.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -756,7 +824,8 @@
     "itemStatus": "low,health,survival,explosion",
     "nickname": "unstableTramsmitter",
     "description": "When reaching below {defense:25%} health the Survivor explodes, dealing {offense:350%} {+350%|per item stack} damage to nearby enemies and teleporting to a random location.\nThis effect has a cooldown of {misc:2} minutes {-5%|per item stack}.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "sots"
   },
   {
     "itemNumber": 90,
@@ -766,7 +835,8 @@
     "itemStatus": "offense,on,hit,radius",
     "nickname": "razorHeadband",
     "description": "Getting hit causes you to explode in a burst of razors, dealing {offense:160% damage}.\nHits up to {offense:5} {+2} targets in a {offense:25m} {+10m} radius.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -776,7 +846,8 @@
     "itemStatus": "on,hit,nearby,mirror,bleed,debuff,stack",
     "nickname": "noxiousThorn",
     "description": "{offense:25% chance} on being hit to inflict nearby enemies with {offense:2} {+1} stacks of bleed.\nIf enemies are already inflicted with one or more stackable debuffs, add {offense:1} {+1} to those debuffs instead.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "sots"
   },
   {
     "itemNumber": 46,
@@ -786,7 +857,8 @@
     "itemStatus": "offense,movespeed,on,kill,locked",
     "nickname": "berzerk",
     "description": "{offense:Killing 4 enemies} within {offense:1} second sends you into a {offense:frenzy} for {offense:6s} {+4s}.\nIncreases {misc:movement speed} by {misc:50%} and {offense:attack speed} by {offense:100%}.",
-    "unlockTask": "Charge the Teleporter with less than 10% health."
+    "unlockTask": "Charge the Teleporter with less than 10% health.",
+    "dlc": "base"
   },
   {
     "itemNumber": 50,
@@ -796,7 +868,8 @@
     "itemStatus": "utility",
     "nickname": "alien",
     "description": "{misc:Reduce skill cooldown} by {misc:25%} {+25%}.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": 85,
@@ -806,7 +879,8 @@
     "itemStatus": "offense,armor,break,hammer,hit",
     "nickname": "hammer",
     "description": "After hitting an enemy {offense:5} times, reduce their {offense:armor} by {offense:60} for {offense:8} {+8} seconds.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": 80,
@@ -816,7 +890,8 @@
     "itemStatus": "utility,heal,defense",
     "nickname": "fullBarrier",
     "description": "Healing past full grants you a {defense:temporary barrier} for {defense:50%} {+50%} of the amount you {defense:healed}.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": 2,
@@ -826,7 +901,8 @@
     "itemStatus": "offense,explosion,on,hit",
     "nickname": "behemoth",
     "description": "All your {offense:attacks explode} in a {offense:4m} {+1.5m} radius for a bonus {offense:60%} TOTAL damage to nearby enemies.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -836,7 +912,8 @@
     "itemStatus": "buff,utility,stack,stats",
     "nickname": "growthNectar",
     "description": "While benefiting from 5+ unique buffs, gain {misc:20%} {+20%} bonus stats for {misc:5} seconds.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "sots"
   },
   {
     "itemNumber": 38,
@@ -846,7 +923,8 @@
     "itemStatus": "offense,utility,grab,locked",
     "nickname": "hook",
     "description": "{offense:20%} {+20%} chance on hit to {offense:fire homing hooks} at up to {offense:10} {+5} enemies for {offense:100%} TOTAL damage.",
-    "unlockTask": "Loop back to the first stage."
+    "unlockTask": "Loop back to the first stage.",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -856,7 +934,8 @@
     "itemStatus": "defense,projectile,protection,shield",
     "nickname": "microbot",
     "description": "Shoot down {offense:1} {+1} projectiles within {offense:20m} every {offense:0.5 seconds}. {misc:Recharge rate scales with attack speed}.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": 35,
@@ -866,17 +945,19 @@
     "itemStatus": "utility,locked",
     "nickname": "clover",
     "description": "All random effects are rolled {misc:+1} {+1} {misc:times for a favorable outcome}.",
-    "unlockTask": "Complete 20 stages in a single run."
+    "unlockTask": "Complete 20 stages in a single run.",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
     "rarity": 2,
     "guid": "missinguid_",
-    "displayName": "Laser scope",
+    "displayName": "Laser Scope",
     "itemStatus": "offence,critical,damage,x2",
     "nickname": "scope",
     "description": "{offense:Critical Strikes} deal an additional {offense:100% damage} {+100%}",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "sotv"
   },
   {
     "itemNumber": 5,
@@ -886,7 +967,8 @@
     "itemStatus": "offense,on,kill,tracking,attack",
     "nickname": "dagger",
     "description": "Killing an enemy fires out {offense:3 homing daggers} that deal {offense:150%} {+150%} base damage.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -896,7 +978,8 @@
     "itemStatus": "offense,drones,useless",
     "nickname": "droneBox",
     "description": "Gain {offense:Col. Droneman}.\nDrones gain {offense:+50%} {+50%} attack speed and cooldown reduction.\nDrones gain {offense:10%} chance to fire a {offense:missile} on hit, dealing {offense:300%} TOTAL damage.\nDrones gain an {offense:automatic chain gun} that deals {offense:6x100%} damage, bouncing to {offense:2} enemies.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "sotv"
   },
   {
     "itemNumber": 66,
@@ -906,7 +989,8 @@
     "itemStatus": "utility,bear,death,jojo,revive,res,locked",
     "nickname": "dio",
     "description": "{misc:Upon Death}, this item will be {misc:consumed} and you will {defense:return to life} with {defense:3 seconds of invulnerability}.",
-    "unlockTask": "Stay alive for 30 consecutive minutes."
+    "unlockTask": "Stay alive for 30 consecutive minutes.",
+    "dlc": "base"
   },
   {
     "itemNumber": 22,
@@ -916,7 +1000,8 @@
     "itemStatus": "defense,attack,fall",
     "nickname": "cuffs",
     "description": "Increase {misc:jump height}.\nCreates a {offense:5m-100m} radius {offense:kinetic explosion} on hitting the ground, dealing {offense:1000%-10000%} base damage that scales up with {offense:fall distance}.\nRecharges in {offense:10} {-50%} seconds.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": 15,
@@ -926,7 +1011,8 @@
     "itemStatus": "offense,on,kill",
     "nickname": "mask",
     "description": "Killing enemies has a {offense:7%} chance to {offense:spawn a ghost} of the killed enemy with {offense:1500%} damage. Lasts {offense:30s} {+30s}.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -936,7 +1022,8 @@
     "itemStatus": "utility,gold,stack,difficulty,level",
     "nickname": "warBonds",
     "description": "Yields {offense:75} gold {+25 gold|per item stack} based on current difficulty level and the survivor's level at the start of every stage.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "sots"
   },
   {
     "itemNumber": 69,
@@ -946,7 +1033,8 @@
     "itemStatus": "utility,elite,poe,headhunter",
     "nickname": "headhunter",
     "description": "Gain the {offense:power} of any killed elite monster for {offense:8s} {+5s}.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": 14,
@@ -956,7 +1044,8 @@
     "itemStatus": "offense,on,kill",
     "nickname": "ice",
     "description": "Killing an enemy surrounds you with an {offense:ice storm} that deals {offense:1200% damage per second} and {misc:slows} enemies by {misc:80%} for {misc:1.5s}.\nThe storm {offense:grows with every kill}, increasing its radius by {offense:2m}.\nStacks up to {offense:18m} {+12m}.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -966,7 +1055,8 @@
     "itemStatus": "defense,debuff,cleanse,tank",
     "nickname": "rainCoat",
     "description": "Prevents {misc:1} {+1} {offense:debuff} and instead grants a {defense:temporary barrier} for {defense:10%} of {defense:maximum health}. Recharges every {misc:5} seconds.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "sotv"
   },
   {
     "itemNumber": 75,
@@ -976,7 +1066,8 @@
     "itemStatus": "defense,heal,double,locked",
     "nickname": "horn",
     "description": "{defense:Heal +100%} {+100%} more.",
-    "unlockTask": "Without healing, reach and complete the 3rd Teleporter event."
+    "unlockTask": "Without healing, reach and complete the 3rd Teleporter event.",
+    "dlc": "base"
   },
   {
     "itemNumber": 70,
@@ -986,7 +1077,8 @@
     "itemStatus": "offense,locked",
     "nickname": "brain",
     "description": "Upon killing an elite monster, {offense:enter a frenzy} for {offense:4s} {+4s} where {misc:skills have no cooldowns}.",
-    "unlockTask": "Defeat an Elite boss on Monsoon difficulty."
+    "unlockTask": "Defeat an Elite boss on Monsoon difficulty.",
+    "dlc": "base"
   },
   {
     "itemNumber": 95,
@@ -996,7 +1088,8 @@
     "itemStatus": "offense,charge,piercing,explode",
     "nickname": "disc",
     "description": "Killing {offense:4} enemies in {misc:7 seconds} charges the Resonance Disc.\nThe disc launches itself toward a target for {offense:300%} base damage {+300%}, piercing all enemies it doesn't kill, and then explodes for {offense:1000%} base damage {+1000%}.\nReturns to the user, striking all enemies along the way for {offense:300%} base damage {+300%}.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -1006,17 +1099,19 @@
     "itemStatus": "on,hit,spawn,meteor,target,targeted",
     "nickname": "runicLens",
     "description": "{misc:Overspill}. {misc:5%} chance {+1%|per 100% done on initial hit plus 1% per item stack} on hit to summon a meteor on the target, dealing {offense:2000%} damage {+50% damage|per 100% damage done on initial hit plus +50% damage per item stack}.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "sots"
   },
   {
     "itemNumber": -1,
     "rarity": 2,
     "guid": "missinguid_hugeMissile",
-    "displayName": "Pocket I.C.B.M",
+    "displayName": "Pocket I.C.B.M.",
     "itemStatus": "offense,missile,triple",
     "nickname": "hugeMissile",
     "description": "All missile items and equipment fire an additional {offense:2 missiles}. Increase missile damage by {offense:0%} {+50%}.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "sotv"
   },
   {
     "itemNumber": 31,
@@ -1026,7 +1121,8 @@
     "itemStatus": "offense,locked",
     "nickname": "opinion",
     "description": "Store {defense:100%} {+100%} of healing as {defense:Soul Energy}.\nAfter your {defense:Soul Energy} reaches {defense:10%} of your {defense:maximum health}, {offense:fire a skull} that deals {offense:250%} of your {defense:Soul Energy} as {offense:damage}.",
-    "unlockTask": "Find the Altar to N'kuhana."
+    "unlockTask": "Find the Altar to N'kuhana.",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -1036,7 +1132,8 @@
     "itemStatus": "utility,debuff,stack",
     "nickname": "scorpion",
     "description": "{offense:100%} chance on hit to reduce {offense:armor} by {offense:2} {+2} {offense:permanently}.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "sotv"
   },
   {
     "itemNumber": 105,
@@ -1046,7 +1143,8 @@
     "itemStatus": "heal,defense,on kill",
     "nickname": "deskPlant",
     "description": "On kill, plant a {defense:healing} fruit seed that grows into a plant after {misc:5} seconds.\nThe plant {defense:heals} for {defense:10%} of {defense:maximum health} every second to all allies within {defense:5m} {+5m}. Lasts {misc:10} seconds.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -1056,7 +1154,8 @@
     "itemStatus": "utility,trigger,equipment,useless",
     "nickname": "bottle",
     "description": "Trigger a {offense:random equipment} effect {offense:1} {+1} time(s).",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "sotv"
   },
   {
     "itemNumber": -1,
@@ -1066,7 +1165,8 @@
     "itemStatus": "on,kill,utility,drop,item",
     "nickname": "sonorousWhispers",
     "description": "When a large monster is killed it will always drop an item. All elites have a {misc:15%} chance of dropping an item {+5%|per item stack}.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "sots"
   },
   {
     "itemNumber": -1,
@@ -1076,7 +1176,8 @@
     "itemStatus": "utility,3d,rare,red",
     "nickname": "scraps3",
     "description": "Does nothing. Prioritized when used with 3D Printers.",
-    "unlockTask": null
+    "unlockTask": null,
+    "dlc": "base"
   },
   {
     "itemNumber": 32,
@@ -1086,7 +1187,8 @@
     "itemStatus": "offense,close,locked",
     "nickname": "tesla",
     "description": "Fire out {offense:lightning} that hits {offense:3} {+2} enemies for {offense:200%} base damage every {offense:0.5s}.\nThe Tesla Coil switches off every {offense:10 seconds}.",
-    "unlockTask": "Deal 5000 damage in one shot."
+    "unlockTask": "Deal 5000 damage in one shot.",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -1095,7 +1197,8 @@
     "displayName": "Electric Boomerang",
     "itemStatus": "better,guitar,on,hit,electric,stun",
     "nickname": "electricBoomerang",
-    "description": "{offense:15%} chance on hit to fire an electric boomerang that travels a short distance before returning, dealing {offense:30%} {+30%} damage and stunning all enemies hit."
+    "description": "{offense:15%} chance on hit to fire an electric boomerang that travels a short distance before returning, dealing {offense:30%} {+30%} damage and stunning all enemies hit.",
+    "dlc": "sots"
   },
   {
     "itemNumber": 51,
@@ -1105,7 +1208,8 @@
     "itemStatus": "utility,equipment,locked",
     "nickname": "soul",
     "description": "{offense:Kills reduce} {misc:equipment cooldown} by {misc:4s} {+2s}.",
-    "unlockTask": "Discover and activate 8 unique Newt Altars."
+    "unlockTask": "Discover and activate 8 unique Newt Altars.",
+    "dlc": "base"
   },
   {
     "itemNumber": 68,
@@ -1114,7 +1218,8 @@
     "displayName": "Hardlight Afterburner",
     "itemStatus": "utility,charge",
     "nickname": "burner",
-    "description": "Add {misc:+2} {+2} charges of your {misc:Utility skill}.\n{misc:Reduces Utility skill cooldown} by {misc:33%}."
+    "description": "Add {misc:+2} {+2} charges of your {misc:Utility skill}.\n{misc:Reduces Utility skill cooldown} by {misc:33%}.",
+    "dlc": "base"
   },
   {
     "itemNumber": 101,
@@ -1123,7 +1228,8 @@
     "displayName": "Artifact Key",
     "itemStatus": "activation",
     "nickname": "artifactKey",
-    "description": "A stone shard with immense power."
+    "description": "A stone shard with immense power.",
+    "dlc": "base"
   },
   {
     "itemNumber": 53,
@@ -1132,7 +1238,8 @@
     "displayName": "Queen's Gland",
     "itemStatus": "utility,invocation",
     "nickname": "beetle",
-    "description": "Every 30 seconds, {misc:summon a Beetle Guard} with bonus {offense:300%} damage and {defense:100%} health.\nCan have up to {misc:1} {+1} Guards at a time."
+    "description": "Every 30 seconds, {misc:summon a Beetle Guard} with bonus {offense:300%} damage and {defense:100%} health.\nCan have up to {misc:1} {+1} Guards at a time.",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -1141,7 +1248,8 @@
     "displayName": "Shatterspleen",
     "itemStatus": "offense,critical hit,bleed,explode,on death",
     "nickname": "critBleed",
-    "description": "{offense:Critical Strikes bleed} enemies for {offense:240%} base damage. {offense:Bleeding} enemies {offense:explode} on death for {offense:400%} {+400%} damage, plus an additional {offense:15%} {+15%} of their maximum health."
+    "description": "{offense:Critical Strikes bleed} enemies for {offense:240%} base damage. {offense:Bleeding} enemies {offense:explode} on death for {offense:400%} {+400%} damage, plus an additional {offense:15%} {+15%} of their maximum health.",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -1150,7 +1258,8 @@
     "displayName": "Molten Perforator",
     "itemStatus": "offense,magma,on hit",
     "nickname": "magmaTooth",
-    "description": "{offense:10%} chance on hit to call forth {offense:3 magma balls} from an enemy, dealing {offense:300%} {+300%} damage and {offense:igniting} all enemies."
+    "description": "{offense:10%} chance on hit to call forth {offense:3 magma balls} from an enemy, dealing {offense:300%} {+300%} damage and {offense:igniting} all enemies.",
+    "dlc": "base"
   },
   {
     "itemNumber": 52,
@@ -1159,7 +1268,8 @@
     "displayName": "Titanic Knurl",
     "itemStatus": "defense,life",
     "nickname": "knurl",
-    "description": "{defense:Increases maximum health} by {defense:40} {+40} and {defense:base health regeneration} by {defense:+1.6 hp/s} {+1.6 hp/s}."
+    "description": "{defense:Increases maximum health} by {defense:40} {+40} and {defense:base health regeneration} by {defense:+1.6 hp/s} {+1.6 hp/s}.",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -1168,7 +1278,8 @@
     "displayName": "Charged Perforator",
     "itemStatus": "offense,lightning,random,new",
     "nickname": "whiteHook",
-    "description": "{offense:10%} chance on hit to do down a lightning strike, dealing {offense:500%} {+500%} damage."
+    "description": "{offense:10%} chance on hit to do down a lightning strike, dealing {offense:500%} {+500%} damage.",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -1177,7 +1288,8 @@
     "displayName": "Defense Nucleus",
     "itemStatus": "utility,summon,triangle",
     "nickname": "triangleSummon",
-    "description": "Killing elite monsters spawns an {offense:Alpha Construct}. Limited to {misc:4} {+4}."
+    "description": "Killing elite monsters spawns an {offense:Alpha Construct}. Limited to {misc:4} {+4}.",
+    "dlc": "sotv"
   },
   {
     "itemNumber": 97,
@@ -1186,7 +1298,8 @@
     "displayName": "Genesis Loop",
     "itemStatus": "low,health,nova,explode,recharge,cooldown",
     "nickname": "weirdTail",
-    "description": "Falling below {debuff:25% health} causes you to explode, dealing {offense:6000% base damage}. Recharges every {misc:30 seconds} {-50%}."
+    "description": "Falling below {debuff:25% health} causes you to explode, dealing {offense:6000% base damage}. Recharges every {misc:30 seconds} {-50%}.",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -1195,7 +1308,8 @@
     "displayName": "Planula",
     "itemStatus": "defense,heal,egg,flat,incoming,new",
     "nickname": "magmaEgg",
-    "description": "Heal from {offense:incoming damage} for {defense:15} {+15}"
+    "description": "Heal from {offense:incoming damage} for {defense:15} {+15}",
+    "dlc": "base"
   },
   {
     "itemNumber": 92,
@@ -1204,7 +1318,8 @@
     "displayName": "Pearl",
     "itemStatus": "defense,health,maximum",
     "nickname": "pearl",
-    "description": "Increases {defense:maximum health} by {defense:10%} {+10%}."
+    "description": "Increases {defense:maximum health} by {defense:10%} {+10%}.",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -1213,7 +1328,8 @@
     "displayName": "Empathy Cores",
     "itemStatus": "offense,summon,drone,boost,new",
     "nickname": "doubleDrone",
-    "description": "Every 30 seconds, {misc:summon two Solus Probes} that gain {offense:+100%} {+100%} damage per {misc:ally on your team}."
+    "description": "Every 30 seconds, {misc:summon two Solus Probes} that gain {offense:+100%} {+100%} damage per {misc:ally on your team}.",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -1222,7 +1338,8 @@
     "displayName": "Item Scrap, Yellow",
     "itemStatus": "utility,3d,unique,yelllow",
     "nickname": "scraps4",
-    "description": "Does nothing. Prioritized when used with 3D Printers."
+    "description": "Does nothing. Prioritized when used with 3D Printers.",
+    "dlc": "base"
   },
   {
     "itemNumber": 93,
@@ -1231,7 +1348,8 @@
     "displayName": "Irradiant Pearl",
     "itemStatus": "defense,boost,statistics",
     "nickname": "shinyPearl",
-    "description": "Increases {misc:ALL stats} by {misc:10%} {+10%}."
+    "description": "Increases {misc:ALL stats} by {misc:10%} {+10%}.",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -1240,7 +1358,8 @@
     "displayName": "Mired Urn",
     "itemStatus": "offense,heal,slow,near,proximity",
     "nickname": "tarUrn",
-    "description": "While in combat, the nearest 1 {+1} characters to you within {offense:13m} will be \"tethered\" to you, dealing {offense:100%} damage per second, applying {offense:tar}, and {defense:healing} you for {defense:100%} of the damage dealt."
+    "description": "While in combat, the nearest 1 {+1} characters to you within {offense:13m} will be \"tethered\" to you, dealing {offense:100%} damage per second, applying {offense:tar}, and {defense:healing} you for {defense:100%} of the damage dealt.",
+    "dlc": "base"
   },
   {
     "itemNumber": 83,
@@ -1249,7 +1368,8 @@
     "displayName": "Little Disciple",
     "itemStatus": "offense,tracking,sprint,attack",
     "nickname": "sprintingWisp",
-    "description": "Fire a {offense:tracking wisp} for {offense:300%} {+300%} {offense:damage}.\nFires every 1.6 seconds while sprinting. Fire rate increases with {misc:movement speed}."
+    "description": "Fire a {offense:tracking wisp} for {offense:300%} {+300%} {offense:damage}.\nFires every 1.6 seconds while sprinting. Fire rate increases with {misc:movement speed}.",
+    "dlc": "base"
   },
   {
     "itemNumber": 82,
@@ -1258,7 +1378,8 @@
     "displayName": "Halcyon Seed",
     "itemStatus": "utility,invocation,boss,summon",
     "nickname": "goldenSeed",
-    "description": "Summon {offense:Aurelionite} during the teleporter event.\nIt has {offense:100%} {+50%} {offense:damage} and {defense:100%} {+100%} {defense:health}."
+    "description": "Summon {offense:Aurelionite} during the teleporter event.\nIt has {offense:100%} {+50%} {offense:damage} and {defense:100%} {+100%} {defense:health}.",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -1267,7 +1388,8 @@
     "displayName": "Safer Spaces",
     "itemStatus": "defense,cooldown,block",
     "nickname": "corruptedBear",
-    "description": "{defense:Block} incoming damage once. Recharges after {misc:15 seconds} {-10%}.\n{corrupt:Corrupts all Tougher Times}."
+    "description": "{defense:Block} incoming damage once. Recharges after {misc:15 seconds} {-10%}.\n{corrupt:Corrupts all Tougher Times}.",
+    "dlc": "sotv"
   },
   {
     "itemNumber": -1,
@@ -1276,7 +1398,8 @@
     "displayName": "Needletick",
     "itemStatus": "offense,utility,collapse",
     "nickname": "needletick",
-    "description": "{offense:10%} {+10%} chance to {offense:collapse} an enemy for {offense:400%} base damage.\n{corrupt:Corrupts all Tri-Tip Daggers}."
+    "description": "{offense:10%} {+10%} chance to {offense:collapse} an enemy for {offense:400%} base damage.\n{corrupt:Corrupts all Tri-Tip Daggers}.",
+    "dlc": "sotv"
   },
   {
     "itemNumber": -1,
@@ -1285,7 +1408,8 @@
     "displayName": "Lost Seer's Lenses",
     "itemStatus": "offense,crit,insta,kill,elite",
     "nickname": "corruptedGlasses",
-    "description": "Your attacks have a {offense:0.5%} {+0.5%} chance to {offense:instantly kill} a {offense:non-Boss enemy}.\n{corrupt:Corrupts all Lens-Maker's Glasses}."
+    "description": "Your attacks have a {offense:0.5%} {+0.5%} chance to {offense:instantly kill} a {offense:non-Boss enemy}.\n{corrupt:Corrupts all Lens-Maker's Glasses}.",
+    "dlc": "sotv"
   },
   {
     "itemNumber": -1,
@@ -1294,7 +1418,8 @@
     "displayName": "Weeping Fungus",
     "itemStatus": "defense,sprint,heal,percent",
     "nickname": "weirdShroom",
-    "description": "{defense:Heals} for {defense:2%} {+2%} of your {defense:health} every second {misc:while sprinting}.\n{corrupt:Corrupts all Bustling Fungi}."
+    "description": "{defense:Heals} for {defense:2%} {+2%} of your {defense:health} every second {misc:while sprinting}.\n{corrupt:Corrupts all Bustling Fungi}.",
+    "dlc": "sotv"
   },
   {
     "itemNumber": -1,
@@ -1303,7 +1428,8 @@
     "displayName": "Encrusted Key",
     "itemStatus": "uility,chest,void",
     "nickname": "corruptedKey",
-    "description": "A {misc:hidden cache} containing an item (60%/{defense:30%}/{debuff:10%}) will appear in a random location {misc:on each stage}. Opening the cache {misc:consumes} this item.\n{corrupt:Corrupts all Rusted Key}."
+    "description": "A {misc:hidden cache} containing an item (60%/{defense:30%}/{debuff:10%}) will appear in a random location {misc:on each stage}. Opening the cache {misc:consumes} this item.\n{corrupt:Corrupts all Rusted Key}.",
+    "dlc": "sotv"
   },
   {
     "itemNumber": -1,
@@ -1312,7 +1438,8 @@
     "displayName": "Polylute",
     "itemStatus": "offense,lightning,group",
     "nickname": "corruptedThing",
-    "description": "{offense:25%} chance to fire {offense:lightning} for {offense:60%} TOTAL damage up to {offense:3} {+3} times.\n{corrupt:Corrupts all Ukuleles}."
+    "description": "{offense:25%} chance to fire {offense:lightning} for {offense:60%} TOTAL damage up to {offense:3} {+3} times.\n{corrupt:Corrupts all Ukuleles}.",
+    "dlc": "sotv"
   },
   {
     "itemNumber": -1,
@@ -1321,7 +1448,8 @@
     "displayName": "Singularity Band",
     "itemStatus": "offense,blackhole,grab,on,hit",
     "nickname": "superRing",
-    "description": "Hits that deal {offense:more than 400% damage} also fire a black hole that {misc:draws enemies within 15m into its center}.\nLasts {misc:5} seconds before collapsing, dealing {offense:100%} {+100%} TOTAL damage.\nRecharges every {misc:20} seconds.\n{corrupt:Corrupts all Kjaro's Band and Runald's Band}."
+    "description": "Hits that deal {offense:more than 400% damage} also fire a black hole that {misc:draws enemies within 15m into its center}.\nLasts {misc:5} seconds before collapsing, dealing {offense:100%} {+100%} TOTAL damage.\nRecharges every {misc:20} seconds.\n{corrupt:Corrupts all Kjaro's Band and Runald's Band}.",
+    "dlc": "sotv"
   },
   {
     "itemNumber": -1,
@@ -1330,7 +1458,8 @@
     "displayName": "Lysate Cell",
     "itemStatus": "utility,stack,add,skill",
     "nickname": "purpleCell",
-    "description": "Add {misc:+1} {+1} charge of your {misc:Special skill}.\n{corrupt:Corrupts all Fuell Cells}."
+    "description": "Add {misc:+1} {+1} charge of your {misc:Special skill}.\n{corrupt:Corrupts all Fuell Cells}.",
+    "dlc": "sotv"
   },
   {
     "itemNumber": -1,
@@ -1339,7 +1468,8 @@
     "displayName": "Voidsent Flame",
     "itemStatus": "offense,on,hit,burst,damage,zone,great",
     "nickname": "flame",
-    "description": "Upon hitting an enemy at or above {offense:100% health}, {offense:detonate} them in a {offense:12m} {+2.4m} radius burst for {offense:260%} {+156%} base damage.\n{corrupt:Corrupts all Will-o'-the-wisps}."
+    "description": "Upon hitting an enemy at or above {offense:100% health}, {offense:detonate} them in a {offense:12m} {+2.4m} radius burst for {offense:260%} {+156%} base damage.\n{corrupt:Corrupts all Will-o'-the-wisps}.",
+    "dlc": "sotv"
   },
   {
     "itemNumber": -1,
@@ -1348,7 +1478,8 @@
     "displayName": "Plasma Shrimp",
     "itemStatus": "offense,on,attack,missile",
     "nickname": "superMissile",
-    "description": "Gain a {defense:shield} equal to {defense:10%} of your maximum health. While you have a {defense:shield}, hitting an enemy fires a missile that deals {offense:40%} {+50%} TOTAL damage.\n{corrupt:Corrupts all AtG Missile Mk. 1s}."
+    "description": "Gain a {defense:shield} equal to {defense:10%} of your maximum health. While you have a {defense:shield}, hitting an enemy fires a missile that deals {offense:40%} {+50%} TOTAL damage.\n{corrupt:Corrupts all AtG Missile Mk. 1s}.",
+    "dlc": "sotv"
   },
   {
     "itemNumber": -1,
@@ -1357,7 +1488,8 @@
     "displayName": "Tentabauble",
     "itemStatus": "utility,root,on,hit",
     "nickname": "plantTentacle",
-    "description": "{misc:5%} {+5%} chance on hit to {offense:root} enemies for {misc:1s} {+1s}.\n{corrupt:Corrupts all Chronobaubles}."
+    "description": "{misc:5%} {+5%} chance on hit to {offense:root} enemies for {misc:1s} {+1s}.\n{corrupt:Corrupts all Chronobaubles}.",
+    "dlc": "sotv"
   },
   {
     "itemNumber": -1,
@@ -1366,7 +1498,8 @@
     "displayName": "Benthic Bloom",
     "itemStatus": "utility,upgrade,next,tier",
     "nickname": "corruptedClover",
-    "description": "{misc:Upgrades 3} {+3} randoms items to items of the next {misc:higher rarity} at the {misc:start of each stage}.\n{corrupt:Corrupts all 57 Leaf Clovers}."
+    "description": "{misc:Upgrades 3} {+3} randoms items to items of the next {misc:higher rarity} at the {misc:start of each stage}.\n{corrupt:Corrupts all 57 Leaf Clovers}.",
+    "dlc": "sotv"
   },
   {
     "itemNumber": -1,
@@ -1375,7 +1508,8 @@
     "displayName": "Pluripotent Larva",
     "itemStatus": "utility,on,death,corrupt,consume",
     "nickname": "hauntedBear",
-    "description": "{misc:Upon death}, this item will be {misc:consumed} and you will {defense:return to life} with {defense:3 seconds of invulnerability}, and all of your items that can be {misc:corrupted} will be.\n{corrupt:Corrupts all Dio's Best Friends}."
+    "description": "{misc:Upon death}, this item will be {misc:consumed} and you will {defense:return to life} with {defense:3 seconds of invulnerability}, and all of your items that can be {misc:corrupted} will be.\n{corrupt:Corrupts all Dio's Best Friends}.",
+    "dlc": "sotv"
   },
   {
     "itemNumber": -1,
@@ -1384,7 +1518,8 @@
     "displayName": "Newly Hatched Zoea",
     "itemStatus": "offense,summon,void,ally",
     "nickname": "corruptedScorpion",
-    "description": "Every {misc:60} {-50%} seconds, gain a random {corrupt:Void} ally. Can have up to {misc:1} {+1} allies at a time.\n{corrupt:Corrupts all Unique Items}."
+    "description": "Every {misc:60} {-50%} seconds, gain a random {corrupt:Void} ally. Can have up to {misc:1} {+1} allies at a time.\n{corrupt:Corrupts all Unique Items}.",
+    "dlc": "sotv"
   },
   {
     "itemNumber": 74,
@@ -1394,7 +1529,8 @@
     "itemStatus": "utility,equipment,locked",
     "nickname": "fossil",
     "description": "{misc:Reduce equipment cooldown} by {misc:50%} {+15%}.\nForces your Equipment to {misc:activate} whenever it is off {misc:cooldown}.",
-    "unlockCondition": "Kill 20 Hermit Crabs by chasing them off the edge of the map."
+    "unlockCondition": "Kill 20 Hermit Crabs by chasing them off the edge of the map.",
+    "dlc": "base"
   },
   {
     "itemNumber": 107,
@@ -1404,7 +1540,8 @@
     "itemStatus": "utility,teleporter,event,smaller,faster",
     "nickname": "orb",
     "description": "Teleporters charge {misc:30%} {+30%} {misc:faster}, but the size of the Teleporter zone is {debuff:50%} {-50%} smaller.",
-    "unlockCondition": "In 4 consecutive stages, don't leave the teleporter radius until it is fully charged."
+    "unlockCondition": "In 4 consecutive stages, don't leave the teleporter radius until it is fully charged.",
+    "dlc": "base"
   },
   {
     "itemNumber": 44,
@@ -1413,7 +1550,8 @@
     "displayName": "Brittle Crown",
     "itemStatus": "utility",
     "nickname": "crown",
-    "description": "{misc:30% chance on hit} to gain {misc:2} {+2} {misc:gold}. {misc:Scales over time}.\nOn taking damage, {debuff:lose gold} equal to {debuff:100%} {+100%} of the maximum health percentage you lost."
+    "description": "{misc:30% chance on hit} to gain {misc:2} {+2} {misc:gold}. {misc:Scales over time}.\nOn taking damage, {debuff:lose gold} equal to {debuff:100%} {+100%} of the maximum health percentage you lost.",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -1422,7 +1560,8 @@
     "displayName": "Light Flux Pauldron",
     "itemStatus": "utility,skill,cooldown,bad,trade",
     "nickname": "coolJacket",
-    "description": "Decrease {misc:skill cooldowns} by {misc:50%} {+50%}. Decrease {offense:attack speed} by {offense:50%} {+50%}."
+    "description": "Decrease {misc:skill cooldowns} by {misc:50%} {+50%}. Decrease {offense:attack speed} by {offense:50%} {+50%}.",
+    "dlc": "sotv"
   },
   {
     "itemNumber": -1,
@@ -1431,7 +1570,8 @@
     "displayName": "Stone Flux Pauldron",
     "itemStatus": "utility,bad,trade",
     "nickname": "pauldron",
-    "description": "Increase {defense:max health} by {defense:100%} {+100%}. Reduce {misc:movement speed} by {misc:50%} {+50%}."
+    "description": "Increase {defense:max health} by {defense:100%} {+100%}. Reduce {misc:movement speed} by {misc:50%} {+50%}.",
+    "dlc": "sotv"
   },
   {
     "itemNumber": -1,
@@ -1441,7 +1581,8 @@
     "itemStatus": "utility,cooldown,reduction,bad luck,reroll",
     "nickname": "snowflake",
     "description": "All skill cooldowns are reduced by {misc:2} {+1} seconds. All random effects are rolled {misc:+1} {+1} times for an {debuff:unfavorable outcome}.",
-    "unlockCondition": "Beat the game in Monsoon difficulty."
+    "unlockCondition": "Beat the game in Monsoon difficulty.",
+    "dlc": "base"
   },
   {
     "itemNumber": 43,
@@ -1450,7 +1591,8 @@
     "displayName": "Shaped Glass",
     "itemStatus": "offense,suicide",
     "nickname": "sword",
-    "description": "Increase base damage by {offense:100%} {+100%}.\n{defense:Reduce maximum health by 50%} {+50%}."
+    "description": "Increase base damage by {offense:100%} {+100%}.\n{defense:Reduce maximum health by 50%} {+50%}.",
+    "dlc": "base"
   },
   {
     "itemNumber": 96,
@@ -1459,17 +1601,19 @@
     "displayName": "Visions of Heresy",
     "itemStatus": "active,primary,replace,offense,damage,recharge,cooldown,skill,orb",
     "nickname": "weirdOrb",
-    "description": "{misc:Replace your Primary Skill} with {misc:Hungering Gaze}.\nFire a flurry of {misc:tracking shards} that detonate after a delay, dealing {offense:120%} base damage. Hold up to 12 charges {+12} that reload after 2 seconds {+2}."
+    "description": "{misc:Replace your Primary Skill} with {misc:Hungering Gaze}.\nFire a flurry of {misc:tracking shards} that detonate after a delay, dealing {offense:120%} base damage. Hold up to 12 charges {+12} that reload after 2 seconds {+2}.",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
     "rarity": 5,
     "guid": "missinguid_hookOfHeresy",
-    "displayName": "Hook of Heresy",
+    "displayName": "Hooks of Heresy",
     "itemStatus": "active,secondary,replace,offense,skill,explode",
     "nickname": "purpleBlade",
     "description": "{misc:Replace your Secondary Skill} with {misc:Slicing Maelstrom}.\nCharge up a projectile that deals {offense:175% damage per second} to nearby enemies, exploding after {misc:3} seconds to deal {offense:700% damage} and {offense:root} enemies for {misc:3} {+3} seconds. Recharges after 5 {+5} seconds.",
-    "unlockCondition": "Kill 15 boss monsters in a single run."
+    "unlockCondition": "Kill 15 boss monsters in a single run.",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -1479,7 +1623,8 @@
     "itemStatus": "active,special,replace,offense,skill,stack,explode",
     "nickname": "ocarina",
     "description": "{misc:Replace your Special Skill} with {misc:Ruin}.\nDealing damage adds a stack of {offense:Ruin} for 10 {+10} seconds. Activating the skill {offense:detonates} all Ruin stack at unlimited range, dealing {offense:300% damage} plus {offense:120% damage per stack of Ruin}.\nRecharges after 8 {+8} seconds.",
-    "unlockCondition": "Kill 15 boss monsters in a single run."
+    "unlockCondition": "Kill 15 boss monsters in a single run.",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -1488,7 +1633,8 @@
     "displayName": "Egocentrism",
     "itemStatus": "utility,sacrifice,item",
     "nickname": "whiteBall",
-    "description": "Every {misc:3} {-50%} seconds, gain an {offense:orbiting bomb} that detonates on impact for {offense:360%} damage, up to a maximum of {misc:3} {+1} {misc:bombs}.\nEvery {misc:60} seconds, a random item is {misc:converted} into this item."
+    "description": "Every {misc:3} {-50%} seconds, gain an {offense:orbiting bomb} that detonates on impact for {offense:360%} damage, up to a maximum of {misc:3} {+1} {misc:bombs}.\nEvery {misc:60} seconds, a random item is {misc:converted} into this item.",
+    "dlc": "sotv"
   },
   {
     "itemNumber": 98,
@@ -1498,7 +1644,8 @@
     "itemStatus": "secret,unlock,zone,no,effect",
     "nickname": "beads",
     "description": "Seems to do nothing... {debuff:but...}",
-    "unlockCondition": "Unlock the new zone from the \"Hidden Realms\" update when you obliterate with this item."
+    "unlockCondition": "Unlock the new zone from the \"Hidden Realms\" update when you obliterate with this item.",
+    "dlc": "base"
   },
   {
     "itemNumber": 88,
@@ -1508,7 +1655,8 @@
     "itemStatus": "utility,movement,skill,arm,speed,heal,defense",
     "nickname": "weirdArm",
     "description": "{misc:Replace your Utility Skill} with {misc:Shadowfade}.\nFade away, becoming {misc:intangible} and gaining {misc:+30% movement speed}. {defense:Heal} for {defense:25%} {+25%} {defense:of your maximum health}. Lasts 3 {+3} seconds.",
-    "unlockCondition": "Kill 15 boss monsters in a single run."
+    "unlockCondition": "Kill 15 boss monsters in a single run.",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -1517,7 +1665,8 @@
     "displayName": "Defiant Gouge",
     "itemStatus": "offense,summon,shrine,on use",
     "nickname": "tools",
-    "description": "Using a Shrine summons {debuff:enemies} nearby. {misc:Scales over time}."
+    "description": "Using a Shrine summons {debuff:enemies} nearby. {misc:Scales over time}.",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -1526,7 +1675,8 @@
     "displayName": "Longstanding Solitude",
     "itemStatus": "on,level,up,free,purchase,conversion,increase,downsize",
     "nickname": "longstandingSolitude",
-    "description": "{misc:On level up} gain a free unlock for the next purchase {+1 free unlock|per item stack} but {debuff:all gold is converted to experience. Anything that costs gold is increased by 100%} {+100%|per item stack}{debuff:.}"
+    "description": "{misc:On level up} gain a free unlock for the next purchase {+1 free unlock|per item stack} but {debuff:all gold is converted to experience. Anything that costs gold is increased by 100%} {+100%|per item stack}{debuff:.}",
+    "dlc": "sots"
   },
   {
     "itemNumber": -1,
@@ -1535,7 +1685,8 @@
     "displayName": "Mercurial Rachis",
     "itemStatus": "offense,power,zone,damage",
     "nickname": "spin",
-    "description": "Creates a Ward of Power in a random location nearby that buffs both enemies and allies within {misc:16m} {+50%}, causing them to deal {offense:+50%} damage."
+    "description": "Creates a Ward of Power in a random location nearby that buffs both enemies and allies within {misc:16m} {+50%}, causing them to deal {offense:+50%} damage.",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -1544,7 +1695,8 @@
     "displayName": "Eulogy Zero",
     "itemStatus": "utility,convert,chance,lunar",
     "nickname": "domino",
-    "description": "Items have a {misc:5%} {+5%} chance to become a {misc:Lunar} item instead."
+    "description": "Items have a {misc:5%} {+5%} chance to become a {misc:Lunar} item instead.",
+    "dlc": "sotv"
   },
   {
     "itemNumber": 71,
@@ -1553,7 +1705,8 @@
     "displayName": "Corpsebloom",
     "itemStatus": "defense,heal,dot",
     "nickname": "flower",
-    "description": "{defense:Heal +100%} {+100%} more.\n{defense:All healing is applied over time}.\nCan {defense:heal} for a {defense:maximum} of {defense:10%} {-50%} of your {defense:health per second}."
+    "description": "{defense:Heal +100%} {+100%} more.\n{defense:All healing is applied over time}.\nCan {defense:heal} for a {defense:maximum} of {defense:10%} {-50%} of your {defense:health per second}.",
+    "dlc": "base"
   },
   {
     "itemNumber": 49,
@@ -1562,7 +1715,8 @@
     "displayName": "Transcendence",
     "itemStatus": "defense,chaos",
     "nickname": "transc",
-    "description": "{defense:Convert} all but {defense:1 health} into {defense:regenerating shields}.\n{defense:Gain 50%} {+25%} {defense:maximum health}."
+    "description": "{defense:Convert} all but {defense:1 health} into {defense:regenerating shields}.\n{defense:Gain 50%} {+25%} {defense:maximum health}.",
+    "dlc": "base"
   },
   {
     "itemNumber": 23,
@@ -1572,7 +1726,8 @@
     "itemStatus": "offense,suicide,fire,equipment,locked",
     "nickname": "burn",
     "description": "Ignite ALL characters within 8m. Deal {offense:5% of your maximum health/second as burning} to yourself.\nThe burn is {offense:0.5x} stronger on allies, and {offense:24x} stronger on enemies.\nCooldown: {misc:45s}",
-    "unlockCondition": "Kill 15 enemies simultaneously."
+    "unlockCondition": "Kill 15 enemies simultaneously.",
+    "dlc": "base"
   },
   {
     "itemNumber": 26,
@@ -1581,7 +1736,8 @@
     "displayName": "Effigy of Grief",
     "itemStatus": "utility,equipment",
     "nickname": "slow",
-    "description": "ALL characters are {misc:slowed by 50%} and has their {offense:armor reduced by 20}.\nCan place up to {misc:5}.\nCooldown: {misc:15s}"
+    "description": "ALL characters are {misc:slowed by 50%} and has their {offense:armor reduced by 20}.\nCan place up to {misc:5}.\nCooldown: {misc:15s}",
+    "dlc": "base"
   },
   {
     "itemNumber": 3,
@@ -1591,17 +1747,19 @@
     "itemStatus": "offense,suicide,equipment,locked",
     "nickname": "meteorite",
     "description": "{offense:Rain meteors} from the sky, damaging ALL characters for {offense:600% damage per blast}.\nLast 20 seconds.",
-    "unlockCondition": "Carry 5 Lunar items in a single run."
+    "unlockCondition": "Carry 5 Lunar items in a single run.",
+    "dlc": "base"
   },
   {
     "itemNumber": 28,
     "rarity": 5,
     "guid": "Tonic",
-    "displayName": "Spinel Affliction",
+    "displayName": "Spinel Tonic",
     "itemStatus": "utility,buff,debuff,attack,speed,movespeed,health,regen",
     "nickname": "tonic",
     "description": "Drink the Tonic, gaining a boost for 15 seconds.\nIncreases {offense:damage} by {offense:+100%}.\nIncreases {offense:attack speed} by {offense:+70%}.\nIncreases {offense:armor} by {offense:+20}.\nIncreases {defense:maximum health} by {defense:+50%}.\nIncreases {defense:passive health regeneration} by {defense:+300%}.\nIncreases {misc:movespeed} by {misc:+30%}.\nWhen the tonic wears off, you have {debuff:20%} chance to gain a {debuff:Tonic Affliction, reducing all of your stats} by {debuff:-5%} {-5%}",
-    "unlockCondition": "Discover and enter three unique portals."
+    "unlockCondition": "Discover and enter three unique portals.",
+    "dlc": "base"
   },
   {
     "itemNumber": 16,
@@ -1611,16 +1769,18 @@
     "itemStatus": "offense,locked",
     "nickname": "beam",
     "description": "Fires preon tendrils, zapping enemies within 35m up to {offense:600% damage/second}.\nOn contact, detonate in an enormous 20m explosion for {offense:4000% damage}.\nCooldown: {misc:140s}",
-    "unlockCondition": "Open the Timed Security Chest on Rallypoint Delta."
+    "unlockCondition": "Open the Timed Security Chest on Rallypoint Delta.",
+    "dlc": "base"
   },
   {
     "itemNumber": 11,
     "rarity": 6,
     "guid": "Blackhole",
-    "displayName": "Blackhole",
+    "displayName": "Primordial Cube",
     "itemStatus": "offense,stack",
     "nickname": "blackhole",
-    "description": "Fire a black hole that {misc:draws enemies within 30m into its center}. Last 10 seconds.\nCooldown: {misc:60s}"
+    "description": "Fire a black hole that {misc:draws enemies within 30m into its center}. Last 10 seconds.\nCooldown: {misc:60s}",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -1629,7 +1789,8 @@
     "displayName": "Trophy Hunter's Tricorn",
     "itemStatus": "utility,one,shoot,boss,drop,item",
     "nickname": "oldGun",
-    "description": "{offense:Execute} any enemy capable of spawning a {offense:unique reward}, and it will drop that {offense:item}. Equipment is {misc:consumed} on use."
+    "description": "{offense:Execute} any enemy capable of spawning a {offense:unique reward}, and it will drop that {offense:item}. Equipment is {misc:consumed} on use.",
+    "dlc": "sotv"
   },
   {
     "itemNumber": 30,
@@ -1639,7 +1800,8 @@
     "itemStatus": "utility,defense,cleanse,debuff",
     "nickname": "potThing",
     "description": "{misc:Cleanse} all negative effects. Includes debuffs, damage over time, and nearby projectiles.\nCooldown: {misc:20s}",
-    "unlockCondition": "Die three fiery deaths."
+    "unlockCondition": "Die three fiery deaths.",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -1648,7 +1810,8 @@
     "displayName": "Disposable Missile Launcher",
     "itemStatus": "attack",
     "nickname": "missile",
-    "description": "Fire a swarm of {offense:12} missiles that deal {offense:12x300%} damage.\nCooldown: {misc:45s}"
+    "description": "Fire a swarm of {offense:12} missiles that deal {offense:12x300%} damage.\nCooldown: {misc:45s}",
+    "dlc": "base"
   },
   {
     "itemNumber": 13,
@@ -1657,7 +1820,8 @@
     "displayName": "Ocular HUD",
     "itemStatus": "attack",
     "nickname": "hud",
-    "description": "Gain {offense:+100% Critical Strike Chance} for 8 seconds.\nCooldown: {misc:60s}"
+    "description": "Gain {offense:+100% Critical Strike Chance} for 8 seconds.\nCooldown: {misc:60s}",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -1667,7 +1831,8 @@
     "itemStatus": "offense,trigger,on kill",
     "nickname": "voodoo",
     "description": "Throw a cursed doll out that {offense:triggers} any {offense:On-kill} effects you have every {misc:1} second for {misc:8} seconds.\nCooldown: {misc:45}",
-    "unlockCondition": "Die 20 times."
+    "unlockCondition": "Die 20 times.",
+    "dlc": "base"
   },
   {
     "itemNumber": 14,
@@ -1677,16 +1842,18 @@
     "itemStatus": "utility,locked",
     "nickname": "drone",
     "description": "Call {offense:4 Strike Drones} to fight for you.\nLast 25 seconds.\nCooldown: {misc:100s}",
-    "unlockCondition": "Repair 30 drones or turrets."
+    "unlockCondition": "Repair 30 drones or turrets.",
+    "dlc": "base"
   },
   {
     "itemNumber": 31,
     "rarity": 6,
     "guid": "FireBallDash",
-    "displayName": "Volcania Egg",
+    "displayName": "Volcanic Egg",
     "itemStatus": "utility,offense,detonate,movement",
     "nickname": "egg",
-    "description": "Turn into a {offense:draconic fireball} for {offense:5} seconds. Deal {offense:500% damage} on impact.\nDetonates at the end for {offense:800% damage}.\nCooldown: {misc:30s}"
+    "description": "Turn into a {offense:draconic fireball} for {offense:5} seconds. Deal {offense:500% damage} on impact.\nDetonates at the end for {offense:800% damage}.\nCooldown: {misc:30s}",
+    "dlc": "base"
   },
   {
     "itemNumber": 2,
@@ -1695,7 +1862,8 @@
     "displayName": "Foreign Fruit",
     "itemStatus": "defense,heal",
     "nickname": "fruit",
-    "description": "Instantly heal for {defense:50% of your maximum health}.\nCooldown: {misc:45s}"
+    "description": "Instantly heal for {defense:50% of your maximum health}.\nCooldown: {misc:45s}",
+    "dlc": "base"
   },
   {
     "itemNumber": 33,
@@ -1704,7 +1872,8 @@
     "displayName": "Jade Elephant",
     "itemStatus": "utility,defense,resistance,armor",
     "nickname": "elephant",
-    "description": "Gain {offense:500 armor} for {misc:5 seconds}.\nCooldown: {misc:45s}"
+    "description": "Gain {offense:500 armor} for {misc:5 seconds}.\nCooldown: {misc:45s}",
+    "dlc": "base"
   },
   {
     "itemNumber": 27,
@@ -1714,7 +1883,8 @@
     "itemStatus": "utility,scan,locked",
     "nickname": "vase",
     "description": "Create a {misc:quantum tunnel} of up to {misc:1000m} in length. Lasts 30 seconds.\nCooldown: {misc:45s}",
-    "unlockCondition": "Defeat the guardian of Gilded Coast without any beacons deactivating."
+    "unlockCondition": "Defeat the guardian of Gilded Coast without any beacons deactivating.",
+    "dlc": "base"
   },
   {
     "itemNumber": 20,
@@ -1724,7 +1894,8 @@
     "itemStatus": "offense,troll,locked",
     "nickname": "gatling",
     "description": "Fires a continuous barrage that deals {offense:100% damage per bullet}.\nCosts $1 per bullet. Costs increases over time.\nCooldown: {misc:5s}",
-    "unlockCondition": "Collect $30,480 total gold."
+    "unlockCondition": "Collect $30,480 total gold.",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -1733,7 +1904,8 @@
     "displayName": "Goobo Jr.",
     "itemStatus": "utility,clone,summon",
     "nickname": "goobo",
-    "description": "Spawn a gummy clone that has {offense:300% damage} and {defense:300% health}. Expires in {misc:30} seconds.\nCooldown: {misc:100s}"
+    "description": "Spawn a gummy clone that has {offense:300% damage} and {defense:300% health}. Expires in {misc:30} seconds.\nCooldown: {misc:100s}",
+    "dlc": "sotv"
   },
   {
     "itemNumber": -1,
@@ -1743,16 +1915,18 @@
     "itemStatus": "utility,revive,bear",
     "nickname": "seedOfLife",
     "description": "Revives the user when killed or dead allies on activation. Consumed on use.\nCooldown: {misc:60s}",
-    "unlockCondition": "Journey to the Prime Meridian and defeat the False Son."
+    "unlockCondition": "Journey to the Prime Meridian and defeat the False Son.",
+    "dlc": "sots"
   },
   {
     "itemNumber": 18,
     "rarity": 6,
     "guid": "Jetpack",
-    "displayName": "Milky Chrisalis",
+    "displayName": "Milky Chrysalis",
     "itemStatus": "utility,movespeed",
     "nickname": "larva",
-    "description": "Sprout wings and {misc:fly for 15 seconds}.\nGain {misc:+20% movement speed} for the duration.\nCooldown: {misc:60s}"
+    "description": "Sprout wings and {misc:fly for 15 seconds}.\nGain {misc:+20% movement speed} for the duration.\nCooldown: {misc:60s}",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -1761,7 +1935,8 @@
     "displayName": "Super Massive Leech",
     "itemStatus": "defense,heal,leech,on hit",
     "nickname": "leech",
-    "description": "{defense:Heal} for {defense:20%} of the {offense:damage} you deal. Lasts {defense:8} seconds.\nCooldown: {misc:60s}"
+    "description": "{defense:Heal} for {defense:20%} of the {offense:damage} you deal. Lasts {defense:8} seconds.\nCooldown: {misc:60s}",
+    "dlc": "base"
   },
   {
     "itemNumber": 19,
@@ -1771,7 +1946,8 @@
     "itemStatus": "offense,locked",
     "nickname": "lightning",
     "description": "Call down a lightning strike on a targeted monster, dealing {offense:3000% damage} and {offense:stunning} nearby monsters.\nCooldown: {misc:20s}",
-    "unlockCondition": "Defeat the Teleporter bosses after activating 2 Shrines of the Mountain."
+    "unlockCondition": "Defeat the Teleporter bosses after activating 2 Shrines of the Mountain.",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -1780,7 +1956,8 @@
     "displayName": "Molotov (6-Pack)",
     "itemStatus": "offense,fire",
     "nickname": "molotov",
-    "description": "Throw {offense:6} molotov cocktails that {offense:ignites} enemies for {offense:500% base damage}. Each molotov leaves a burning area for {offense:200% damage per second}.\nCooldown: {misc:45s}"
+    "description": "Throw {offense:6} molotov cocktails that {offense:ignites} enemies for {offense:500% base damage}. Each molotov leaves a burning area for {offense:200% damage per second}.\nCooldown: {misc:45s}",
+    "dlc": "sotv"
   },
   {
     "itemNumber": -1,
@@ -1789,7 +1966,8 @@
     "displayName": "Executive Card",
     "itemStatus": "utility,shop,money,gold",
     "nickname": "creditCard",
-    "description": "Whenever you make a gold purchase, get {misc:10%} of the spent gold back. If the purchase is a {misc:multishop} terminal, the other terminals will {misc:remaing open}.\nCooldown: {misc:0.1s}"
+    "description": "Whenever you make a gold purchase, get {misc:10%} of the spent gold back. If the purchase is a {misc:multishop} terminal, the other terminals will {misc:remaing open}.\nCooldown: {misc:0.1s}",
+    "dlc": "sotv"
   },
   {
     "itemNumber": 21,
@@ -1799,7 +1977,8 @@
     "itemStatus": "defense,heal,locked",
     "nickname": "spirit",
     "description": "Gain a Woodsprite follower that heals a friendly target for {defense:10% of their maximum health} instantly, then {defense:1.5% of your maximum health} every second.\nActivating the equipment assigns a new target, or yourself if there are no targets available.\nCooldown: {misc:15s}",
-    "unlockCondition": "Fully upgrade a Shrine of the Woods."
+    "unlockCondition": "Fully upgrade a Shrine of the Woods.",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -1809,7 +1988,8 @@
     "itemStatus": "utility,reroll,recycle,transform",
     "nickname": "recycler",
     "description": "{misc:Transform} an Item or Equipment into a different one. {misc:Can only be converted in the same tier one time}.\nCooldown: {misc:45s}",
-    "unlockCondition": "Destroy 20 flying rocks in Sky Meadow."
+    "unlockCondition": "Destroy 20 flying rocks in Sky Meadow.",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -1818,7 +1998,8 @@
     "displayName": "Sawmerang",
     "itemStatus": "offense,boomerang",
     "nickname": "metalSpin",
-    "description": "Throw {offense:three large saw blades} that slice through enemies for {offense:3x400%} damage.\nAlso deals an additional {offense:3x100% damage per second} while {offense:bleeding} enemies.\nCan {offense:strike} enemies again on the way back.\nCooldown: {misc:45s}"
+    "description": "Throw {offense:three large saw blades} that slice through enemies for {offense:3x400%} damage.\nAlso deals an additional {offense:3x100% damage per second} while {offense:bleeding} enemies.\nCan {offense:strike} enemies again on the way back.\nCooldown: {misc:45s}",
+    "dlc": "base"
   },
   {
     "itemNumber": 25,
@@ -1828,7 +2009,8 @@
     "itemStatus": "utility,scan,locked",
     "nickname": "radar",
     "description": "{misc:Reveal} all interactables within 500m for {misc:10 seconds}.\nCooldown: {misc:45s}",
-    "unlockCondition": "Collect 10 Monster or Environment Logs."
+    "unlockCondition": "Collect 10 Monster or Environment Logs.",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -1837,7 +2019,8 @@
     "displayName": "Gorag's Opus",
     "itemStatus": "utility,offense,frenzy,movement speed,attack speed",
     "nickname": "drum",
-    "description": "All allies enter a {offense:frenzy} for {misc:7} seconds. Increases {misc:movement speed} by {misc:50%} and {offense:attack speed} by {offense:100%}.\nCooldown: {misc:45s}"
+    "description": "All allies enter a {offense:frenzy} for {misc:7} seconds. Increases {misc:movement speed} by {misc:50%} and {offense:attack speed} by {offense:100%}.\nCooldown: {misc:45s}",
+    "dlc": "base"
   },
   {
     "itemNumber": -1,
@@ -1846,6 +2029,315 @@
     "displayName": "Remote Caffeinator",
     "itemStatus": "utility,heal,drop,coffee,deliver",
     "nickname": "fridge",
-    "description": "Request an {offense:Eclipse Zero Vending Machine} from the {offense:UES Safe Travels}. Delivery guaranteed in {misc:5 seconds}, dealing {offense:2000% damage}. {defense:Heal} up to 3 targets for {defense:25% of their maximum health}.\nCooldown: {misc:60s}"
+    "description": "Request an {offense:Eclipse Zero Vending Machine} from the {offense:UES Safe Travels}. Delivery guaranteed in {misc:5 seconds}, dealing {offense:2000% damage}. {defense:Heal} up to 3 targets for {defense:25% of their maximum health}.\nCooldown: {misc:60s}",
+    "dlc": "sotv"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 0,
+    "guid": "BarrierOnCooldown",
+    "displayName": "Eclipse Lite",
+    "itemStatus": "defense,barrier,cooldown,skill",
+    "nickname": "eclipseLite",
+    "description": "When a skill comes off cooldown, gain a {defense:temporary barrier} for {defense:1%} {+0.25%} of your maximum health per second of the skill's base cooldown.",
+    "unlockTask": null,
+    "dlc": "alloyed"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 0,
+    "guid": "CritAtLowerElevation",
+    "displayName": "Hiker's Boots",
+    "itemStatus": "offense,critical,high,ground,elevation",
+    "nickname": "hikerBoots",
+    "description": "Striking enemies from a higher elevation grants {offense:+1%} {+1%} {offense:critical strike chance} and {offense:critical strike damage}, up to {misc:10 times}. Lasts 10 seconds.",
+    "unlockTask": null,
+    "dlc": "alloyed"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 1,
+    "guid": "DroneDropsDynamite",
+    "displayName": "Box of Dynamite",
+    "itemStatus": "offense,drone,dynamite,stun,summon",
+    "nickname": "boxOfDynamite",
+    "description": "Gain {offense:Lt. Droneboy}. While in combat, your drones drop sticks of dynamite that detonate for {offense:240% damage} {+85%}, stunning enemies. Recharges after {misc:10} seconds.",
+    "unlockTask": null,
+    "dlc": "alloyed"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 1,
+    "guid": "SpeedOnPickup",
+    "displayName": "Collector's Compulsion",
+    "itemStatus": "utility,stats,pickup,barrel,stack",
+    "nickname": "collectorsCompulsion",
+    "description": "Picking up {offense:an item or other collectible} increases {misc:all stats} by {misc:+3% for 20 seconds, up to 3} {+2} {misc:times}. Barrels grant minor pickups.",
+    "unlockTask": null,
+    "dlc": "alloyed"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 1,
+    "guid": "JumpDamageStrike",
+    "displayName": "Faraday Spur",
+    "itemStatus": "utility,offense,charge,jump,electric,movement",
+    "nickname": "faradaySpur",
+    "description": "Moving around builds up {misc:charge}, granting up to {misc:+160% movement speed} and {misc:+200% jump height} at 100%. At 25% charge or higher, jumping triggers an {offense:explosive discharge} for {offense:400%} {+280%} {offense:damage} in a 5m to 32.3m {+7.5m} area.",
+    "unlockTask": null,
+    "dlc": "alloyed"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 1,
+    "guid": "ShieldBooster",
+    "displayName": "Kinetic Dampener",
+    "itemStatus": "defense,armor,shield,stun,pulse",
+    "nickname": "kineticDampener",
+    "description": "Increases armor by {misc:30} {+30} while you have a shield. When shield breaks, release a stunning pulse for {offense:100% damage} plus an amount {offense:equal to 100%} {+10%} {offense:of your max shield}. Grants a shield for {defense:4% of your max health}.",
+    "unlockTask": null,
+    "dlc": "alloyed"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 2,
+    "guid": "SharedSuffering",
+    "displayName": "Networked Suffering",
+    "itemStatus": "offense,virus,spread,damage,debuff",
+    "nickname": "networkedSuffering",
+    "description": "Infect up to {misc:4} {+2} enemies with a computer virus that duplicates {offense:50% of all damage taken} and sends it to a global damage pool. Every 3 seconds, ALL infected enemies suffer {offense:100% pooled damage}.",
+    "unlockTask": null,
+    "dlc": "alloyed"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 2,
+    "guid": "PhysicsProjectile",
+    "displayName": "Orphaned Core",
+    "itemStatus": "offense,summon,drone,movement,damage",
+    "nickname": "orphanedCore",
+    "description": "Gain a {defense:friendly Solus unit} that launches itself at enemies for {offense:400%} {+400%} {offense:damage}. The unit inherits your {misc:movement speed items} and deals {offense:more damage the faster it moves}. The unit can be pet to {misc:cleanse negative effects}. Recharges after 15 seconds.",
+    "unlockTask": null,
+    "dlc": "alloyed"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 2,
+    "guid": "Duplicator",
+    "displayName": "Substandard Duplicator",
+    "itemStatus": "utility,copy,temporary,item",
+    "nickname": "substandardDuplicator",
+    "description": "{misc:Picking up an item} gives you a {misc:temporary copy} of itself. Temporary items last an additional {offense:10} {+10} {offense:seconds}.",
+    "unlockTask": null,
+    "dlc": "alloyed"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 3,
+    "guid": "MasterBattery",
+    "displayName": "Encrypted Cerebellum",
+    "itemStatus": "utility,quest,collective,decrypt",
+    "nickname": "encryptedCerebellum",
+    "description": "Contains encrypted remnants of the Collective network. Needs to be decrypted before it can be returned.",
+    "unlockTask": null,
+    "dlc": "alloyed"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 3,
+    "guid": "MasterCore",
+    "displayName": "Exposed Cerebellum",
+    "itemStatus": "utility,quest,collective,entity",
+    "nickname": "exposedCerebellum",
+    "description": "A swarming data nexus representing the Collective network. Can be given to a powerful entity.",
+    "unlockTask": null,
+    "dlc": "alloyed"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 3,
+    "guid": "ShockDamageAura",
+    "displayName": "Faulty Conductor",
+    "itemStatus": "offense,electric,aura,energize,critical",
+    "nickname": "faultyConductor",
+    "description": "Every {misc:15} {-20%} {misc:seconds}, release a wave of electricity that {defense:energizes} nearby allies for {misc:7} seconds. Energized allies gain {offense:+30% attack and movement speed}, and ALWAYS land {offense:critical strikes} with {misc:electric} items and attacks.",
+    "unlockTask": null,
+    "dlc": "alloyed"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 3,
+    "guid": "ExtraEquipment",
+    "displayName": "Functional Coupler",
+    "itemStatus": "utility,equipment,extra,hold",
+    "nickname": "functionalCoupler",
+    "description": "Hold {misc:1 additional equipment} {+1}. Press the {misc:interact} and {misc:equipment} buttons to cycle through held equipment.",
+    "unlockTask": null,
+    "dlc": "alloyed"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 3,
+    "guid": "PowerCube",
+    "displayName": "Prison Matrix",
+    "itemStatus": "defense,armor,matrix,terminal,placeable",
+    "nickname": "prisonMatrix",
+    "description": "Gain {misc:+50% armor}. Can be placed in a Matrix Terminal.",
+    "unlockTask": null,
+    "dlc": "alloyed"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 3,
+    "guid": "PowerPyramid",
+    "displayName": "Sentry Key",
+    "itemStatus": "utility,movement,speed,sentry,terminal,placeable",
+    "nickname": "sentryKey",
+    "description": "Gain {misc:+15% move speed}. Can be placed in a Sentry Terminal or used for decryption.",
+    "unlockTask": null,
+    "dlc": "alloyed"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 5,
+    "guid": "TransferDebuffOnHit",
+    "displayName": "Neutronium Weight",
+    "itemStatus": "debuff,stats,transfer,combat,lunar",
+    "nickname": "neutroniumWeight",
+    "description": "{debuff:Reduces your stats while in combat}, but {misc:send this item to an enemy} on hit. On death, this item will be sent to its holder's killer.\nReduces {offense:damage} by 30% {+10%}, {offense:attack speed} by 30% {+10%}, {misc:movement speed} by 30% {+10%}, and {misc:armor} by 35 {+15}.",
+    "unlockTask": null,
+    "dlc": "alloyed"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 6,
+    "guid": "Parry",
+    "displayName": "Deus Ex Machina",
+    "itemStatus": "defense,parry,counter,blessing,cooldown",
+    "nickname": "deusExMachina",
+    "description": "Briefly enter a countering stance that lets you parry {misc:any and ALL} damage. A successful parry {defense:nullifies incoming damage}, reduces your equipment cooldown by {offense:75%}, and grants {misc:Blessing}, causing your next attack to ALWAYS activate your on-hit effects.",
+    "unlockTask": null,
+    "dlc": "alloyed"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 6,
+    "guid": "QuestVolatileBattery",
+    "displayName": "Fuel Array",
+    "itemStatus": "utility,quest,power,unstable",
+    "nickname": "fuelArray",
+    "description": "Looks like it could power something. {debuff:EXTREMELY unstable...}",
+    "unlockTask": null,
+    "dlc": "base"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 6,
+    "guid": "EliteFireEquipment",
+    "displayName": "Ifrit's Distinction",
+    "itemStatus": "elite,equipment,fire,aspect",
+    "nickname": "ifritsDistinction",
+    "description": "Become an aspect of fire.",
+    "unlockTask": null,
+    "dlc": "base"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 6,
+    "guid": "EliteLightningEquipment",
+    "displayName": "Silence Between Two Strikes",
+    "itemStatus": "elite,equipment,lightning,aspect",
+    "nickname": "silenceBetweenTwoStrikes",
+    "description": "Become an aspect of lightning.",
+    "unlockTask": null,
+    "dlc": "base"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 6,
+    "guid": "EliteIceEquipment",
+    "displayName": "Her Biting Embrace",
+    "itemStatus": "elite,equipment,ice,aspect",
+    "nickname": "herBitingEmbrace",
+    "description": "Become an aspect of ice.",
+    "unlockTask": null,
+    "dlc": "base"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 6,
+    "guid": "ElitePoisonEquipment",
+    "displayName": "N'kuhana's Retort",
+    "itemStatus": "elite,equipment,corruption,poison,aspect",
+    "nickname": "nkuhanasRetort",
+    "description": "Become an aspect of corruption.",
+    "unlockTask": null,
+    "dlc": "base"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 6,
+    "guid": "EliteHauntedEquipment",
+    "displayName": "Spectral Circlet",
+    "itemStatus": "elite,equipment,ghost,haunted,aspect",
+    "nickname": "spectralCirclet",
+    "description": "Become an aspect of incorporeality.",
+    "unlockTask": null,
+    "dlc": "base"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 6,
+    "guid": "EliteLunarEquipment",
+    "displayName": "Shared Design",
+    "itemStatus": "elite,equipment,lunar,aspect,perfection",
+    "nickname": "sharedDesign",
+    "description": "Become an aspect of perfection.",
+    "unlockTask": null,
+    "dlc": "base"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 6,
+    "guid": "EliteEarthEquipment",
+    "displayName": "His Reassurance",
+    "itemStatus": "elite,equipment,earth,aspect",
+    "nickname": "hisReassurance",
+    "description": "Become an aspect of earth.",
+    "unlockTask": null,
+    "dlc": "sotv"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 6,
+    "guid": "EliteAurelioniteEquipment",
+    "displayName": "Aurelionite's Blessing",
+    "itemStatus": "elite,equipment,radiance,aspect",
+    "nickname": "aurelionitesBlessing",
+    "description": "Become an aspect of radiance.",
+    "unlockTask": null,
+    "dlc": "sots"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 6,
+    "guid": "EliteBeadEquipment",
+    "displayName": "His Spiteful Boon",
+    "itemStatus": "elite,equipment,spite,bead,aspect",
+    "nickname": "hisSpitefulBoon",
+    "description": "Become an aspect of spite.",
+    "unlockTask": null,
+    "dlc": "sots"
+  },
+  {
+    "itemNumber": -1,
+    "rarity": 6,
+    "guid": "EliteCollectiveEquipment",
+    "displayName": "Of One Mind",
+    "itemStatus": "elite,equipment,collective,aspect",
+    "nickname": "ofOneMind",
+    "description": "Become an aspect of the Collective.",
+    "unlockTask": null,
+    "dlc": "alloyed"
   }
 ]

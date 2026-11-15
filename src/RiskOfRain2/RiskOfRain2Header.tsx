@@ -8,7 +8,7 @@ import { useStyles } from "./useStyles";
 import { observer } from "mobx-react-lite";
 import RiskOfRain2HeaderHamburger from "./RiskOfRain2HeaderHamburger";
 import SearchBar from "./common/SearchBar";
-import { filtersAreDefault, RARITY_NAMES, DisplayType } from "./RiskOfRain2Types";
+import { DLC_CODES, DLC_NAMES, dlcsAreDefault, filtersAreDefault, RARITY_NAMES, DisplayType, DlcCode } from "./RiskOfRain2Types";
 import { DISPLAY_TYPE_PATHS } from "./routing";
 
 const RiskOfRain2Header = observer(() => {
@@ -45,6 +45,7 @@ const RiskOfRain2Header = observer(() => {
   }
 
   const showResetFilters = !filtersAreDefault(uiState.filters)
+  const showResetDlcs = !dlcsAreDefault(uiState.enabledDlcs)
 
   const headerClasses = clsx(styles.header, styles.fillAvailableWidth)
   const filterOptionsClasses = clsx(
@@ -54,6 +55,10 @@ const RiskOfRain2Header = observer(() => {
   const rarityFilterClasses = clsx(
     styles.flexRow,
     styles.rarityFilter
+  )
+  const dlcFilterClasses = clsx(
+    styles.flexRow,
+    styles.dlcFilter
   )
 
   const expanded = uiState.headerExpanded
@@ -69,7 +74,7 @@ const RiskOfRain2Header = observer(() => {
 
       <div
         className={styles.headerControls}
-        style={{ maxHeight: expanded ? 240 : 0, opacity: expanded ? 1 : 0 }}
+        style={{ maxHeight: expanded ? 320 : 0, opacity: expanded ? 1 : 0 }}
       >
         <div className={styles.headerControlsRow}>
           <div className={filterOptionsClasses}>
@@ -123,6 +128,45 @@ const RiskOfRain2Header = observer(() => {
               </button>
             }
           </div>
+        </div>
+
+        <div className={dlcFilterClasses}>
+          <span className={styles.dlcLabel}>DLC:</span>
+          {DLC_CODES.map((code) => {
+            const enabled = uiState.enabledDlcs.has(code)
+            const dlcName = DLC_NAMES[code as DlcCode]
+            const toggleClasses = clsx(
+              styles.dlcToggle,
+              enabled ? styles.dlcToggleActive : styles.dlcToggleInactive,
+              code === 'base' && styles.dlcToggleText
+            )
+            return (
+              <button
+                key={code}
+                type="button"
+                className={toggleClasses}
+                onClick={() => uiState.toggleDlc(code)}
+                aria-pressed={enabled}
+                aria-label={dlcName}
+                title={dlcName}
+              >
+                {code === 'base'
+                  ? 'Base'
+                  : <img className={styles.dlcToggleImage} src={require(`./dlc_logos/${code}.webp`)} alt="" draggable={false} />}
+              </button>
+            )
+          })}
+          {showResetDlcs &&
+            <button
+              type="button"
+              className={styles.resetFilterLink}
+              aria-label="Reset DLC"
+              title="Restore all DLCs"
+              onClick={() => uiState.resetDlcs()}
+            >
+              Reset
+            </button>
+          }
         </div>
       </div>
     </div>

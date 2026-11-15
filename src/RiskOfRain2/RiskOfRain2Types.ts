@@ -8,7 +8,27 @@ export type RiskOfRain2Item = {
   image: string;
   maxstack?: number;
   cooldown?: number;
+  dlc?: DlcCode;
 }
+
+export type DlcCode = 'base' | 'sotv' | 'sots' | 'alloyed'
+
+export const DLC_CODES: readonly DlcCode[] = ['base', 'sotv', 'sots', 'alloyed']
+
+export const DLC_NAMES: Record<DlcCode, string> = {
+  base: 'Base Game',
+  sotv: 'Survivors of the Void',
+  sots: 'Seekers of the Storm',
+  alloyed: 'Alloyed Collective',
+}
+
+export const DEFAULT_DLC_FILTERS: readonly DlcCode[] = DLC_CODES
+
+export const dlcsAreDefault = (dlcs: Set<string>): boolean =>
+  dlcs.size === DEFAULT_DLC_FILTERS.length &&
+  DEFAULT_DLC_FILTERS.every((code) => dlcs.has(code))
+
+export const defaultDlcs = (): Set<string> => new Set<string>(DLC_CODES)
 
 export type DisplayType = 'grid' | 'list' | 'flashCards'
 

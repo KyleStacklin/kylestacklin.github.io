@@ -2,13 +2,21 @@ import { makeAutoObservable } from "mobx";
 import ror2_items from "./ror2_items.json";
 import {
   loadStoredDisplayType,
+  loadStoredDlcs,
   loadStoredFilters,
   loadStoredHeaderExpanded,
   saveDisplayType,
+  saveDlcs,
   saveFilters,
   saveHeaderExpanded,
 } from "./localStorage";
-import { defaultFilters, DisplayType, RARITY_NAMES } from "./RiskOfRain2Types";
+import {
+  defaultDlcs,
+  defaultFilters,
+  DisplayType,
+  dlcsAreDefault as dlcsSelectionIsDefault,
+  RARITY_NAMES,
+} from "./RiskOfRain2Types";
 
 const rarityToString = (rarity: number) => RARITY_NAMES[rarity] ?? ''
 
@@ -16,6 +24,7 @@ class RiskOfRainUiState {
 
   private _displayType: DisplayType = 'grid';
   private _filters: Set<string> = new Set<string>();
+  private _enabledDlcs: Set<string> = defaultDlcs();
   private _filteredList: any[] = [];
   private _list: any[] = [];
   private _searchQuery: string = '';
@@ -39,6 +48,8 @@ class RiskOfRainUiState {
     if (storedDisplayType) this._displayType = storedDisplayType
     const storedFilters = loadStoredFilters()
     this._filters = storedFilters ? new Set<string>(storedFilters) : defaultFilters()
+    const storedDlcs = loadStoredDlcs()
+    this._enabledDlcs = storedDlcs ? new Set<string>(storedDlcs) : defaultDlcs()
     const storedHeaderExpanded = loadStoredHeaderExpanded()
     if (storedHeaderExpanded !== null) this._headerExpanded = storedHeaderExpanded
 
@@ -51,6 +62,7 @@ class RiskOfRainUiState {
 
   get displayType() { return this._displayType; }
   get filters() { return this._filters; }
+  get enabledDlcs() { return this._enabledDlcs; }
   get filteredList() { return this._filteredList; }
   get list() { return this._list; }
   get searchQuery() { return this._searchQuery; }
@@ -66,6 +78,7 @@ class RiskOfRainUiState {
 
   set displayType(value: DisplayType) { this._displayType = value; }
   set filters(value: Set<string>) { this._filters = value; }
+  set enabledDlcs(value: Set<string>) { this._enabledDlcs = value; }
   set filteredList(value: any[]) { this._filteredList = value; }
   set list(value: any[]) { this._list = value; }
   set searchQuery(value: string) { this._searchQuery = value; }
@@ -79,10 +92,12 @@ class RiskOfRainUiState {
   set itemsGuessed(value: any[]) { this._itemsGuessed = value; }
   set itemHasBeenGuessed(value: boolean) { this._itemHasBeenGuessed = value; }
 
-  // Applies the search query and rarity filters together
+  // Applies the search query, rarity filters and DLC toggles together
   public applyFilters = () => {
     const query = this.searchQuery.trim().toLowerCase()
     this.filteredList = this.list.filter((item) => {
+      // Items without a dlc marker belong to the base game.
+      if (!this.enabledDlcs.has(item.dlc ?? 'base')) return false
       if (this.filters.size > 0 && !this.filters.has(rarityToString(item.rarity))) return false
       if (!query) return true
       return item.displayName.toLowerCase().includes(query) ||
@@ -117,6 +132,22 @@ class RiskOfRainUiState {
     this.filters = defaultFilters()
     this.applyFilters()
     saveFilters(this.filters)
+  }
+
+  public dlcsAreDefault = (): boolean => dlcsSelectionIsDefault(this.enabledDlcs)
+
+  public toggleDlc = (dlc: string) => {
+    if (!this.enabledDlcs.delete(dlc)) {
+      this.enabledDlcs.add(dlc)
+    }
+    this.applyFilters()
+    saveDlcs(this.enabledDlcs)
+  }
+
+  public resetDlcs = () => {
+    this.enabledDlcs = defaultDlcs()
+    this.applyFilters()
+    saveDlcs(this.enabledDlcs)
   }
 
   public toggleHeaderExpanded = () => {
