@@ -64,7 +64,7 @@ const useComponentStyles = createUseStyles({
     background: 'rgba(255,255,255,0.08)',
     border: '1px solid rgba(255,255,255,0.12)',
     color: '#a3adc2',
-    fontSize: '11px',
+    fontSize: '0.6875rem',
     fontWeight: '700',
     lineHeight: 1,
     transition: 'background 0.15s ease, color 0.15s ease, border-color 0.15s ease',
@@ -93,13 +93,13 @@ const useComponentStyles = createUseStyles({
     objectFit: 'contain',
   },
   optionName: {
-    fontSize: '14px',
+    fontSize: '0.875rem',
     fontWeight: '700',
     color: '#ffffff',
     lineHeight: 1.3,
   },
   optionPill: {
-    fontSize: '10px',
+    fontSize: '0.625rem',
     fontWeight: '600',
     letterSpacing: '0.4px',
     textTransform: 'uppercase',
@@ -111,7 +111,7 @@ const useComponentStyles = createUseStyles({
     flex: 1,
     minWidth: 0,
     color: '#c3cbd9',
-    fontSize: '12.5px',
+    fontSize: '0.78125rem',
     lineHeight: 1.5,
     whiteSpace: 'pre-line',
     // Candidate descriptions are clamped so long entries stay scannable.

@@ -1,4 +1,4 @@
-import { cleanup, render, screen } from '@testing-library/react'
+import { cleanup, fireEvent, render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { HashRouter } from 'react-router-dom'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
@@ -223,12 +223,23 @@ describe('dlc toggles', () => {
 describe('dlc badges', () => {
   it('shows a DLC logo badge on DLC items and none on base-game items', () => {
     const { container } = renderApp()
-    expect(container.querySelectorAll('img[title="Survivors of the Void"]')).toHaveLength(41)
-    expect(container.querySelectorAll('img[title="Seekers of the Storm"]')).toHaveLength(20)
-    expect(container.querySelectorAll('img[title="Alloyed Collective"]')).toHaveLength(18)
-    expect(container.querySelectorAll('img[title="Hallowed Concepts"]')).toHaveLength(38)
-    // Badge images are the only images carrying a title attribute.
-    expect(container.querySelectorAll('img[title]')).toHaveLength(117)
+    expect(container.querySelectorAll('span[data-dlc="sotv"]')).toHaveLength(41)
+    expect(container.querySelectorAll('span[data-dlc="sots"]')).toHaveLength(20)
+    expect(container.querySelectorAll('span[data-dlc="alloyed"]')).toHaveLength(18)
+    expect(container.querySelectorAll('span[data-dlc="hallowed"]')).toHaveLength(38)
+    // Badge spans are the only elements carrying a data-dlc attribute.
+    expect(container.querySelectorAll('span[data-dlc]')).toHaveLength(117)
+  })
+
+  it('shows a full-name tooltip on badge hover and removes it on leave', () => {
+    const { container } = renderApp()
+    const badge = container.querySelector('span[data-dlc="sotv"]')
+    expect(badge).not.toBeNull()
+    expect(document.body.querySelector('[role="tooltip"]')).toBeNull()
+    fireEvent.mouseEnter(badge!)
+    expect(document.body.querySelector('[role="tooltip"]')!.textContent).toBe('Survivors of the Void')
+    fireEvent.mouseLeave(badge!)
+    expect(document.body.querySelector('[role="tooltip"]')).toBeNull()
   })
 })
 

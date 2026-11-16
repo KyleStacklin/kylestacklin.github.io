@@ -17,7 +17,7 @@ const useComponentStyles = createUseStyles({
     boxShadow: '0 2px 10px rgba(0, 0, 0, 0.35)',
   },
   hudCounter: {
-    fontSize: '12px',
+    fontSize: '0.75rem',
     fontWeight: '600',
     color: '#c3cbd9',
     whiteSpace: 'nowrap',
@@ -40,7 +40,7 @@ const useComponentStyles = createUseStyles({
     display: 'flex',
     alignItems: 'center',
     gap: '5px',
-    fontSize: '12px',
+    fontSize: '0.75rem',
     fontWeight: '600',
     color: '#c3cbd9',
     background: 'rgba(255,255,255,0.06)',

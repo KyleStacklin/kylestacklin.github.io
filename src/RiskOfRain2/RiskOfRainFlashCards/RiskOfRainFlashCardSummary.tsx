@@ -22,7 +22,7 @@ const useComponentStyles = createUseStyles({
   },
   summaryTitle: {
     margin: 0,
-    fontSize: '20px',
+    fontSize: '1.25rem',
     fontWeight: '700',
     color: '#ffffff',
   },
@@ -43,29 +43,29 @@ const useComponentStyles = createUseStyles({
     border: '1px solid rgba(255,255,255,0.08)',
   },
   statValue: {
-    fontSize: '24px',
+    fontSize: '1.5rem',
     fontWeight: '700',
     color: '#ffffff',
     lineHeight: 1.1,
   },
   statLabel: {
-    fontSize: '11px',
+    fontSize: '0.6875rem',
     fontWeight: '600',
     letterSpacing: '0.6px',
     textTransform: 'uppercase',
     color: '#a3adc2',
   },
   statSub: {
-    fontSize: '12px',
+    fontSize: '0.75rem',
     color: '#a3adc2',
   },
   recordTag: {
-    fontSize: '11px',
+    fontSize: '0.6875rem',
     fontWeight: '700',
     color: '#e8802e',
   },
   sectionTitle: {
-    fontSize: '14px',
+    fontSize: '0.875rem',
     fontWeight: '700',
     color: '#ffffff',
   },
@@ -116,11 +116,11 @@ const useComponentStyles = createUseStyles({
   },
   reviewName: {
     fontWeight: '700',
-    fontSize: '14px',
+    fontSize: '0.875rem',
     color: '#ffffff',
   },
   reviewPill: {
-    fontSize: '10px',
+    fontSize: '0.625rem',
     fontWeight: '600',
     letterSpacing: '0.4px',
     textTransform: 'uppercase',
@@ -130,12 +130,12 @@ const useComponentStyles = createUseStyles({
   },
   reviewDescription: {
     color: '#c3cbd9',
-    fontSize: '12.5px',
+    fontSize: '0.78125rem',
     lineHeight: 1.5,
     whiteSpace: 'pre-line',
   },
   reviewPicked: {
-    fontSize: '12px',
+    fontSize: '0.75rem',
     color: '#a3adc2',
   },
   reviewPickedName: {
@@ -143,7 +143,7 @@ const useComponentStyles = createUseStyles({
     fontWeight: '600',
   },
   perfectNote: {
-    fontSize: '13px',
+    fontSize: '0.8125rem',
     fontWeight: '600',
     color: '#35c45d',
   },

@@ -23,12 +23,12 @@ const useComponentStyles = createUseStyles({
   },
   startTitle: {
     margin: 0,
-    fontSize: '22px',
+    fontSize: '1.375rem',
     fontWeight: '700',
     color: '#ffffff',
   },
   startSubtitle: {
-    fontSize: '13.5px',
+    fontSize: '0.84375rem',
     color: '#a3adc2',
     maxWidth: '440px',
     lineHeight: 1.5,
@@ -41,12 +41,12 @@ const useComponentStyles = createUseStyles({
     gap: '8px',
   },
   difficultyLabel: {
-    fontSize: '12px',
+    fontSize: '0.75rem',
     fontWeight: '600',
     color: '#a3adc2',
   },
   sessionInfo: {
-    fontSize: '12px',
+    fontSize: '0.75rem',
     fontWeight: '600',
     color: '#c3cbd9',
     background: 'rgba(255,255,255,0.06)',
@@ -55,7 +55,7 @@ const useComponentStyles = createUseStyles({
     padding: '3px 12px',
   },
   statsLine: {
-    fontSize: '12px',
+    fontSize: '0.75rem',
     color: '#a3adc2',
   },
   statsValue: {
@@ -63,12 +63,12 @@ const useComponentStyles = createUseStyles({
     fontWeight: '700',
   },
   keyHint: {
-    fontSize: '11px',
+    fontSize: '0.6875rem',
     color: '#a3adc2',
   },
   kbd: {
     fontFamily: 'monospace',
-    fontSize: '10px',
+    fontSize: '0.625rem',
     padding: '1px 5px',
     borderRadius: '4px',
     background: 'rgba(255,255,255,0.08)',

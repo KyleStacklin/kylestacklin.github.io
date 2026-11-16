@@ -77,7 +77,7 @@ const useComponentStyles = createUseStyles({
     },
   },
   questionLabel: {
-    fontSize: '11px',
+    fontSize: '0.6875rem',
     fontWeight: '700',
     letterSpacing: '0.8px',
     textTransform: 'uppercase',
@@ -86,7 +86,7 @@ const useComponentStyles = createUseStyles({
   },
   questionDescription: {
     color: '#c3cbd9',
-    fontSize: '16px',
+    fontSize: '1rem',
     lineHeight: 1.6,
     whiteSpace: 'pre-line',
   },
@@ -148,7 +148,7 @@ const useComponentStyles = createUseStyles({
     minWidth: 0,
   },
   revealVerdict: {
-    fontSize: '11px',
+    fontSize: '0.6875rem',
     fontWeight: '700',
     letterSpacing: '0.8px',
     textTransform: 'uppercase',
@@ -160,12 +160,12 @@ const useComponentStyles = createUseStyles({
     gap: '8px',
   },
   revealName: {
-    fontSize: '17px',
+    fontSize: '1.0625rem',
     fontWeight: '700',
     color: '#ffffff',
   },
   revealPill: {
-    fontSize: '10px',
+    fontSize: '0.625rem',
     fontWeight: '600',
     letterSpacing: '0.4px',
     textTransform: 'uppercase',
@@ -174,7 +174,7 @@ const useComponentStyles = createUseStyles({
     width: 'fit-content',
   },
   revealUnlock: {
-    fontSize: '12px',
+    fontSize: '0.75rem',
     color: '#a8b2c5',
   },
   revealUnlockLabel: {
@@ -183,7 +183,7 @@ const useComponentStyles = createUseStyles({
   },
   revealDescription: {
     color: '#c3cbd9',
-    fontSize: '13px',
+    fontSize: '0.8125rem',
     lineHeight: 1.5,
     whiteSpace: 'pre-line',
     width: '100%',
@@ -195,18 +195,18 @@ const useComponentStyles = createUseStyles({
     gap: '12px',
   },
   continueHint: {
-    fontSize: '12px',
+    fontSize: '0.75rem',
     color: '#a3adc2',
   },
   keyHintRow: {
     display: 'flex',
     justifyContent: 'center',
-    fontSize: '11.5px',
+    fontSize: '0.71875rem',
     color: '#a3adc2',
   },
   kbd: {
     fontFamily: 'monospace',
-    fontSize: '10px',
+    fontSize: '0.625rem',
     padding: '1px 5px',
     borderRadius: '4px',
     background: 'rgba(255,255,255,0.08)',
@@ -222,14 +222,14 @@ const useComponentStyles = createUseStyles({
     padding: '64px 16px',
     color: '#a3adc2',
     textAlign: 'center',
-    fontSize: '14px',
+    fontSize: '0.875rem',
     border: '1px dashed rgba(255,255,255,0.15)',
     borderRadius: '12px',
     background: 'rgba(255,255,255,0.03)',
   },
   emptyStateTitle: {
     fontWeight: '700',
-    fontSize: '17px',
+    fontSize: '1.0625rem',
     color: '#c9d1e0',
   },
 })

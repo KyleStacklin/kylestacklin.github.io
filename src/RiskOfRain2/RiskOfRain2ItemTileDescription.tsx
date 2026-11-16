@@ -7,7 +7,7 @@ const useStyles = createUseStyles({
   description: {
     color: '#c3cbd9',
     textAlign: 'left',
-    fontSize: '13px',
+    fontSize: '0.8125rem',
     lineHeight: 1.5,
     whiteSpace: 'pre-line',
   },

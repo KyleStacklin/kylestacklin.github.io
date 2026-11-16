@@ -11,7 +11,7 @@ const useStyles = createUseStyles({
     color: '#c9d1e0',
     border: '1px solid rgba(255,255,255,0.12)',
     cursor: 'pointer',
-    fontSize: '13px',
+    fontSize: '0.8125rem',
     fontWeight: '600',
     letterSpacing: '0.2px',
     transition: 'background 0.15s ease, color 0.15s ease, border-color 0.15s ease',

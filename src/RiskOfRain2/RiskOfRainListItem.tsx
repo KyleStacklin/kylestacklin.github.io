@@ -3,6 +3,7 @@ import { createUseStyles } from "react-jss";
 import RiskOfRain2ItemTileDescription from "./RiskOfRain2ItemTileDescription";
 import { rarityConverter, rarityPillStyle } from "./RiskOfRainBusinessLogic";
 import { DLC_NAMES, DlcCode } from "./RiskOfRain2Types";
+import { DlcTooltip } from "./DlcTooltip";
 
 const useComponentStyles = createUseStyles({
   listItem: {
@@ -69,11 +70,11 @@ const useComponentStyles = createUseStyles({
   displayName: {
     margin: 0,
     fontWeight: '700',
-    fontSize: '15px',
+    fontSize: '0.9375rem',
     color: '#ffffff',
   },
   rarityPill: {
-    fontSize: '10px',
+    fontSize: '0.625rem',
     fontWeight: '600',
     letterSpacing: '0.4px',
     textTransform: 'uppercase',
@@ -82,10 +83,10 @@ const useComponentStyles = createUseStyles({
     width: 'fit-content',
   },
   description: {
-    fontSize: '12.5px',
+    fontSize: '0.78125rem',
   },
   unlockTask: {
-    fontSize: '12px',
+    fontSize: '0.75rem',
     color: '#a8b2c5',
   },
   unlockLabel: {
@@ -134,15 +135,16 @@ const RiskOfRainListItem = ({ item }: Props) => {
   return (
     <div className={componentStyles.listItem} style={{ '--tile-accent': rarityColor } as React.CSSProperties}>
       {dlcName &&
-        <span className={componentStyles.dlcBadge} aria-hidden={true}>
-          <img
-            className={componentStyles.dlcBadgeImage}
-            src={require(`./dlc_logos/${dlc}.webp`)}
-            alt=""
-            title={dlcName}
-            draggable={false}
-          />
-        </span>
+        <DlcTooltip label={dlcName}>
+          <span className={componentStyles.dlcBadge} aria-hidden={true} data-dlc={dlc}>
+            <img
+              className={componentStyles.dlcBadgeImage}
+              src={require(`./dlc_logos/${dlc}.webp`)}
+              alt=""
+              draggable={false}
+            />
+          </span>
+        </DlcTooltip>
       }
       <div className={componentStyles.imageFrame}>
         <img className={componentStyles.image} src={require(`./ror2_items_img/${nickname}.webp`)} alt={displayName} />

@@ -114,16 +114,16 @@ export const useStyles = createUseStyles({
   },
   headerTitle: {
     fontWeight: '700',
-    fontSize: '17px',
+    fontSize: '1.0625rem',
     letterSpacing: '0.3px',
     color: '#ffffff',
     whiteSpace: 'nowrap',
     '@media (max-width: 639px)': {
-      fontSize: '15px',
+      fontSize: '0.9375rem',
     },
   },
   resultCount: {
-    fontSize: '12px',
+    fontSize: '0.75rem',
     fontWeight: '600',
     color: '#a3adc2',
     backgroundColor: 'rgba(255,255,255,0.06)',
@@ -132,7 +132,7 @@ export const useStyles = createUseStyles({
     borderRadius: '999px',
     whiteSpace: 'nowrap',
     '@media (max-width: 639px)': {
-      fontSize: '11px',
+      fontSize: '0.6875rem',
       padding: '2px 8px',
     },
   },
@@ -171,9 +171,11 @@ export const useStyles = createUseStyles({
     flex: '1 1 0%',
     minWidth: 0,
     gap: '14px',
+    justifyContent: 'flex-end',
     '@media (max-width: 899px)': {
       flexDirection: 'column',
       gap: '10px',
+      justifyContent: 'flex-start',
     },
   },
   filterGroup: {
@@ -187,10 +189,10 @@ export const useStyles = createUseStyles({
     flex: '0 1 auto',
   },
   rarityGroup: {
-    flex: '1 1 0%',
+    flex: '0 1 auto',
   },
   groupLabel: {
-    fontSize: '10px',
+    fontSize: '0.625rem',
     fontWeight: '700',
     lineHeight: 1,
     letterSpacing: '1.2px',
@@ -264,7 +266,7 @@ export const useStyles = createUseStyles({
   },
   dlcToggleText: {
     padding: '0 12px',
-    fontSize: '12px',
+    fontSize: '0.75rem',
     fontWeight: '600',
     letterSpacing: '0.2px',
     color: '#ffffff',
@@ -287,7 +289,7 @@ export const useStyles = createUseStyles({
     border: '1px solid rgba(255,255,255,0.14)',
     borderRadius: '8px',
     outline: 'none',
-    fontSize: '14px',
+    fontSize: '0.875rem',
     boxSizing: 'border-box',
     backgroundColor: 'rgba(255,255,255,0.07)',
     color: '#e8eaf0',
@@ -301,7 +303,7 @@ export const useStyles = createUseStyles({
     },
     '@media (max-width: 639px)': {
       height: '40px',
-      fontSize: '16px',
+      fontSize: '1rem',
     },
   },
   filterOptions: {
@@ -310,16 +312,22 @@ export const useStyles = createUseStyles({
     alignItems: 'center',
     gap: '8px',
   },
-  resetFilterLink: {
+  groupHeader: {
+    display: 'flex',
+    alignItems: 'baseline',
+    gap: '8px',
+    minWidth: 0,
+  },
+  groupReset: {
     background: 'none',
     border: 'none',
     padding: '0 2px',
     cursor: 'pointer',
-    fontSize: '12px',
-    fontWeight: '600',
-    letterSpacing: '0.2px',
+    fontSize: '0.5625rem',
+    fontWeight: '700',
+    letterSpacing: '0.4px',
+    textTransform: 'uppercase',
     color: '#e8802e',
-    textDecoration: 'none',
     transition: 'color 0.15s ease',
     '&:hover': {
       color: '#f18c3c',
@@ -330,9 +338,61 @@ export const useStyles = createUseStyles({
       outlineOffset: '2px',
       borderRadius: '4px',
     },
+  },
+  groupScroller: {
+    position: 'relative',
+    minWidth: 0,
+  },
+  scrollChevron: {
+    position: 'absolute',
+    top: '50%',
+    transform: 'translateY(-50%)',
+    width: '32px',
+    minHeight: '32px',
+    padding: 0,
+    borderRadius: '999px',
+    background: 'rgba(8, 10, 16, 0.78)',
+    border: '1px solid rgba(255,255,255,0.25)',
+    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.45)',
+    color: '#e8eaf0',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: '0.875rem',
+    lineHeight: 1,
+    cursor: 'pointer',
+    zIndex: 2,
+    transition: 'background 0.15s ease',
+    '&:hover': {
+      background: 'rgba(8, 10, 16, 0.95)',
+    },
+    '&:focus-visible': {
+      outline: '2px solid rgba(255, 139, 61, 0.5)',
+      outlineOffset: '2px',
+    },
+  },
+  scrollChevronLeft: {
+    left: '2px',
+  },
+  scrollChevronRight: {
+    right: '2px',
+  },
+  fadeRight: {
     '@media (max-width: 899px)': {
-      padding: '0 6px',
-      fontSize: '13px',
+      maskImage: 'linear-gradient(to right, #000 0, #000 calc(100% - 24px), transparent)',
+      WebkitMaskImage: 'linear-gradient(to right, #000 0, #000 calc(100% - 24px), transparent)',
+    },
+  },
+  fadeLeft: {
+    '@media (max-width: 899px)': {
+      maskImage: 'linear-gradient(to right, transparent, #000 24px)',
+      WebkitMaskImage: 'linear-gradient(to right, transparent, #000 24px)',
+    },
+  },
+  fadeBoth: {
+    '@media (max-width: 899px)': {
+      maskImage: 'linear-gradient(to right, transparent, #000 24px, #000 calc(100% - 24px), transparent)',
+      WebkitMaskImage: 'linear-gradient(to right, transparent, #000 24px, #000 calc(100% - 24px), transparent)',
     },
   },
 
@@ -369,7 +429,7 @@ export const useStyles = createUseStyles({
     width: '75px',
 
     fontWeight: '700',
-    fontSize: '24px',
+    fontSize: '1.5rem',
     color: '#1f1a13',
   },
   tierListContents: {
@@ -409,14 +469,14 @@ export const useStyles = createUseStyles({
     padding: '64px 16px',
     color: '#a3adc2',
     textAlign: 'center',
-    fontSize: '14px',
+    fontSize: '0.875rem',
     border: '1px dashed rgba(255,255,255,0.15)',
     borderRadius: '12px',
     backgroundColor: 'rgba(255,255,255,0.03)',
   },
   emptyStateTitle: {
     fontWeight: '700',
-    fontSize: '17px',
+    fontSize: '1.0625rem',
     color: '#c9d1e0',
   },
 })

@@ -3,6 +3,7 @@ import { createUseStyles } from "react-jss";
 import { rarityConverter, rarityPillStyle } from "./RiskOfRainBusinessLogic";
 import RiskOfRain2ItemTileDescription from "./RiskOfRain2ItemTileDescription";
 import { DLC_NAMES, DlcCode } from "./RiskOfRain2Types";
+import { DlcTooltip } from "./DlcTooltip";
 
 const useStyles = createUseStyles({
   tile: {
@@ -69,12 +70,12 @@ const useStyles = createUseStyles({
   displayName: {
     margin: 0,
     fontWeight: '700',
-    fontSize: '16px',
+    fontSize: '1rem',
     lineHeight: 1.25,
     color: '#ffffff',
   },
   alias: {
-    fontSize: '11px',
+    fontSize: '0.6875rem',
     color: '#a3adc2',
   },
   metaRow: {
@@ -84,7 +85,7 @@ const useStyles = createUseStyles({
     gap: '8px',
   },
   rarityPill: {
-    fontSize: '10px',
+    fontSize: '0.625rem',
     fontWeight: '600',
     letterSpacing: '0.4px',
     textTransform: 'uppercase',
@@ -93,7 +94,7 @@ const useStyles = createUseStyles({
     width: 'fit-content',
   },
   itemNumber: {
-    fontSize: '11px',
+    fontSize: '0.6875rem',
     fontWeight: '600',
     color: '#aab4c8',
     backgroundColor: 'rgba(255,255,255,0.08)',
@@ -102,7 +103,7 @@ const useStyles = createUseStyles({
   },
   description: {
     color: '#c3cbd9',
-    fontSize: '13px',
+    fontSize: '0.8125rem',
     lineHeight: 1.5,
   },
   unlockTask: {
@@ -112,7 +113,7 @@ const useStyles = createUseStyles({
     marginTop: 'auto',
     paddingTop: '10px',
     borderTop: '1px solid rgba(255,255,255,0.08)',
-    fontSize: '12.5px',
+    fontSize: '0.78125rem',
     color: '#a8b2c5',
   },
   unlockLabel: {
@@ -165,15 +166,16 @@ const RiskOfRain2ItemTile = ({ item }: Props) => {
       style={{ '--tile-accent': rarityColor } as React.CSSProperties}
     >
       {dlcName &&
-        <span className={styles.dlcBadge} aria-hidden={true}>
-          <img
-            className={styles.dlcBadgeImage}
-            src={require(`./dlc_logos/${dlc}.webp`)}
-            alt=""
-            title={dlcName}
-            draggable={false}
-          />
-        </span>
+        <DlcTooltip label={dlcName}>
+          <span className={styles.dlcBadge} aria-hidden={true} data-dlc={dlc}>
+            <img
+              className={styles.dlcBadgeImage}
+              src={require(`./dlc_logos/${dlc}.webp`)}
+              alt=""
+              draggable={false}
+            />
+          </span>
+        </DlcTooltip>
       }
       <div className={styles.tileHeader}>
         <div className={styles.imageFrame}>
